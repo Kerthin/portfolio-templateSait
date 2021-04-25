@@ -1,0 +1,83 @@
+/*____________________________________________________________
+
+# @import
+	## @import reset.scss
+# Mixins
+	## Media queries mixin
+
+____________________________________________________________*/
+
+/*____________________________________________________________
+# @import
+____________________________________________________________*/
+/*____________________________________________________________
+## @import reset.scss
+____________________________________________________________*/
+@import '../../bower_components/reset.scss/reset.scss';
+
+/*____________________________________________________________
+# Mixins
+____________________________________________________________*/
+/*____________________________________________________________
+## Media queries mixin
+____________________________________________________________*/
+@mixin media-screen($media) {
+	@if $media == 1440 {
+		@media only screen and (max-width: $media-screen-1440) { @content; }
+	}
+	@else if $media == 1366 {
+		@media only screen and (max-width: $media-screen-1366) { @content; }
+	}
+	@else if $media == 1280 {
+		@media only screen and (max-width: $media-screen-1280) { @content; }
+	}
+	@else if $media == 1120 {
+		@media only screen and (max-width: $media-screen-1120) { @content; }
+	}
+	@else if $media == 1024 {
+		@media only screen and (max-width: $media-screen-1024) { @content; }
+	}
+
+	@else if $media == 960 {
+		@media only screen and (max-width: $media-screen-960) { @content; }
+	}
+	@else if $media == 848 {
+		@media only screen and (max-width: $media-screen-848) { @content; }
+	}
+	@else if $media == 768 {
+		@media only screen and (max-width: $media-screen-768) { @content; }
+	}
+	@else if $media == 720 {
+		@media only screen and (max-width: $media-screen-720) { @content; }
+	}
+	@else if $media == 642 {
+		@media only screen and (max-width: $media-screen-642) { @content; }
+	}
+	@else if $media == 480 {
+		@media only screen and (max-width: $media-screen-480) { @content; }
+	}
+	
+	@else if $media == 414 {
+		@media only screen and (max-width: $media-screen-410) { @content; }
+	}
+	@else if $media == 375 {
+		@media only screen and (max-width: $media-screen-375) { @content; }
+	}
+	@else if $media == 360 {
+		@media only screen and (max-width: $media-screen-360) { @content; }
+	}
+	@else if $media == 320 {
+		@media only screen and (max-width: $media-screen-320) { @content; }
+	}
+}
+
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
