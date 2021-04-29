@@ -3,3 +3,284 @@ html
 		include template/head.pug
 		include template/partials/_general.pug
 	body
+		.container
+
+			//- Home section
+			section.home
+
+				//- Illustration
+				.illustration
+
+					//- Blob circle
+					svg#blob-js(viewBox="0 0 1000 1000")
+						path#blob__path-js
+
+					//- Illustration Bubbles Wrap
+					ul.illustrationBubblesWrap
+						- for (var n = 0; n < 12; n++)
+							li.illustrationBubble
+
+					//- Illustration Dashed Frame
+					- var n = 1;
+					while n <= 3
+						.illustrationDashedFrame(class=`dashedFrame_type${n++}`)
+
+					//- Illustration Circle Charts
+					- var n = 1;
+					while n <= 2
+						.illustrationCircleChart(class=`illustrationCircleChart_type${n++}`)
+
+					//- Illustration Stickers
+					- var n = 1;
+					while n <= 2
+						.illustrationSticker(class=`illustrationSticker_type${n++}`)
+							ul.illustrationSticker__noteWrap
+								- for (var j = 0; j < 3; j++)
+									li.illustrationSticker__note
+
+					//- Illustration Site Layout
+					.illustrationSiteLayout
+						.illustrationSiteLayout__codeWrap
+							.illustrationSiteLayout__scrollBox
+								ul.illustrationSiteLayout__codeList
+									- for (var n = 0; n < 4; n++)
+										li.illustrationSiteLayout__codeItem
+											- for (var j = 0; j < 7; j++)
+												.illustrationSiteLayout__codeLine
+
+					//- Illustration Dialog
+					ul.illustrationDialog
+						- for (var n = 0; n < 5; n++)
+							li.illustrationDialog__line
+
+					//- Illustration Folder
+					.illustrationFolder
+						ul.illustrationFolder__file
+							- for (var n = 0; n < 5; n++)
+								li.illustrationFolder__line
+
+					//- Illustration Books
+					.illustrationBooks
+						.illustrationBooks__book
+						.illustrationBooks__book
+						.illustrationBooks__book
+							- for (var n = 0; n < 4; n++)
+								.illustrationBooks__binding
+
+					//- Illustration Analytics
+					.illustrationAnalytics
+						.illustrationAnalyticsPanel
+							.illustrationAnalyticsPanel__buttonsWrap
+								each val, index in ['exit', 'minimize', 'screen']
+									.illustrationAnalyticsPanel__button(class=`illustrationPresentationPanel__button_${val}`)
+
+						//-- Illustration Analytics	Page
+						.illustrationAnalyticsPage
+							.illustrationAnalyticsPage__container
+
+								//--- Illustration Analytics Diagram
+								ul.illustrationAnalyticsPage__diagramWrap
+									- for (var n = 0; n < 4; n++)
+										li.illustrationAnalyticsPage__diagram
+
+								//--- Illustration Analytics Banner
+								.illustrationAnalyticsPage__banner
+
+									//---- Illustration Analytics Description
+									ul.illustrationAnalyticsPage__descriptionWrap
+										- for (var n = 0; n < 8; n++)
+											li.illustrationAnalyticsPage__description
+
+									//---- Illustration Analytics Product List
+									ul.illustrationAnalyticsPage__productList
+										- for (var n = 0; n < 4; n++)
+											li.illustrationAnalyticsPage__productItem
+												.illustrationAnalyticsPage__productImg
+												ul.illustrationAnalyticsPage__productDescriptionWrap
+													- for (var j = 0; j < 3; j++)
+														li.illustrationAnalyticsPage__productDescription
+
+					//- Illustration Imac
+					.illustrationImac
+						.illustrationImac__display
+
+							//-- Illustration Imac Editor
+							.illustrationImacEditor
+								.illustrationImacEditorPanel
+
+								//--- Illustration Imac	Editor Code
+								.illustrationImacEditorCodeWrap
+									.illustrationImacEditorCodeWrap__scrollBox
+										- for (var n = 0; n < 2; n++)
+											ul.illustrationImacEditorCodeWrap__codeList
+												- for (var j = 0; j < 6; j++)
+													li.illustrationImacEditorCodeWrap__codeItem
+														- for (var x = 0; x < 10; x++)
+															.illustrationImacEditorCodeWrap__codeLine
+
+							//-- Illustration Imac Browser
+							.illustrationImacBrowser
+
+								//--- Illustration Imac Browser Panel
+								.illustrationImacBrowserPanel
+									.illustrationImacBrowserPanel__buttonsWrap
+										each val, index in ['exit', 'minimize', 'screen']
+											.illustrationImacBrowserPanel__button(class=`illustrationImacBrowserPanel__button_${val}`)
+
+								//--- Illustration Imac Browser Page
+								.illustrationImacBrowserPage
+									.illustrationImacBrowserPage__container
+
+										//---- Illustration Imac Browser Header
+										header.illustrationImacBrowserPage__header
+											ul.illustrationImacBrowserPage__nav
+												- for (var n = 0; n < 4; n++)
+													li.illustrationImacBrowserPage__navItem
+
+										//---- Illustration Imac Browser Main
+										section.illustrationImacBrowserPage__main
+											.illustrationImacBrowserPage__banner
+												.illustrationImacBrowserPage__img
+												ul.illustrationImacBrowserPage__descriptionWrap
+													- for (var n = 0; n < 4; n++)
+														li.illustrationImacBrowserPage__description
+
+										//---- Illustration Imac Browser Footer
+										footer.illustrationImacBrowserPage__footer
+											ul.illustrationImacBrowserPage__productList
+												- for (var n = 0; n < 3; n++)
+													li.illustrationImacBrowserPage__productItem
+														.illustrationImacBrowserPage__productImg
+														ul.illustrationImacBrowserPage__productDescriptionWrap
+															- for (var j = 0; j < 2; j++)
+																li.illustrationImacBrowserPage__productDescription
+
+							//-- Picture
+							.picture
+								.picture__dayWrap
+									.picture__sun
+									.picture__moon
+								.picture__mountainsWrap
+									- for (var n = 0; n < 3; n++)
+										.picture__mountain
+
+							//-- Avatar
+							.avatarWrap
+								.avatar
+
+									//--- Head
+									.headWrap
+										//---- Hair
+										.hair
+											.hair__leftSide
+												- for (var n = 0; n < 3; n++)
+													.blink
+											.hair__rightSide
+
+										//---- Ears
+										.ears
+											.ear
+											.ear
+
+										//---- Face
+										.face
+											//----- Top Face
+											.eyebrows
+												.eyebrows__brow
+												.eyebrows__brow
+												.eyebrows__shadow
+											//----- Middle Face
+											.eyes
+											.glasses
+												each val, index in ['left', 'right']
+													div(class=`${val}`)
+														.lens
+															.shine
+											//----- Bottom Face
+											.nose
+											.arm
+												each val, index in ['pharynx', 'tooth', 'tongue']
+													div(class=`arm__${val}`)
+
+										//---- Neck
+										.neck
+
+									//--- Body
+									.bodyWrap
+										.bodyWrap__body
+											.collar
+												.shirt
+												.button
+												.button
+										//---- Bow
+										.bowWrap
+											each val, index in ['bowShadow', 'bow', 'crease']
+												div(class=`bowWrap__${val}`)
+
+						//-- Illustration Imac Panel
+						.illustrationImac__panel
+							.illustrationImac__panelButton
+
+						//-- Illustration Imac Stand
+						.illustrationImac__stand
+							.illustrationImac__standShadow
+							.illustrationImac__standBase
+
+					//- Illustration Presentation
+					.illustrationPresentation
+						//-- Illustration Presentation Panel
+						.illustrationPresentationPanel
+							.illustrationPresentationPanel__buttonsWrap
+								each val, index in ['exit', 'minimize', 'screen']
+									.illustrationPresentationPanel__button(class=`illustrationPresentationPanel__button_${val}`)
+
+						//-- Illustration Presentation Page
+						.illustrationPresentationPage
+							.illustrationPresentationPage__container
+
+								//--- Illustration Presentation Banner
+								.illustrationPresentationPage__banner
+									.illustrationPresentationPage__img
+										//---- Picture
+										.picture
+											.picture__dayWrap
+												.picture__sun
+												.picture__moon
+											.picture__mountainsWrap
+												- for (var n = 0; n < 3; n++)
+													.picture__mountain
+									ul.illustrationPresentationPage__descriptionWrap
+										- for (var n = 0; n < 6; n++)
+											li.illustrationPresentationPage__description
+
+								//--- Illustration Presentation Form
+								.illustrationPresentationPage__form
+									.illustrationPresentationPage__input
+									.illustrationPresentationPage__input
+
+					//- Illustration Settings
+					.illustrationSettings
+						.illustrationSettings__container
+
+							//-- Illustration Settings Gear
+							.illustrationSettings__gearWrap
+								.illustrationSettings__gear
+									svg(viewBox="-208 -208 300 300")
+										defs
+											line#tooth(x1="-2" x2="26")
+										g.teeth
+											- var n = 0;
+											- var angle = 45;
+											while n < 8
+												g(transform=`rotate(${n++ * angle})`)
+													use(xlink:href="#tooth" x="85")
+								.illustrationSettings__gearCircle
+
+							//-- Illustration Settings Line
+							ul.illustrationSettings__lineWrap
+								- for (var n = 0; n < 4; n++)
+									li.illustrationSettings__line
+			//- About section
+			section.about
+
+		include template/partials/_mainScripts.pug

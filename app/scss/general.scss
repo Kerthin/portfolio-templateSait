@@ -2,8 +2,12 @@
 
 # @import
 	## @import reset.scss
+# Variables
+	## Screen size variables
 # Mixins
 	## Media queries mixin
+# Home
+# Illustration
 
 ____________________________________________________________*/
 
@@ -16,13 +20,49 @@ ____________________________________________________________*/
 @import '../../bower_components/reset-scss/reset.scss';
 
 /*____________________________________________________________
+# Variables
+____________________________________________________________*/
+/*____________________________________________________________
+## Screen size variables
+____________________________________________________________*/
+$media-screen-1824: 1824px;
+$media-screen-1680: 1680px;
+$media-screen-1600: 1600px;
+$media-screen-1440: 1440px;
+$media-screen-1366: 1366px;
+$media-screen-1280: 1280px;
+$media-screen-1120: 1120px;
+$media-screen-1024: 1024px;
+
+$media-screen-960: 960px;
+$media-screen-848: 848px;
+$media-screen-768: 768px;
+$media-screen-720: 720px;
+$media-screen-642: 642px;
+$media-screen-480: 480px;
+
+$media-screen-410: 410px;
+$media-screen-375: 375px;
+$media-screen-360: 360px;
+$media-screen-320: 320px;
+
+/*____________________________________________________________
 # Mixins
 ____________________________________________________________*/
 /*____________________________________________________________
 ## Media queries mixin
 ____________________________________________________________*/
 @mixin media-screen($media) {
-	@if $media == 1440 {
+	@if $media == 1824 {
+		@media only screen and (max-width: $media-screen-1824) { @content; }
+	}
+	@else if $media == 1680 {
+		@media only screen and (max-width: $media-screen-1680) { @content; }
+	}
+	@else if $media == 1600 {
+		@media only screen and (max-width: $media-screen-1600) { @content; }
+	}
+	@else if $media == 1440 {
 		@media only screen and (max-width: $media-screen-1440) { @content; }
 	}
 	@else if $media == 1366 {
@@ -80,4 +120,2337 @@ ____________________________________________________________*/
 	content: "";
 	display: table;
 	clear: both;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/*____________________________________________________________
+# Home
+____________________________________________________________*/
+.home {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-color: #9b2d30;
+}
+
+/*____________________________________________________________
+# Illustration
+____________________________________________________________*/
+.illustration {
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	transform: translateY(-50%);
+	width: 893px;
+	height: 600px;
+	overflow: hidden;
+
+  &:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 3px;
+		border-radius: 3px;
+		background-color: #2a333c;
+	}
+}
+
+/*____________________________________________________________
+# Illustration Bubbles Wrap
+____________________________________________________________*/
+.illustrationBubblesWrap {
+	width: 100%;
+	height: 100%;
+}
+
+.illustrationBubble  {
+	position: absolute;
+	border-radius: 50%;
+	background-color: #7dcbd8;
+	animation: levitation 5s linear infinite;
+
+	@mixin bubbleNthChild($nthChild, $top, $left, $width, $height, $bg, $delay) {
+		&:nth-child(#{$nthChild}) {
+			top: #{$top}px;
+			left: #{$left}px;
+			width: #{$width}px;
+			height: #{$height}px;
+			background-color: #{$bg};
+			animation-delay: #{$delay}s;
+		}
+	}
+
+	@include bubbleNthChild(1, 535, 310, 16, 16, #7dcbd8, 0);
+	@include bubbleNthChild(2, 370, 150, 12, 12, #7dcbd8, .3);
+	@include bubbleNthChild(3, 240, 50, 16, 16, #2a333c, .6);
+	@include bubbleNthChild(4, 180, 2, 10, 2, #7dcbd8, 0);
+	@include bubbleNthChild(5, 140, 275, 20, 20, transparent, 1.2);
+	@include bubbleNthChild(6, 50, 420, 12, 12, #7dcbd8, 1.5);
+	@include bubbleNthChild(7, 10, 510, 10, 10, #7dcbd8, 1.8);
+	@include bubbleNthChild(8, 30, 640, 6, 6, #2a333c, 2.1);
+	@include bubbleNthChild(9, 75, 700, 10, 2, #7dcbd8, 2.4);
+	@include bubbleNthChild(10, 220, 780, 16, 16, #7dcbd8, 2.7);
+	@include bubbleNthChild(11, 300, 730, 6, 6, #ee6648, 3);
+	@include bubbleNthChild(12, 550, 630, 10, 2, #2a333c, 3.3);
+
+	&:nth-child(4) {
+		animation: none;
+	}
+
+	&:nth-child(4),
+	&:nth-child(9),
+	&:nth-child(12) {
+		border-radius: 1px;
+	}
+
+	&:nth-child(4):before,
+	&:nth-child(9):before,
+	&:nth-child(12):before {
+		content: '';
+		position: absolute;
+		top: -4px;
+		left: 4px;
+		width: 2px;
+		height: 10px;
+		border-radius: 1px;
+		background-color: #7dcbd8;
+	}
+
+	&:nth-child(5) {
+		border: 3px solid #7dcbd8;
+	}
+
+	&:nth-child(12):before {
+		background-color: #2a333c;
+	}
+}
+
+
+/*____________________________________________________________
+# Illustration Dashed Frame
+____________________________________________________________*/
+.illustrationDashedFrame {
+	position: absolute;
+	border: 2px dashed #37a4b8;
+	border-radius: 5px;
+}
+
+@mixin dashedFrameType($nthType, $top, $left, $width, $height) {
+	.dashedFrame_type#{$nthType} {
+		top: #{$top}px;
+		left: #{$left}px;
+		width: #{$width}px;
+		height: #{$height}px;
+	}
+}
+
+@include dashedFrameType(1, 292, 130, 116, 243);
+@include dashedFrameType(2, 100, 210, 130, 130);
+@include dashedFrameType(3, 210, 673, 170, 210);
+
+/*____________________________________________________________
+# Illustration Circle Charts
+____________________________________________________________*/
+.illustrationCircleChart,
+.illustrationCircleChart_type1:before,
+.illustrationCircleChart_type2,
+.illustrationCircleChart_type2:before,
+.illustrationCircleChart_type2:after {
+	position: absolute;
+	border-radius: 50%;
+}
+
+.illustrationCircleChart_type1 {
+	top: 250px;
+	left: 90px;
+	border-right: 30px solid transparent;
+	border-top: 30px solid #7dcbd8;
+	border-left: 30px solid #7dcbd8;
+	border-bottom: 30px solid #7dcbd8;
+	animation: rotateRays 7s linear infinite;
+
+  &:before {
+		content: '';
+		top: -30px;
+		left: -24px;
+		border-right: 30px solid #ee6648;
+		border-top: 30px solid transparent;
+		border-left: 30px solid transparent;
+		border-bottom: 30px solid transparent;
+	}
+}
+
+.illustrationCircleChart_type2 {
+	top: 280px;
+	right: 30px;
+	border-right: 35px solid transparent;
+	border-top: 35px solid #ee6648;
+	border-left: 35px solid transparent;
+	border-bottom: 35px solid #ee6648;
+	animation: rotateRays 7s linear infinite;
+
+  &:before {
+		content: '';
+		top: -35px;
+		left: -30px;
+		border-right: 35px solid #2a333c;
+		border-top: 35px solid transparent;
+		border-left: 35px solid transparent;
+		border-bottom: 35px solid transparent;
+	}
+	&:after {
+		content: '';
+		top: -35px;
+		right: -30px;
+		border-right: 35px solid transparent;
+		border-top: 35px solid transparent;
+		border-left: 35px solid #2a333c;
+		border-bottom: 35px solid transparent;
+	}
+}
+
+/*____________________________________________________________
+# Illustration Stickers
+____________________________________________________________*/
+.illustrationSticker {
+	position: absolute;
+	padding: 10px 7px;
+	width: 60px;
+	height: 35px;
+	overflow: hidden;
+
+  &:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-width: 0 16px 16px 0;
+		border-style: solid;
+		display: block;
+		width: 0;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
+								-1px 1px 1px rgba(0, 0, 0, 0.2);
+	}
+}
+
+
+@mixin stickerType($nthType, $top, $left, $bg) {
+	.illustrationSticker_type#{$nthType} {
+		top: #{$top}px;
+		left: #{$left}px;
+		background-color: #{$bg};
+
+		&:before {
+			border-color: #f7e0b5 #f7e0b5 #{$bg} #{$bg};
+		}
+	}
+}
+
+@include stickerType(1, 125, 320, #7dcbd8);
+@include stickerType(2, 75, 300, #ee6648);
+
+.illustrationSticker_type1 {
+	transform: rotate(10deg);
+}
+
+.illustrationSticker__noteWrap {
+	width: 28px;
+	height: 15px;
+	list-style: none;
+}
+.illustrationSticker__note {
+	position: relative;
+	margin-bottom: 3px;
+	width: 100%;
+	height: 3px;
+	overflow: hidden;
+
+  &:nth-child(2) {
+  	&:after {
+			animation-delay: .1s;
+		}
+  }
+  &:nth-child(3) {
+  	&:after {
+			animation-delay: .2s;
+		}
+  }
+
+  &:last-child {
+		margin-bottom: 0;
+		width: 70%;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		animation: slide 3.5s ease infinite;
+	}
+}
+
+/*____________________________________________________________
+# Illustration Site Layout
+____________________________________________________________*/
+.illustrationSiteLayout {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 90px;
+	height: 85px;
+	border: 2px solid #a3d9e3;
+	border-radius: 5px;
+	animation: levitation 5s linear infinite 3.2s;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		border: solid #a3d9e3;
+	}
+	&:before {
+		width: 100%;
+		height: 20px;
+		border-width: 0 0 2px 0;
+	}
+	&:after {
+		top: 20px;
+		width: 20px;
+		height: calc(100% - 20px);
+		border-width: 0 2px 0 0;
+	}
+}
+
+.illustrationSiteLayout__codeWrap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 3px 6px 3px 8px;
+  width: calc(100% - 20px);
+  height: calc(100% - 22px);
+}
+
+.illustrationSiteLayout__scrollBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.illustrationSiteLayout__codeList {
+  position: absolute;
+  width: 100%;
+  list-style: none;
+  animation: scrollCode .9s linear infinite;
+}
+.illustrationSiteLayout__codeItem {
+  position: relative;
+  margin-bottom: 2px;
+  width: 100%;
+  height: 18px;
+}
+.illustrationSiteLayout__codeLine {
+  position: absolute;
+  height: 2px;
+  background-color: #a3d9e3;
+  overflow: hidden;
+
+  &:nth-child(1) {
+		width: 90%;
+	}
+	&:nth-child(2) {
+		top: 4px;
+		width: 70%;
+	}
+	&:nth-child(3) {
+		top: 8px;
+		width: 50%;
+	}
+	&:nth-child(4) {
+		top: 12px;
+		width: 20%;
+	}
+	&:nth-child(5) {
+		top: 12px;
+		left: 30%;
+		width: 60%;
+	}
+	&:nth-child(6) {
+		top: 16px;
+		width: 50%;
+	}
+	&:nth-child(7) {
+		top: 16px;
+		left: 60%;
+		width: 15%;
+	}
+}
+
+/*____________________________________________________________
+# Illustration Dialog
+____________________________________________________________*/
+.illustrationDialog {
+  position: absolute;
+  top: 90px;
+  right: 170px;
+  padding: 8px 14px;
+  width: 78px;
+  height: 45px;
+  background-color: #a3d9e3;
+  animation: levitation 5s linear infinite .8s;
+
+	&:before {
+		content: '';
+		position: absolute;
+		left: 10px;
+		bottom: -10px;
+		width: 0; 
+		height: 0;
+		border-top: 10px solid #a3d9e3;
+		border-right: 10px solid transparent;
+	}
+}
+.illustrationDialog__line {
+	position: relative;
+	margin-bottom: 3px;
+	width: 100%;
+	height: 3px;
+	overflow: hidden;
+
+	&:nth-child(2) {
+		width: 70%;
+	}
+	&:nth-child(4) {
+		width: 60%;
+	}
+	&:nth-child(5) {
+		width: 90%;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		animation: slide 3.5s ease infinite;
+	}
+
+	&:nth-child(2):after {
+		animation-delay: .1s;
+	}
+	&:nth-child(3):after {
+		animation-delay: .2s;
+	}
+	&:nth-child(4):after {
+		animation-delay: .3s;
+	}
+	&:nth-child(5):after {
+		animation-delay: .35s;
+	}
+}
+
+/*____________________________________________________________
+# Illustration Folder
+____________________________________________________________*/
+.illustrationFolder {
+	position: absolute;
+	top: 350px;
+	left: 50px;
+	width: 47px;
+	height: 31px;
+	border-radius: 1px 0 1px 1px;
+	background-color: #2c8291;
+	animation: levitation 5s linear infinite 1.4s;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -4px;
+		right: 0;
+		width: 10px;
+		height: 4px;
+		border-radius: 1px 1px 0 0;
+		background-color: #2c8291;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: -5px;
+		bottom: 0;
+		width: 47px;
+		height: 31px;
+		border-radius: 1px;
+		background-color: #7dcbd8;
+		animation: openFolder 3.5s ease infinite;
+	}
+}
+
+.illustrationFolder__file {
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+  padding: 4px 2px;
+  width: 29px;
+  height: 35px;
+  border-radius: 1px;
+  background-color: #fff;
+  animation: openFile 3.5s ease infinite;
+}
+.illustrationFolder__line {
+	position: relative;
+	margin-bottom: 2px;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #2a333c;
+		animation: slide 3.5s ease infinite;
+	}
+
+	&:nth-child(2):after {
+		animation-delay: .1s;
+	}
+	&:nth-child(3):after {
+		animation-delay: .2s;
+	}
+	&:nth-child(4):after {
+		animation-delay: .3s;
+	}
+	&:nth-child(5):after {
+		animation-delay: .4s;
+	}
+}
+
+/*____________________________________________________________
+# Illustration Books
+____________________________________________________________*/
+.illustrationBooks {
+	position: absolute;
+	left: 70px;
+	bottom: 0;
+	width: 164px;
+	height: 86px;
+}
+.illustrationBooks__book {
+	position: absolute;
+
+	&:nth-child(1) {
+		left: 5px;
+		width: 132px;
+		height: 28px;
+		border: solid #ee6648;
+		border-width: 4px 0 4px 4px;
+		border-radius: 20px 0 0 20px;
+		background: repeating-linear-gradient(0deg, #fff, #fff 4px, #e6e6e6 4px, #e6e6e6 5px);
+	}
+	&:nth-child(2) {
+		top: 28px;
+		right: 0;
+		width: 146px;
+		height: 31px;
+		border: solid #7dcbd8;
+		border-width: 4px 4px 4px 0;
+		border-radius: 0 20px 20px 0;
+		background: repeating-linear-gradient(0deg, #fff, #fff 4px, #e6e6e6 4px, #e6e6e6 5px);
+	}
+	&:nth-child(3) {
+		bottom: 0;
+		width: 132px;
+		height: 27px;
+		background-color: #ee6648;
+	}
+}
+
+.illustrationBooks__binding {
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background-color: #8c250e;
+
+	&:nth-child(1) {
+		left: 10px;
+	}
+	&:nth-child(2) {
+		left: 20px;
+	}
+	&:nth-child(3) {
+		right: 20px;
+	}
+	&:nth-child(4) {
+		right: 10px;
+	}
+}
+
+/*____________________________________________________________
+# Illustration Analytics
+____________________________________________________________*/
+.illustrationAnalytics {
+  position: absolute;
+  bottom: 25px;
+  right: 10px;
+  width: 215px;
+  height: 180px;
+  background-color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  animation: levitation 5s linear infinite;
+}
+
+.illustrationAnalyticsPanel {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #2a333c;
+}
+.illustrationAnalyticsPanel__buttonsWrap {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  height: 8px;
+}
+.illustrationAnalyticsPanel__button {
+  float: left;
+  margin-right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.illustrationAnalyticsPanel__button_exit {
+  background-color: #ff5f56;
+}
+.illustrationAnalyticsPanel__button_minimize {
+  background-color: #febc2e;
+}
+.illustrationAnalyticsPanel__button_screen {
+  background-color: #29c740;
+}
+
+/*____________________________________________________________
+## Illustration Analytics Page
+____________________________________________________________*/
+.illustrationAnalyticsPage {
+  padding: 8px;
+  width: 100%;
+  height: calc(100% - 20px);
+}
+.illustrationAnalyticsPage__container {
+  width: 100%;
+  height: 100%;
+}
+
+/*____________________________________________________________
+### Illustration Analytics Diagram
+____________________________________________________________*/
+.illustrationAnalyticsPage__diagramWrap  {
+	float: left;
+	padding-top: 20%;
+	margin-right: 10px;
+	width: 90px;
+	height: 100%;
+	list-style: none;
+}
+.illustrationAnalyticsPage__diagram {
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	width: 15px;
+	height: 100%;
+	border-radius: 1px;
+	overflow: hidden;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 10%;
+		background-color: #a3d9e3;
+		animation: lineDiagram 2.8s ease infinite;
+	}
+
+	&:nth-child(2):after {
+		animation-delay: .6s;
+	}
+	&:nth-child(3):after {
+		animation-delay: .3s;
+	}
+	&:nth-child(4):after {
+		animation-delay: .9s;
+	}
+}
+
+/*____________________________________________________________
+### Illustration Analytics Banner
+____________________________________________________________*/
+.illustrationAnalyticsPage__banner {
+	float: left;
+	width: calc(100% - 100px);
+	height: 100%;
+}
+
+/*____________________________________________________________
+#### Illustration Analytics Description
+____________________________________________________________*/
+.illustrationAnalyticsPage__descriptionWrap {
+	margin-bottom: 17px;
+	width: 100%;
+	height: 87px;
+	list-style: none;
+}
+.illustrationAnalyticsPage__description {
+	position: relative;
+	margin-bottom: 5px;
+	width: 100%;
+	height: 3px;
+	border-radius: 3px;
+	overflow: hidden;
+
+	&:first-child {
+		width: 60%;
+		height: 6px;
+		margin-bottom: 8px;
+	}
+	&:nth-child(5),
+	&:nth-child(6),
+	&:nth-child(7) {
+		width: 70%;
+	}
+	&:last-child {
+		height: 27px;
+		margin-bottom: 0;
+		border-radius: 1px;
+		background-color: #cceaf0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #cceaf0;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@mixin analyticsDescriptionChild($nthChild, $delay) {
+		&:nth-child(#{$nthChild}) {
+			&:after {
+				animation-delay: #{$delay}s;
+			}
+		}
+	}
+
+	@include analyticsDescriptionChild(1, .1);
+	@include analyticsDescriptionChild(2, .2);
+	@include analyticsDescriptionChild(3, .3);
+	@include analyticsDescriptionChild(4, .35);
+	@include analyticsDescriptionChild(5, .4);
+	@include analyticsDescriptionChild(6, .45);
+	@include analyticsDescriptionChild(7, .5);
+
+	&:last-child {
+		&:after {
+			animation: none;
+		}
+	}
+}
+
+/*____________________________________________________________
+#### Illustration Analytics Product List
+____________________________________________________________*/
+.illustrationAnalyticsPage__productList {
+	width: 100%;
+	height: calc(100% - 104px);
+	list-style: none;
+}
+
+.illustrationAnalyticsPage__productItem {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	width: 47px;
+	height: 15px;
+
+  &:nth-child(2n)  {
+		margin-right: 0;
+	}
+
+	&:nth-child(3),
+	&:nth-child(4) {
+		.illustrationAnalyticsPage__productImg {
+			background-color: #a3d9e3;
+		}
+	}
+}
+
+.illustrationAnalyticsPage__productImg {
+  float: left;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  background-color: #cceaf0;
+}
+
+.illustrationAnalyticsPage__productDescriptionWrap {
+  float: left;
+  width: calc(100% - 20px);
+  height: 15px;
+  list-style: none;
+}
+.illustrationAnalyticsPage__productDescription {
+  position: relative;
+  margin-bottom: 3px;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+
+  &:nth-child(2),
+	&:last-child {
+		width: 70%;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #cceaf0;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@mixin analyticsDescriptionChild($nthChild, $delay) {
+		&:nth-child(#{$nthChild}) {
+			&:after {
+				animation-delay: #{$delay}s;
+			}
+		}
+	}
+
+	@include analyticsDescriptionChild(1, .1);
+	@include analyticsDescriptionChild(2, .2);
+	@include analyticsDescriptionChild(3, .3);
+}
+
+/*____________________________________________________________
+# Illustration Imac
+____________________________________________________________*/
+.illustrationImac {
+	position: absolute;
+	bottom: 147px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 482px;
+	height: 266px;
+}
+.illustrationImac__display {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 9px solid #2a333c;
+	border-radius: 10px 10px 0 0;
+	background: repeating-linear-gradient(90deg, #7dcbd8, #7dcbd8 24px, #a3d9e3 24px, #a3d9e3 34px);
+}
+
+/*____________________________________________________________
+## Illustration Imac Editor
+____________________________________________________________*/
+.illustrationImacEditor {
+	position: absolute;
+	bottom: 9px;
+	left: 30px;
+	width: 180px;
+	height: 116px;
+	background-color: #fff;
+}
+
+.illustrationImacEditorPanel {
+	width: 100%;
+	height: 10px;
+	background-color: #2a333c;
+}
+
+/*____________________________________________________________
+### Illustration Imac Editor Code
+____________________________________________________________*/
+.illustrationImacEditorCodeWrap {
+	position: relative;
+	padding: 6px;
+	width: 100%;
+	height: calc(100% - 10px);
+	background-color: #4c5259;
+}
+.illustrationImacEditorCodeWrap__scrollBox {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+@mixin editorCodeLineChild($nthChild, $top, $side, $sideInent, $width, $bg) {
+	&:nth-child(#{$nthChild}) {
+		top: #{$top}px;
+		#{$side}: #{$sideInent}px;
+		width: #{$width}px;
+		background-color: #{$bg};
+	}
+}
+.illustrationImacEditorCodeWrap__codeList {
+  position: absolute;
+  width: 50%;
+  list-style: none;
+  animation: scrollCode .9s linear infinite;
+
+	&:first-child {
+		border-right: 1px solid #626a73;
+
+		.illustrationImacEditorCodeWrap__codeLine {
+			@include editorCodeLineChild(1, 0, left, 0, 20, #ee6648);
+			@include editorCodeLineChild(2, 0, left, 24, 45, #ee6648);
+			@include editorCodeLineChild(3, 4, left, 10, 21, #fff);
+			@include editorCodeLineChild(4, 4, left, 35, 25, #fff);
+			@include editorCodeLineChild(5, 8, left, 0, 22, #78dbe2);
+			@include editorCodeLineChild(6, 8, left, 26, 14, #78dbe2);
+			@include editorCodeLineChild(7, 12, right, 40, 22, #ADFF2F);
+			@include editorCodeLineChild(8, 12, right, 16, 20, #ADFF2F);
+			@include editorCodeLineChild(9, 16, right, 18, 30, #fff);
+			@include editorCodeLineChild(10, 16, right, 6, 8, #fff);
+		}
+	}
+	&:last-child {
+		right: 0;
+		animation-duration: 1.3s;
+
+		.illustrationImacEditorCodeWrap__codeLine {
+			@include editorCodeLineChild(1, 0, left, 6, 36, #fff);
+			@include editorCodeLineChild(2, 0, left, 46, 20, #ff4765);
+			@include editorCodeLineChild(3, 4, left, 12, 30, #29b87d);
+			@include editorCodeLineChild(4, 4, left, 46, 18, #ff4765);
+			@include editorCodeLineChild(5, 8, left, 18, 24, transparent);
+			@include editorCodeLineChild(6, 8, left, 46, 16, #ff4765);
+			@include editorCodeLineChild(7, 12, right, 35, 15, #feb021);
+			@include editorCodeLineChild(8, 12, right, 6, 25, #feb021);
+			@include editorCodeLineChild(9, 16, right, 10, 30, #78dbe2);
+			@include editorCodeLineChild(10, 16, right, 0, 6, #78dbe2);
+		}
+	}
+}
+
+.illustrationImacEditorCodeWrap__codeItem {
+	position: relative;
+	margin-bottom: 2px;
+	width: 100%;
+	height: 18px;
+}
+.illustrationImacEditorCodeWrap__codeLine {
+	position: absolute;
+	height: 2px;
+	background-color: #ee6648;
+	overflow: hidden;
+}
+
+/*____________________________________________________________
+## Illustration Imac Browser
+____________________________________________________________*/
+.illustrationImacBrowser {
+	position: absolute;
+	top: 12px;
+	left: 16px;
+	width: 180px;
+	height: 116px;
+	background-color: #fff;
+}
+
+/*____________________________________________________________
+### Illustration Imac Browser Panel
+____________________________________________________________*/
+.illustrationImacBrowserPanel {
+	width: 100%;
+	height: 10px;
+	background-color: #2a333c;
+}
+.illustrationImacBrowserPanel__buttonsWrap {
+	position: absolute;
+	top: 3px;
+	left: 6px;
+	height: 4px;
+}
+.illustrationImacBrowserPanel__button {
+	float: left;
+	margin-right: 2px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+}
+
+.illustrationImacBrowserPanel__button_exit {
+	background-color: #ff5f56;
+}
+.illustrationImacBrowserPanel__button_minimize {
+	background-color: #febc2e;
+}
+.illustrationImacBrowserPanel__button_screen {
+	background-color: #29c740;
+}
+
+/*____________________________________________________________
+### Illustration Imac Browser Page
+____________________________________________________________*/
+.illustrationImacBrowserPage {
+  width: 100%;
+  height: calc(100% - 10px);
+}
+.illustrationImacBrowserPage__container {
+  width: 100%;
+  height: 100%;
+}
+
+/*____________________________________________________________
+#### Illustration Imac Browser Header
+____________________________________________________________*/
+.illustrationImacBrowserPage__header {
+	position: relative;
+	padding-top: 9px;
+	width: 100%;
+	height: 27px;
+}
+
+.illustrationImacBrowserPage__nav {
+	position: relative;
+	padding-top: 4px;
+	margin: 0 auto;
+	width: 100px;
+	height: 10px;
+	background-color: #c0c0c0;
+}
+.illustrationImacBrowserPage__navItem {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 15px;
+	height: 2px;
+	overflow: hidden;
+
+	&:first-child {
+		margin-left: calc(10px / 2);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #2a333c;
+		animation: slide 3.5s ease infinite;
+	}
+
+	&:nth-child(2) {
+		&:after {
+			animation-delay: .1s;
+		}
+	}
+	&:nth-child(3) {
+		&:after {
+			animation-delay: .2s;
+		}
+	}
+	&:nth-child(4) {
+		&:after {
+			animation-delay: .3s;
+		}
+	}
+}
+
+/*____________________________________________________________
+#### Illustration Imac Browser Main
+____________________________________________________________*/
+.illustrationImacBrowserPage__main {
+	position: relative;
+	padding: 8px;
+	width: 100%;
+	height: 37px;
+	background-color: #ee6648;
+}
+
+.illustrationImacBrowserPage__banner {
+	width: 100%;
+	height: 100%;
+}
+.illustrationImacBrowserPage__img {
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	width: 44px;
+	height: 22px;
+	overflow: hidden;
+
+  &:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		animation: slide 3.5s ease infinite;
+	}
+}
+
+.illustrationImacBrowserPage__descriptionWrap {
+  float: left;
+  width: calc(100% - 54px);
+  height: 20px;
+}
+.illustrationImacBrowserPage__description {
+  position: relative;
+  margin-bottom: 3px;
+  width: 100%;
+  height: 2px;
+  overflow: hidden;
+
+	&:last-child {
+  	width: calc(100% / 2);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #2a333c;
+		animation: slide 3.5s ease infinite;
+	}
+
+	&:nth-child(1) {
+		&:after {
+			animation-delay: .1s;
+		}
+	}
+	&:nth-child(2) {
+		&:after {
+			animation-delay: .2s;
+		}
+	}
+	&:nth-child(3) {
+		&:after {
+			animation-delay: .3s;
+		}
+	}
+	&:nth-child(4) {
+		&:after {
+			animation-delay: .35s;
+		}
+	}
+}
+
+/*____________________________________________________________
+#### Illustration Imac Browser Footer
+____________________________________________________________*/
+.illustrationImacBrowserPage__footer {
+  position: relative;
+  padding: 7px 8px;
+  width: 100%;
+  height: 42px;
+}
+
+.illustrationImacBrowserPage__productList {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+.illustrationImacBrowserPage__productItem {
+  position: relative;
+  float: left;
+  margin-right: 16px;
+  width: 44px;
+  height: 100%;
+
+  &:last-child {
+		margin-right: 0;
+	}
+}
+
+.illustrationImacBrowserPage__productImg {
+  position: relative;
+  margin-bottom: 2px;
+  width: 100%;
+  height: 22px;
+  overflow: hidden;
+
+  &:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #c0c0c0;
+		animation: slide 3.5s ease infinite;
+	}
+}
+
+.illustrationImacBrowserPage__productDescriptionWrap {
+  width: 100%;
+  height: 6px;
+}
+.illustrationImacBrowserPage__productDescription {
+  position: relative;
+  float: left;
+  margin-bottom: 2px;
+  width: 100%;
+  height: 2px;
+  overflow: hidden;
+
+  &:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #2a333c;
+		animation: slide 3.5s ease infinite;
+	}
+
+  &:nth-child(1) {
+		&:after {
+			animation-delay: .1s;
+		}
+	}
+	&:nth-child(2) {
+		&:after {
+			animation-delay: .2s;
+		}
+	}
+}
+
+/*____________________________________________________________
+## Avatar
+____________________________________________________________*/
+.avatarWrap {
+	position: absolute;
+	bottom: 0;
+	right: 30px;
+	width: 250px;
+	height: 356px;
+}
+
+/*____________________________________________________________
+### Head
+____________________________________________________________*/
+.headWrap {
+	position: relative;
+	width: 100%;
+	height: 249px;
+}
+
+/*____________________________________________________________
+#### Hair
+____________________________________________________________*/
+.hair {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 140px;
+	height: 44px;
+}
+.hair__leftSide {
+	position: absolute;
+	width: 120px;
+	height: 44px;
+	border-radius: 60px 0 30px 0;
+	background-color: #000;
+	z-index: 9;
+
+	.blink {
+		position: absolute;
+		height: 5.5px;
+		border-radius: 5px;
+		background-color: #0b3442;
+
+		&:nth-child(1) {
+			top: 29px;
+			left: 25px;
+			width: 26px;
+		}
+		&:nth-child(2) {
+			top: 12px;
+			left: 40px;
+			width: 63px;
+		}
+		&:nth-child(3) {
+			top: 26px;
+			right: 10px;
+			width: 26px;
+		}
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -40px;
+		width: 40px;
+		height: 40px;
+		background-color: #000;
+	}
+}
+
+.hair__rightSide {
+	overflow: hidden;
+	content: '';
+	position: absolute;
+	top: 25px;
+	right: 0;
+	width: 40px;
+	height: 55px;
+	background-color: #000;
+
+  &:after {
+		content: '';
+		position: absolute;
+		top: -16px;
+		left: -16px;
+		width: 50px;
+		height: 40px;
+		border-radius: 0 0 30px 0;
+		background-color: #01243a;
+	}
+}
+
+/*____________________________________________________________
+#### Ears
+____________________________________________________________*/
+.ears {
+	position: absolute;
+	top: 115px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 186px;
+	height: 40px;
+}
+.ear {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #c74b16;
+
+	&:nth-child(2) {
+		right: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: #180812;
+	}
+}
+
+/*____________________________________________________________
+#### Face
+____________________________________________________________*/
+.face {
+	position: absolute;
+	top: 44px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 140px;
+	height: 181px;
+	border-radius: 60px 60px 100px 100px; 
+	background-color: #c74b16;
+	z-index: 2;
+}
+
+/*____________________________________________________________
+##### Top Face
+____________________________________________________________*/
+.eyebrows {
+	position: absolute;
+	top: 29px;
+	left: 50%;
+	transform: translate(-50%);
+	width: 90px;
+	height: 10px;
+}
+.eyebrows__brow {
+	overflow: hidden;
+	position: absolute;
+	width: 30px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #000;
+	z-index: 9;
+
+	&:nth-child(2) {
+		right: 0;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -4px;
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		background-color: #01243a;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 12px;
+		height: 2px;
+		border-radius: 15px;
+		background-color: #fff;
+		opacity: .2;
+	}
+}
+
+.eyebrows__shadow {
+	position: absolute;
+	top: 4px;
+	width: 100%;
+	height: 100%;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 10px;
+		border-radius: 10px;
+		background-color: #5f140e;
+	}
+	&:after {
+		right: 0;
+	}
+}
+
+/*____________________________________________________________
+##### Middle Face
+____________________________________________________________*/
+.eyes {
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 22px;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 12px;
+		height: 22px;
+		border-radius: 6px;
+		background-color: #000;
+		animation: blink 3s ease-in-out infinite;
+	}
+	&:after {
+		right: 0;
+	}
+}
+
+.glasses {
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 4px;
+	height: 4px;
+	background: #000;
+
+	.left,
+	.right {
+		position: absolute;
+		width: 56px;
+		height: 56px;
+		background: transparent;
+		border-radius: 100%;
+		border: 5px solid #000;
+		left: -56px;
+		top: -26px;
+		z-index: 2;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 20px;
+			height: 4px;
+			border-radius: 5px;
+			background-color: #000;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 8px;
+			height: 2px;
+			border-radius: 15px;
+			background-color: #fff;
+			opacity: .4;
+		}
+	}
+	.left {
+
+		&:before {
+			left: -20px;
+		}
+		&:after {
+			left: -17px;
+		}
+	}
+	.right {
+		left: 4px;
+
+		&:before {
+			right: -20px;
+		}
+		&:after {
+			right: -17px;
+		}
+	}
+}
+
+
+.lens {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+
+	.shine {
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: -21px;
+			left: 5px;
+			width: 20px;
+			height: 100px;
+			background: #fff;
+			transform: rotate(30deg);
+			opacity: 0.3;
+		}
+		&:after {
+			width: 5px;
+			left: 30px;
+		}
+	}
+}
+
+/*____________________________________________________________
+##### Bottom Face
+____________________________________________________________*/
+.nose {
+	position: absolute;
+	bottom: 72px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 30px;
+	height: 8px;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: #4d160e;
+	}
+	&:after {
+		right: 0;
+	}
+}
+
+.arm {
+	overflow: hidden;
+	position: absolute;
+	bottom: 28px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(81px - 10px);
+	height: calc(30px - 0px);
+	border-radius: 0 0 50% 50% / 0 0 100% 100%;
+	background-color: #7a1635;
+}
+.arm__pharynx {
+	position: absolute;
+	top: 6px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(57px - 10px);
+	height: calc(11px - 0px);
+	border-radius: 20px;
+	background-color: #480a16;
+}
+.arm__tooth {
+	position: absolute;
+	left: 6px;
+	width: calc(69px - 10px);
+	height: calc(9px - 0px);
+	background-color: #fff;
+	border-radius: 0 0 5px 5px;
+	z-index: 1;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		background-color: #cfdce5;
+	}
+}
+.arm__tongue {
+	position: absolute;
+	bottom: 0;
+	right: 3px;
+	width: calc(58px - 10px);
+	height: calc(16px - 0px);
+	border-radius: 15px 0 0 0;
+	background-color: #dd3e62;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 4px;
+		left: 12px;
+		width: 22px;
+		height: 3px;
+		border-radius: 15px;
+		background-color: #fff;
+		opacity: .2;
+	}
+}
+
+/*____________________________________________________________
+#### Neck
+____________________________________________________________*/
+.neck {
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 58px;
+	height: 31px;
+	background-color: #c74b16;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 58px;
+		height: 18px;
+		border-radius: 0 0 50% 50% / 0 0 100% 100%;
+		background-color: #5f140e;
+	}
+}
+
+/*____________________________________________________________
+### Body
+____________________________________________________________*/
+.bodyWrap {
+	position: relative;
+	width: 100%;
+	height: 107px;
+}
+.bodyWrap__body  {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: red;
+	border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+	background-color: #c6b69d;
+	background-image: linear-gradient(90deg, transparent 20%, rgba(166, 152, 134,.5) 20%);
+	background-size: 20px 20px;
+	overflow: hidden;
+}
+
+.collar {
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 120px;
+	height: 170px;
+	border-radius: 100%;
+	background: #4d5c68;
+}
+
+.shirt {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0; 
+	height: 0;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+	border-top: 200px solid #fafac3;
+}
+
+.button {
+	position: absolute;
+	top: 82px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	background: #4d5c68;
+
+	&:nth-child(2) {
+		top: 102px;
+	}
+}
+
+/*____________________________________________________________
+#### Bow
+____________________________________________________________*/
+.bowWrap {
+	position: absolute;
+	top: -17px;
+	left: 85px;
+	width: 80px;
+	height: 46px;
+}
+.bowWrap__bowShadow {
+	&:before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		width: 0;
+		height: 5px;
+		border-width: 23px 40px;
+		border-style: solid;
+		border-color: transparent #bce1be transparent #bce1be;
+		border-radius: 25px;
+		opacity: .8;
+		z-index: 1;
+	}
+}
+.bowWrap__bowShadow {
+	&:after {
+		content: "";
+		position: absolute;
+		top: 16px;
+		left: 31.5px;
+		width: 17px;
+		height: 19px;
+		border-radius: 2px;
+		background: #bce1be;
+		opacity: .8;
+		z-index: 2;
+	}
+}
+.bowWrap__bow {
+	&:before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 5px;
+		border-width: 23px 40px;
+		border-style: solid;
+		border-color: transparent #9b2d30 transparent #9b2d30;
+		border-radius: 25px;
+		z-index: 1;
+	}
+}
+.bowWrap__bow {
+	&:after {
+		content: "";
+		position: absolute;
+		top: 16px;
+		left: 31.5px;
+		width: 17px;
+		height: 19px;
+		border-radius: 2px;
+		background: #732124;
+		z-index: 2;
+	}
+}
+.bowWrap__crease {
+	position: absolute;
+	top: 21px;
+	left: 17.5px;
+	width: 45px;
+	height: 4px;
+	border-radius: 2px;
+	background: #732124;
+	z-index: 1;
+}
+
+@keyframes blink {
+	0% {
+		transform: scaleY(1);
+	}
+	18% {
+		transform: scaleY(1);
+	}
+	20% {
+		transform: scaleY(0);
+	}
+	25% {
+		transform: scaleY(1);
+	}
+	38% {
+		transform: scaleY(1);
+	}
+	40% {
+		transform: scaleY(0);
+	}
+	45% {
+		transform: scaleY(1);
+	}
+	80% {
+		transform: scaleY(1);
+	}
+}
+
+/*____________________________________________________________
+## Illustration Imac Panel
+____________________________________________________________*/
+.illustrationImac__panel {
+	position: absolute;
+	bottom: -45px;
+	width: 100%;
+	height: 45px;
+	border-radius: 0 0 10px 10px;
+	background-color: #c3cdd1;
+}
+.illustrationImac__panelButton {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background-color: #889ea6;
+}
+
+/*____________________________________________________________
+## Illustration Imac Stand
+____________________________________________________________*/
+.illustrationImac__stand {
+	position: absolute;
+	bottom: -127px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 154px;
+	height: 0; 
+	border-bottom: 82px solid #a4b4ba;
+	border-left: 21px solid transparent;
+	border-right: 21px solid transparent;
+}
+.illustrationImac__standShadow {
+	position: absolute;
+	top: 5px;
+	left: -5px;
+	height: 0; 
+	width: 122px;
+	border-bottom: 16px solid #889ea6;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+}
+.illustrationImac__standBase {
+	position: absolute;
+	top: 82px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 284px;
+	height: 20px;
+	border-radius: 15px;
+	background-color: #b0b7c6;
+}
+
+/*____________________________________________________________
+# Illustration Presentation	
+____________________________________________________________*/
+.illustrationPresentation {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  width: 215px;
+  height: 179px;
+  background-color: #a3d9e3;
+  border-radius: 2px;
+  overflow: hidden;
+  animation: levitation 5s linear infinite;
+}
+
+/*____________________________________________________________
+## Illustration Presentation Panel
+____________________________________________________________*/
+.illustrationPresentationPanel {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #2a333c;
+}
+.illustrationPresentationPanel__buttonsWrap {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  height: 8px;
+}
+.illustrationPresentationPanel__button {
+  float: left;
+  margin-right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.illustrationPresentationPanel__button_exit {
+  background-color: #ff5f56;
+}
+.illustrationPresentationPanel__button_minimize {
+  background-color: #febc2e;
+}
+.illustrationPresentationPanel__button_screen {
+  background-color: #29c740;
+}
+
+/*____________________________________________________________
+## Illustration Presentation Page
+____________________________________________________________*/
+.illustrationPresentationPage {
+  padding: 8px;
+  width: 100%;
+  height: calc(100% - 20px);
+}
+.illustrationPresentationPage__container {
+  width: 100%;
+  height: 100%;
+}
+
+/*____________________________________________________________
+### Illustration Presentation Banner
+____________________________________________________________*/
+.illustrationPresentationPage__banner {
+	position: relative;
+	width: 100%;
+	height: 72px;
+	margin-bottom: 6px;
+}
+
+.illustrationPresentationPage__img {
+	position: relative;
+	float: right;
+	margin-left: 10px;
+	width: 93px;
+	height: 72px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+/*____________________________________________________________
+#### Picture
+____________________________________________________________*/
+.picture {
+	position: absolute;
+	width: 93px;
+	height: 72px;
+	border: 6px solid #e1e6e8;
+	background-color: #57c2cb;
+	overflow: hidden;
+	animation: changeDay 10s linear infinite;
+}
+.illustrationImac__display {
+	.picture {
+		top: 50px;
+		right: 10px;
+		animation-delay: 3s;
+	}
+
+	.picture__dayWrap {
+		animation-delay: 3s;
+	}
+}
+
+.picture__mountain {
+	position: absolute;
+	bottom: 0;
+
+	@mixin pictureMountainChild($nthChild, $side, $sideInent, $borderWidth, $borderHeight, $bg) {
+		&:nth-child(#{$nthChild}) {
+			#{$side}: #{$sideInent};
+			border-left: #{$borderWidth}px solid transparent;
+			border-right: #{$borderWidth}px solid transparent;
+			border-bottom: #{$borderHeight}px solid #{$bg};
+		}
+	}
+
+	@include pictureMountainChild(1, left, 0, 22.5, 24, #171b25);
+	@include pictureMountainChild(2, right, -20, 36, 39, #272f3a);
+	@include pictureMountainChild(3, left, 26, 10, 10, #3e4955);
+}
+
+.picture__dayWrap {
+	position: absolute;
+	top: 15px;
+	left: 8px;
+	width: 70px;
+	height: 70px;
+	animation: rotateRays 10s linear infinite;
+}
+
+.picture__dayWrap,
+.picture__sun,
+.picture__moon {
+	border-radius: 50%;
+}
+
+.picture__sun,
+.picture__moon {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.picture__sun {
+	top: -5px;
+	width: 15px;
+	height: 15px;
+	background-color: #fff;
+}
+.picture__moon {
+	bottom: -4px;
+	width: 17px;
+	height: 17px;
+	box-shadow: 4px 4px 0 0 #FEC712;
+	transform: rotate(120deg);
+}
+
+
+.illustrationPresentationPage__descriptionWrap {
+  float: right;
+  width: calc(100% - 103px);
+  height: 20px;
+}
+.illustrationPresentationPage__description {
+  position: relative;
+  margin-bottom: 6px;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+
+	&:last-child {
+		margin-bottom: 0;
+		width: 80%;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #cceaf0;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@mixin presentationDescriptionChild($nthChild, $delay) {
+		&:nth-child(#{$nthChild}) {
+			&:after {
+				animation-delay: #{$delay}s;
+			}
+		}
+	}
+
+	@include presentationDescriptionChild(1, .1);
+	@include presentationDescriptionChild(2, .2);
+	@include presentationDescriptionChild(3, .3);
+	@include presentationDescriptionChild(4, .35);
+	@include presentationDescriptionChild(5, .4);
+	@include presentationDescriptionChild(6, .45);
+}
+
+/*____________________________________________________________
+### Illustration Presentation Form
+____________________________________________________________*/
+.illustrationPresentationPage__form {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 78px);
+}
+.illustrationPresentationPage__input {
+  margin-bottom: 6px;
+  width: 100%;
+  height: 16px;
+  border-radius: 3px;
+  background-color: #fff;
+
+  &:last-child {
+		height: calc(100% - 22px);
+	}
+}
+
+/*____________________________________________________________
+# Illustration Settings
+____________________________________________________________*/
+.illustrationSettings {
+	position: absolute;
+	bottom: 115px;
+	left: 5px;
+	padding: 8px 14px;
+	width: 206px;
+	height: 56px;
+	border-radius: 5px;
+	background-color: #2c8291;
+	animation: levitation 5s linear infinite 3s;
+}
+.illustrationSettings__container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+## Illustration Settings Gear
+____________________________________________________________*/
+.illustrationSettings__gearWrap {
+	position: relative;
+	float: left;
+	margin-right: 12px;
+	width: 40px;
+	height: 40px;
+}
+
+.illustrationSettings__gear {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:  50px;
+	height: 50px;
+}
+.illustrationSettings__gear svg {
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	fill: none;
+	stroke: #fff;
+	stroke-width: 35px;
+	animation: rotateRays 7s linear infinite;
+}
+.illustrationSettings__gear .teeth {
+	position: absolute;
+	top: 19.32%;
+	left: 19.32%;
+	transform: translate(-19.32%, -19.32%);
+}
+
+.illustrationSettings__gearCircle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 29px;
+	height: 29px;
+	border: 8px solid #fff;
+	background-color: #2c8291;
+	border-radius: 50%;
+}
+
+/*____________________________________________________________
+## Illustration Settings Line
+____________________________________________________________*/
+.illustrationSettings__lineWrap {
+	position: relative;
+	float: left;
+	padding-top: 6.5px;
+	width: calc(100% - 52px);
+	height: 40px;
+}
+.illustrationSettings__line {
+	position: relative;
+	width: 100%;
+	height: 3px;
+	margin-bottom: 5px;
+	overflow: hidden;
+
+	&:last-child {
+		margin-bottom: 0;
+		width: 60%;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@mixin settingLineChild($nthChild, $delay) {
+		&:nth-child(#{$nthChild}) {
+			&:after {
+				animation-delay: #{$delay}s;
+			}
+		}
+	}
+
+	@include settingLineChild(1, .1);
+	@include settingLineChild(2, .2);
+	@include settingLineChild(3, .3);
+	@include settingLineChild(4, .35);
+}
+
+/*____________________________________________________________
+# Animation Pack
+____________________________________________________________*/
+@keyframes openFolder {
+	0% {
+		left: 0;
+		transform: skew(0);
+	}
+	20% {
+		left: -5px;
+		height: 26px;
+		transform: skew(20deg);
+	}
+	80% {
+		left: -5px;
+		height: 26px;
+		transform: skew(20deg);
+	}
+	100% {
+		left: 0;
+		height: 31px;
+		transform: skew(0);
+	}
+}
+
+@keyframes openFile {
+	0% {
+		bottom: 0;
+	}
+	20% {
+		bottom: 10px;
+	}
+	80% {
+		bottom: 10px;
+	}
+	100% {
+		bottom: 0;
+	}
+}
+
+@keyframes slide {
+	0% {
+		left: -100%;
+	}
+	22% {
+		left: 0%;
+	}
+	78% {
+		left: 0%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+
+@keyframes scrollCode {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: -20px;
+	}
+}
+
+@keyframes rotateRays {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes changeDay {
+	0% {
+		background-color: #7dcbd8;
+	}
+	25% {
+		background-color: #2a333c;
+	}
+	60% {
+		background-color: #2a333c;
+	}
+	75% {
+		background-color: #7dcbd8;
+	}
+	100% {
+		background-color: #7dcbd8;
+	}
+}
+
+@keyframes lineDiagram {
+	0% {
+		height: 10%;
+	}
+	50% {
+		height: 100%;
+	}
+	100% {
+		left: 10%;
+	}
+}
+
+@keyframes levitation {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(6px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
