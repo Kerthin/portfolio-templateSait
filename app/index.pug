@@ -3,42 +3,43 @@ html
 		include template/head.pug
 		include template/partials/_general.pug
 	body
+		//- Container
 		.container
 
-			//- Home section
+			//-- Home section
 			section.home
 
-				//- Illustration
+				//--- Illustration
 				.illustration
 
-					//- Blob circle
-					svg#blob-js(viewBox="0 0 1000 1000")
-						path#blob__path-js
+					//---- Illustration Blob Circle
+					svg#blob-js.illustrationBlob(viewBox="0 0 1000 1000")
+						path#blob__path-js.illustrationBlob__path
 
-					//- Illustration Bubbles Wrap
+					//---- Illustration Bubbles Wrap
 					ul.illustrationBubblesWrap
 						- for (var n = 0; n < 12; n++)
 							li.illustrationBubble
 
-					//- Illustration Dashed Frame
+					//---- Illustration Dashed Frame
 					- var n = 1;
 					while n <= 3
 						.illustrationDashedFrame(class=`dashedFrame_type${n++}`)
 
-					//- Illustration Circle Charts
+					//---- Illustration Circle Charts
 					- var n = 1;
 					while n <= 2
 						.illustrationCircleChart(class=`illustrationCircleChart_type${n++}`)
 
-					//- Illustration Stickers
+					//---- Illustration Stickers
 					- var n = 1;
 					while n <= 2
 						.illustrationSticker(class=`illustrationSticker_type${n++}`)
-							ul.illustrationSticker__noteWrap
+							ul.illustrationSticker__lineWrap
 								- for (var j = 0; j < 3; j++)
-									li.illustrationSticker__note
+									li.illustrationSticker__line
 
-					//- Illustration Site Layout
+					//---- Illustration Site Layout
 					.illustrationSiteLayout
 						.illustrationSiteLayout__codeWrap
 							.illustrationSiteLayout__scrollBox
@@ -48,18 +49,18 @@ html
 											- for (var j = 0; j < 7; j++)
 												.illustrationSiteLayout__codeLine
 
-					//- Illustration Dialog
+					//---- Illustration Dialog
 					ul.illustrationDialog
 						- for (var n = 0; n < 5; n++)
 							li.illustrationDialog__line
 
-					//- Illustration Folder
+					//---- Illustration Folder
 					.illustrationFolder
 						ul.illustrationFolder__file
 							- for (var n = 0; n < 5; n++)
 								li.illustrationFolder__line
 
-					//- Illustration Books
+					//---- Illustration Books
 					.illustrationBooks
 						.illustrationBooks__book
 						.illustrationBooks__book
@@ -67,48 +68,49 @@ html
 							- for (var n = 0; n < 4; n++)
 								.illustrationBooks__binding
 
-					//- Illustration Analytics
+					//---- Illustration Analytics
 					.illustrationAnalytics
 						.illustrationAnalyticsPanel
 							.illustrationAnalyticsPanel__buttonsWrap
 								each val, index in ['exit', 'minimize', 'screen']
-									.illustrationAnalyticsPanel__button(class=`illustrationPresentationPanel__button_${val}`)
+									.illustrationAnalyticsPanel__button(class=`__button_${val}`)
 
-						//-- Illustration Analytics	Page
+						//----- Illustration Analytics	Page
 						.illustrationAnalyticsPage
 							.illustrationAnalyticsPage__container
 
-								//--- Illustration Analytics Diagram
+								//------ Illustration Analytics Diagram
 								ul.illustrationAnalyticsPage__diagramWrap
 									- for (var n = 0; n < 4; n++)
 										li.illustrationAnalyticsPage__diagram
 
-								//--- Illustration Analytics Banner
+								//------ Illustration Analytics Banner
 								.illustrationAnalyticsPage__banner
 
-									//---- Illustration Analytics Description
-									ul.illustrationAnalyticsPage__descriptionWrap
+									//------- Illustration Analytics Description
+									ul.illustrationAnalyticsPage__lineWrap
 										- for (var n = 0; n < 8; n++)
-											li.illustrationAnalyticsPage__description
+											li.illustrationAnalyticsPage__line
 
-									//---- Illustration Analytics Product List
+									//------- Illustration Analytics Product List
 									ul.illustrationAnalyticsPage__productList
 										- for (var n = 0; n < 4; n++)
 											li.illustrationAnalyticsPage__productItem
 												.illustrationAnalyticsPage__productImg
-												ul.illustrationAnalyticsPage__productDescriptionWrap
+												ul.illustrationAnalyticsPage__productLineWrap
 													- for (var j = 0; j < 3; j++)
-														li.illustrationAnalyticsPage__productDescription
+														li.illustrationAnalyticsPage__productLine
 
-					//- Illustration Imac
+					//---- Illustration Imac
 					.illustrationImac
+						//----- Illustration Imac Display
 						.illustrationImac__display
 
-							//-- Illustration Imac Editor
+							//------ Illustration Imac Editor
 							.illustrationImacEditor
 								.illustrationImacEditorPanel
 
-								//--- Illustration Imac	Editor Code
+								//------- Illustration Imac	Editor Code
 								.illustrationImacEditorCodeWrap
 									.illustrationImacEditorCodeWrap__scrollBox
 										- for (var n = 0; n < 2; n++)
@@ -118,26 +120,26 @@ html
 														- for (var x = 0; x < 10; x++)
 															.illustrationImacEditorCodeWrap__codeLine
 
-							//-- Illustration Imac Browser
+							//------ Illustration Imac Browser
 							.illustrationImacBrowser
 
-								//--- Illustration Imac Browser Panel
+								//------- Illustration Imac Browser Panel
 								.illustrationImacBrowserPanel
 									.illustrationImacBrowserPanel__buttonsWrap
 										each val, index in ['exit', 'minimize', 'screen']
-											.illustrationImacBrowserPanel__button(class=`illustrationImacBrowserPanel__button_${val}`)
+											.illustrationImacBrowserPanel__button(class=`__button_${val}`)
 
-								//--- Illustration Imac Browser Page
+								//------- Illustration Imac Browser Page
 								.illustrationImacBrowserPage
 									.illustrationImacBrowserPage__container
 
-										//---- Illustration Imac Browser Header
+										//-------- Illustration Imac Browser Header
 										header.illustrationImacBrowserPage__header
 											ul.illustrationImacBrowserPage__nav
 												- for (var n = 0; n < 4; n++)
 													li.illustrationImacBrowserPage__navItem
 
-										//---- Illustration Imac Browser Main
+										//-------- Illustration Imac Browser Main
 										section.illustrationImacBrowserPage__main
 											.illustrationImacBrowserPage__banner
 												.illustrationImacBrowserPage__img
@@ -145,7 +147,7 @@ html
 													- for (var n = 0; n < 4; n++)
 														li.illustrationImacBrowserPage__description
 
-										//---- Illustration Imac Browser Footer
+										//-------- Illustration Imac Browser Footer
 										footer.illustrationImacBrowserPage__footer
 											ul.illustrationImacBrowserPage__productList
 												- for (var n = 0; n < 3; n++)
@@ -155,7 +157,7 @@ html
 															- for (var j = 0; j < 2; j++)
 																li.illustrationImacBrowserPage__productDescription
 
-							//-- Picture
+							//------ Picture
 							.picture
 								.picture__dayWrap
 									.picture__sun
@@ -164,84 +166,84 @@ html
 									- for (var n = 0; n < 3; n++)
 										.picture__mountain
 
-							//-- Avatar
+							//------ Avatar
 							.avatarWrap
 								.avatar
 
-									//--- Head
+									//------- Head
 									.headWrap
-										//---- Hair
+										//-------- Hair
 										.hair
 											.hair__leftSide
 												- for (var n = 0; n < 3; n++)
 													.blink
 											.hair__rightSide
 
-										//---- Ears
+										//-------- Ears
 										.ears
 											.ear
 											.ear
 
-										//---- Face
+										//-------- Face
 										.face
-											//----- Top Face
+											//--------- Top Face
 											.eyebrows
 												.eyebrows__brow
 												.eyebrows__brow
 												.eyebrows__shadow
-											//----- Middle Face
+											//--------- Middle Face
 											.eyes
 											.glasses
 												each val, index in ['left', 'right']
 													div(class=`${val}`)
 														.lens
 															.shine
-											//----- Bottom Face
+											//--------- Bottom Face
 											.nose
 											.arm
 												each val, index in ['pharynx', 'tooth', 'tongue']
 													div(class=`arm__${val}`)
 
-										//---- Neck
+										//-------- Neck
 										.neck
 
-									//--- Body
+									//------- Body
 									.bodyWrap
 										.bodyWrap__body
 											.collar
 												.shirt
 												.button
 												.button
-										//---- Bow
+										//-------- Bow
 										.bowWrap
 											each val, index in ['bowShadow', 'bow', 'crease']
 												div(class=`bowWrap__${val}`)
 
-						//-- Illustration Imac Panel
+						//----- Illustration Imac Panel
 						.illustrationImac__panel
 							.illustrationImac__panelButton
 
-						//-- Illustration Imac Stand
+						//----- Illustration Imac Stand
 						.illustrationImac__stand
 							.illustrationImac__standShadow
 							.illustrationImac__standBase
 
-					//- Illustration Presentation
+					//---- Illustration Presentation
 					.illustrationPresentation
-						//-- Illustration Presentation Panel
+						//----- Illustration Presentation Panel
 						.illustrationPresentationPanel
 							.illustrationPresentationPanel__buttonsWrap
 								each val, index in ['exit', 'minimize', 'screen']
-									.illustrationPresentationPanel__button(class=`illustrationPresentationPanel__button_${val}`)
+									.illustrationPresentationPanel__button(class=`__button_${val}`)
 
-						//-- Illustration Presentation Page
+						//----- Illustration Presentation Page
 						.illustrationPresentationPage
 							.illustrationPresentationPage__container
 
-								//--- Illustration Presentation Banner
+								//------ Illustration Presentation Banner
 								.illustrationPresentationPage__banner
 									.illustrationPresentationPage__img
-										//---- Picture
+										//------- Picture
 										.picture
 											.picture__dayWrap
 												.picture__sun
@@ -249,20 +251,20 @@ html
 											.picture__mountainsWrap
 												- for (var n = 0; n < 3; n++)
 													.picture__mountain
-									ul.illustrationPresentationPage__descriptionWrap
+									ul.illustrationPresentationPage__lineWrap
 										- for (var n = 0; n < 6; n++)
-											li.illustrationPresentationPage__description
+											li.illustrationPresentationPage__line
 
-								//--- Illustration Presentation Form
+								//------ Illustration Presentation Form
 								.illustrationPresentationPage__form
 									.illustrationPresentationPage__input
 									.illustrationPresentationPage__input
 
-					//- Illustration Settings
+					//---- Illustration Settings
 					.illustrationSettings
 						.illustrationSettings__container
 
-							//-- Illustration Settings Gear
+							//----- Illustration Settings Gear
 							.illustrationSettings__gearWrap
 								.illustrationSettings__gear
 									svg(viewBox="-208 -208 300 300")
@@ -276,11 +278,11 @@ html
 													use(xlink:href="#tooth" x="85")
 								.illustrationSettings__gearCircle
 
-							//-- Illustration Settings Line
+							//----- Illustration Settings Line
 							ul.illustrationSettings__lineWrap
 								- for (var n = 0; n < 4; n++)
 									li.illustrationSettings__line
-			//- About section
+			//-- About section
 			section.about
 
 		include template/partials/_mainScripts.pug
