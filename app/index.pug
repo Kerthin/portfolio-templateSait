@@ -143,9 +143,9 @@ html
 										section.illustrationImacBrowserPage__main
 											.illustrationImacBrowserPage__banner
 												.illustrationImacBrowserPage__img
-												ul.illustrationImacBrowserPage__descriptionWrap
+												ul.illustrationImacBrowserPage__lineWrap
 													- for (var n = 0; n < 4; n++)
-														li.illustrationImacBrowserPage__description
+														li.illustrationImacBrowserPage__line
 
 										//-------- Illustration Imac Browser Footer
 										footer.illustrationImacBrowserPage__footer
@@ -153,9 +153,9 @@ html
 												- for (var n = 0; n < 3; n++)
 													li.illustrationImacBrowserPage__productItem
 														.illustrationImacBrowserPage__productImg
-														ul.illustrationImacBrowserPage__productDescriptionWrap
+														ul.illustrationImacBrowserPage__productLineWrap
 															- for (var j = 0; j < 2; j++)
-																li.illustrationImacBrowserPage__productDescription
+																li.illustrationImacBrowserPage__productLine
 
 							//------ Picture
 							.picture
@@ -284,5 +284,102 @@ html
 									li.illustrationSettings__line
 			//-- About section
 			section.about
+
+				//--- Card Wrap
+				.cardWrap
+
+					//---- Learnability Icon
+					.iconCard
+						.learnabilityIcon
+
+							//----- Learnability Editor
+							.learnabilityEditor
+
+								//------ Learnability Editor Panel
+								.learnabilityEditor__panel
+									.learnabilityEditor__buttonsWrap
+										each val, index in ['exit', 'minimize', 'screen']
+											.learnabilityEditor__button(class=`__button_${val}`)
+
+								//------ Learnability Editor Code
+								.learnabilityEditor__codeWrap
+									.learnabilityEditor__scrollBox
+										ul.learnabilityEditor__codeList
+											- for (var n = 0; n < 7; n++)
+												li.learnabilityEditor__codeItem
+													- for (var j = 0; j < 5; j++)
+														.learnabilityEditor__codeLine
+
+							//----- Learnability Keyboard
+							.learnabilityKeyboard
+								each val, index in [14, 14, 13, 12, 10]
+									ul.learnabilityKeyboard__line
+										- for (var n = 0; n < val; n++)
+											li.learnabilityKeyboard__button
+
+							//----- Learnability Gear
+							.learnabilityGear
+								.learnabilityGear__gear
+									svg(viewBox="-208 -208 300 300")
+										defs
+											line#learnabilityGearTooth(x1="-2" x2="22")
+										g.teeth
+											- var n = 0;
+											- var angle = 30;
+											while n < 12
+												g(transform=`rotate(${n++ * angle})`)
+													use(xlink:href="#learnabilityGearTooth" x="85")
+								.learnabilityGear__gearCircle
+
+					//---- Fast Icon
+					.iconCard
+						.fastIcon
+
+							//----- Fast Browser
+							.fastBrowser
+
+								//------ Fast Browser Panel
+								.fastBrowser__panel
+									.fastBrowser__buttonsWrap
+										each val, index in ['exit', 'minimize', 'screen']
+											.fastBrowser__button(class=`__button_${val}`)
+									.fastBrowser__input
+
+								//------ Fast Browser Page
+								.fastBrowser__page
+									ul.fastBrowser__lineWrap
+										- for (var n = 0; n < 6; n++)
+											li.fastBrowser__line
+
+							//----- Fast Clock Wrap
+							.fastClockWrap
+
+								//------ Fast Clock Gear
+								.fastClockWrap__gear
+									svg(viewBox="-208 -208 300 300")
+										defs
+											line#clockGearTooth(x1="-2" x2="18")
+										g.teeth
+											- var n = 0;
+											- var angle = 30;
+											while n < 12
+												g(transform=`rotate(${n++ * angle})`)
+													use(xlink:href="#clockGearTooth" x="85")
+
+								//------ Fast Clock
+								.fastClockWrap__clock
+									.clockFaceContainer
+										.clockFaceContainer__clockHand
+										.clockFaceContainer__clockCircle
+
+										svg(viewBox="-208 -208 300 300")
+											defs
+												line#clockDealTooth(x1="-2" x2="10")
+											g.teeth
+												- var n = 0;
+												- var angle = 9;
+												while n < 40
+													g(transform=`rotate(${n++ * angle})`)
+														use(xlink:href="#clockDealTooth" x="85")
 
 		include template/partials/_mainScripts.pug

@@ -66,7 +66,7 @@ gulp.task('js:dist',	function()	{
 	gulp.src(path.app.js)
 		.pipe(rigger())
 		.pipe(sourcemaps.init())
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.dist.js))
 		.pipe(reload({stream:	true}));
