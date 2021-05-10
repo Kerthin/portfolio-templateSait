@@ -382,4 +382,205 @@ html
 													g(transform=`rotate(${n++ * angle})`)
 														use(xlink:href="#clockDealTooth" x="85")
 
+					//---- Dynamic Icon
+					.iconCard
+						.dynamicIcon
+
+							//----- Dynamic Browser
+							.dynamicBrowser
+
+								//------ Dynamic Browser Panel
+								.dynamicBrowser__panel
+									.dynamicBrowser__buttonsWrap
+										each val, index in ['exit', 'minimize', 'screen']
+											.dynamicBrowser__button(class=`__button_${val}`)
+
+								//------ Dynamic Browser Header
+								header.dynamicBrowser__header
+									ul.dynamicBrowser__lineWrap
+										- for (var n = 0; n < 4; n++)
+											li.dynamicBrowser__line
+									.dynamicBrowser__title
+									.dynamicBrowser__subtitle
+
+								//------ Dynamic Browser Main
+								section.dynamicBrowser__main
+									.landscape
+										.landscapePicture
+											.landscapePicture__bg
+											.landscapePicture__dayWrap
+												.landscapePicture__sun
+												.landscapePicture__moon
+											.landscapePicture__mountainsWrap
+												.landscapePicture__mountain
+												.landscapePicture__mountain
+
+								//------ Dynamic Browser Footer
+								footer.dynamicBrowser__footer
+									ul.dynamicBrowser__productList
+										- for (var n = 0; n < 3; n++)
+											li.dynamicBrowser__product
+												.dynamicBrowser__productImg
+												.dynamicBrowser__productLineWrap
+													- for (var j = 0; j < 3; j++)
+														.dynamicBrowser__productLine
+
+							//----- Dynamic Dialog
+							mixin dynamicDialogMix(side, lineIteration)
+								ul.dynamicDialog(class=`dynamicDialog_${side}`)
+									- for (var n = 0; n < lineIteration; n++)
+										li.dynamicDialog__line
+
+							+dynamicDialogMix('left', '4')
+							+dynamicDialogMix('right', '3')
+
+							//----- Dynamic Dashed Frame
+							.dynamicDashedFrame
+
+							//----- Dynamic Chart
+							ul.dynamicChart
+								- for (var n = 0; n < 5; n++)
+									li.dynamicChart__line
+
+					//---- Responsive Icon
+					.iconCard
+						.responsiveIcon
+
+							//----- Responsive Imac
+							.respImac
+
+								//------ Responsive Imac Display
+								.respImac__display
+
+									//------- Responsive Browser
+									.respBrowser
+
+										//-------- Responsive Browser Panel
+										.respBrowser__panel
+											.respBrowser__buttonsWrap
+												each val, index in ['exit', 'minimize', 'screen']
+													.respBrowser__button(class=`__button_${val}`)
+
+										//-------- Responsive Browser Page
+										.respBrowser__page
+											.respBrowser__pageLayout
+
+												//--------- Responsive Browser Nav
+												.respBrowser__nav
+
+												//--------- Responsive Browser Banner
+												.respBrowser__banner
+
+												//--------- Responsive Browser Product List
+												ul.respBrowser__productList
+													- for (var n = 0; n < 3; n++)
+														li.respBrowser__product
+															.respBrowser__productImg
+															.respBrowser__productLineWrap
+																- for (var j = 0; j < 2; j++)
+																	.respBrowser__productLine
+
+								//------ Responsive Imac Panel
+								.respImac__panel
+
+								//------ Responsive Imac Stand
+								.respImac__stand
+									.respImac__standShadow
+									.respImac__standBase
+
+							//----- Responsive Ipad
+							.respIpad
+
+								//------ Responsive Ipad Display
+								.respIpad__display
+
+									//------- Ipad Browser
+									.ipadBrowser
+
+										//-------- Ipad Browser Nav
+										.ipadBrowser__nav
+
+										//-------- Ipad Browser Banner
+										.ipadBrowser__banner
+
+										//-------- Responsive Ipad Product List
+										ul.ipadBrowser__productList
+											- for (var n = 0; n < 3; n++)
+												li.ipadBrowser__product
+													.ipadBrowser__productImg
+													.ipadBrowser__productLineWrap
+														- for (var j = 0; j < 3; j++)
+															.ipadBrowser__productLine
+
+								//------ Responsive Ipad Camera
+								.respIpad__camera
+
+								//------ Responsive Ipad Button
+								.respIpad__button
+
+							//----- Responsive Iphone
+							.respIphone
+
+								//------ Responsive Iphone Display
+								.respIphone__display
+
+									//------- Iphone Browser
+									.iphoneBrowser
+
+										//-------- Iphone Browser Nav
+										.iphoneBrowser__nav
+
+										//-------- Responsive Iphone Product List
+										ul.iphoneBrowser__productList
+											- for (var n = 0; n < 2; n++)
+												li.iphoneBrowser__product
+													.iphoneBrowser__productImg
+													.iphoneBrowser__productLineWrap
+														- for (var j = 0; j < 2; j++)
+															.iphoneBrowser__productLine
+
+								//------ Responsive Iphone Camera
+								.respIphone__camera
+
+								//------ Responsive Iphone Button
+								.respIphone__button
+
+					//---- Sociable Icon
+					.iconCard
+						.sociableIcon
+
+							//----- Sociable Link
+							mixin sociableLinkMix(position, name)
+								.sociableLink(class=`sociableLink_${position}`)
+									.sociableLink__figure(class=`sociableLink__figure_${name}`)
+
+							+sociableLinkMix('posLC', 'mail')
+							+sociableLinkMix('posLT', 'money')
+							+sociableLinkMix('posCT', 'tag')
+							+sociableLinkMix('posRT', 'percent')
+							+sociableLinkMix('posRC', 'and')
+
+							//----- Sociable Display
+							.sociableDisplay
+
+								//------ Sociable Panel
+								mixin sociableDisplayPanelMix(side, lineIteration)
+									ul.sociableDisplay__panel(class=`sociableDisplay_${side}Side`)
+										- for (var n = 0; n < lineIteration; n++)
+											li.sociableDisplay__line
+
+								+sociableDisplayPanelMix('left', '6')
+								+sociableDisplayPanelMix('right', '4')
+
+								//------ Sociable Avatar
+								.sociableDisplay__avatar
+
+								//------ Sociable Buttons Wrap
+								ul.sociableDisplay__buttonsWrap
+									- for (var n = 0; n < 2; n++)
+										li.sociableDisplay__button
+
+							//----- Sociable Keyboard
+							.sociableKeyboard
+
 		include template/partials/_mainScripts.pug
