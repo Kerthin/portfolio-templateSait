@@ -62,7 +62,77 @@
 			#### Illustration Settings
 				##### Illustration Settings Gear
 				##### Illustration Settings Line
+	## About section
+		### Card wrap
+			#### Learnability Icon
+				##### Learnability Editor
+					###### Learnability Editor Panel
+					###### Learnability Editor Code
+				##### Learnability Keyboard
+				##### Learnability Gear
+			#### Fast Icon
+				##### Fast Browser
+					###### Fast Browser Panel
+					###### Fast Browser Page
+				##### Fast Clock Wrap
+					###### Fast Clock Gear
+					###### Fast Clock
+			#### Dynamic Icon
+				##### Dynamic Browser
+					###### Dynamic Browser Panel
+					###### Dynamic Browser Header
+					###### Dynamic Browser Main
+					###### Dynamic Browser Footer
+				##### Dynamic Dialog
+				##### Dynamic Dashed Frame
+				##### Dynamic Chart
+			#### Responsive Icon
+				##### Responsive Imac
+					###### Responsive Imac Display
+						####### Responsive Browser
+							######## Responsive Browser Panel
+							######## Responsive Browser Page
+								######### Responsive Browser Nav
+								######### Responsive Browser Banner
+								######### Responsive Browser Product List
+					###### Responsive Imac Panel
+					###### Responsive Imac Stand
+				##### Responsive Ipad
+					###### Responsive Ipad Display
+						####### Ipad Browser
+							######## Ipad Browser Nav
+							######## Ipad Browser Banner
+							######## Responsive Ipad Product List
+					###### Responsive Ipad Camera
+					###### Responsive Ipad Button
+				##### Responsive Iphone
+					###### Responsive Iphone Display
+						####### Iphone Browser
+							######## Iphone Browser Nav
+							######## Responsive Iphone Product List
+					###### Responsive Iphone Camera
+					###### Responsive Iphone Button
+			#### Sociable Icon
+				##### Sociable Link
+				##### Sociable Display
+					###### Sociable Panel
+					###### Sociable Avatar
+					###### Sociable Buttons Wrap
+				##### Sociable Keyboard
+			#### Intuitive Icon
+				##### Intuitive Rays
+				##### Intuitive Lamp
+				##### Intuitive Lamp Circle
+				##### Intuitive Brain
+				##### Intuitive Play
+				##### Intuitive Figures
+				##### Intuitive Dialog
+				##### Intuitive Landscape
+				##### Intuitive Neck
+				##### Intuitive Base Housing
 # Animation Pack
+	## Animation Illustration
+	## Animation Icons
 
 ____________________________________________________________*/
 
@@ -192,7 +262,7 @@ $media-screen-720: 720px;
 $media-screen-642: 642px;
 $media-screen-480: 480px;
 
-$media-screen-410: 410px;
+$media-screen-410: 414px;
 $media-screen-375: 375px;
 $media-screen-360: 360px;
 $media-screen-320: 320px;
@@ -3745,16 +3815,16 @@ ____________________________________________________________*/
 
 			.sociableLink__figure {
 				top: #{$topFigure};
-				#{$sideFigure}: #{$sideInentFigure}px;
+				#{$sideFigure}: #{$sideInentFigure};
 			}
 		}
 	}
 
-	@include sociableLinkPos(LC, 50%, left, -10px, '1px 0 0 0', 0, -7, left, -12);
-	@include sociableLinkPos(LT, -10px, left, -1px, '1px 1px 0 0', .8, -7, left, -12);
-	@include sociableLinkPos(CT, -10px, left, 50%, '0 0 0 1px', 1.5, -12, left, -7);
-	@include sociableLinkPos(RT, -10px, right, -1px, '1px 0 0 1px', 2.2, -7, right, -12);
-	@include sociableLinkPos(RC, 50%, right, -10px, '1px 0 0 0', 2.9, -7, right, -12);
+	@include sociableLinkPos(LC, 50%, left, -10px, '1px 0 0 0', 0, -7px, left, -12px);
+	@include sociableLinkPos(LT, -10px, left, -1px, '1px 1px 0 0', .8, -7px, left, -12px);
+	@include sociableLinkPos(CT, -10px, left, 50%, '0 0 0 1px', 1.5, -12px, left, -7px);
+	@include sociableLinkPos(RT, -10px, right, -1px, '1px 0 0 1px', 2.2, -7px, right, -12px);
+	@include sociableLinkPos(RC, 50%, right, -10px, '1px 0 0 0', 2.9, -7px, right, -12px);
 
 	&:nth-child(2),
 	&:nth-child(4) {
@@ -3891,7 +3961,7 @@ ____________________________________________________________*/
 	height: 18px;
 	border-radius: 50%;
 	background-color: $palette-tertiary;
-	background-image: url('https://s576man.storage.yandex.net/rdisk/1fee0b58e0ad20e8c7e752cf1e8c7337d3e9af5d45161df668b90b4aedd179fa/6099fa14/G-KrMnUA7fvpyJmlT7znEjPfA1D9tLNAmlG0pjwqesgGnzLSxItQ8BMYnQMBbQJTtlCzWWE_G6Cy8r_vm1S1tg==?uid=0&filename=avatar.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&fsize=65687&hid=99fccb2d05866caae3b225e38b9d20b7&media_type=image&tknv=v2&etag=05d99321de948f7f4c24164eec708a15&rtoken=6hoo64XDg2GK&force_default=no&ycrid=na-849d52c41d42c66ec900cb240412d603-downloader24h&ts=5c2058023ad00&s=a6509766d2a7d8ba59637fae0918e89f32eed7bf90a542ffbc8e6c654101ab33&pb=U2FsdGVkX1-b3_Qtf46pn-Pwp1X3hgj8wk6-8_LRg8lzlQrsLChTTU2xQTtc0LroBsimhJzcVz-jx6_1oQjBvkmsgH0JiLavk_qasfhNEoY');
+	background-image: url('https://i.pinimg.com/originals/05/d9/93/05d99321de948f7f4c24164eec708a15.png');
 	background-repeat: no-repeat;
 	background-position: center 2px;
 	background-size: contain;
@@ -3934,45 +4004,342 @@ ____________________________________________________________*/
 }
 
 /*____________________________________________________________
+#### Intuitive Icon
+____________________________________________________________*/
+.intuitiveIcon {
+	@extend %centering;
+	width: 50px;
+	height: 59px;
+}
+
+/*____________________________________________________________
+##### Intuitive Rays
+____________________________________________________________*/
+.intuitiveRays {
+	position: absolute;
+	top: -30px;
+	left: -30px;
+	width: 110px;
+	height: 110px;
+
+	svg {
+		position: absolute;
+		max-width: 100%;
+		max-height: 100%;
+		fill: none;
+		stroke: $palette-secondary;
+		stroke-width: 5px;
+		stroke-linecap: round;
+		animation: rotateRays 3s linear infinite;
+	}
+	.teeth {
+		position: absolute;
+		top: 19.32%;
+		left: 19.32%;
+		transform: translate(-19.32%, -19.32%);
+	}
+}
+
+/*____________________________________________________________
+##### Intuitive Lamp
+____________________________________________________________*/
+.intuitiveLightBulb {
+	position: absolute;
+	width: 50px;
+}
+.intuitiveLightBulb__silhouette {
+	fill: $palette-secondary;
+}
+
+/*____________________________________________________________
+##### Intuitive Lamp Circle
+____________________________________________________________*/
+.intuitiveLightBulbCircle {
+	@extend %horizontalCentering;
+	top: 8px;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background-color: $x-color-white;
+}
+
+/*____________________________________________________________
+##### Intuitive Brain
+____________________________________________________________*/
+.intuitiveBrain {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+	width: 34px;
+	height: 34px;
+	opacity: .9;
+	background-image: url('https://i.pinimg.com/originals/56/68/37/566837724bf672f1f538df597d55604a.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+/*____________________________________________________________
+##### Intuitive Play
+____________________________________________________________*/
+.intuitivePlay {
+	position: absolute;
+	top: 35px;
+	left: -20px;
+	width: 20px;
+	height: 20px;
+	z-index: 1;
+	animation: levitation 5s linear infinite;
+
+	path {
+		fill: $palette-secondary;
+	}
+}
+
+/*____________________________________________________________
+##### Intuitive Figures
+____________________________________________________________*/
+.intuitiveBubble {
+	position: absolute;
+	border-radius: 50%;
+	animation: levitation 5s linear infinite;
+}
+
+.intuitiveBubble_sm {
+	top: 50px;
+	left: 3px;
+	width: 7px;
+	height: 7px;
+	background-color: $x-color-grideperlevy;
+	animation-delay: 1.6s;
+}
+.intuitiveBubble_lg {
+	top: -12px;
+	left: 12px;
+	width: 13px;
+	height: 13px;
+	background-color: $x-color-aquamarine;
+	opacity: .8;
+	animation-delay: 2s;
+}
+
+.intuitiveRectangle {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	width: 20px;
+	height: 12px;
+	border: 3px solid $x-color-granite;
+	animation: levitation 5s linear infinite .5s;
+}
+
+/*____________________________________________________________
+##### Intuitive Dialog
+____________________________________________________________*/
+.intuitiveDialog {
+	position: absolute;
+	top: 2px;
+	left: -15px;
+	width: 25px; 
+	height: 20px;
+	animation: levitation 5s linear infinite .8s;
+}
+.intuitiveDialog__cloud {
+	position: absolute;
+	width: 25px; 
+	height: 15px; 
+	background-color: $x-color-grideperlevy;
+	opacity: .8;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		left: 5px;
+		width: 0; 
+		height: 0;
+		border-top: 5px solid $x-color-grideperlevy;
+		border-right: 5px solid transparent;
+	}
+}
+.intuitiveDialog__lineWrap {
+	position: absolute;
+	top: 4px;
+	right: 7px;
+	width: 23px;
+	height: 6px;
+}
+.intuitiveDialog__line {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	overflow: hidden;
+
+	&:nth-child(2) {
+		bottom: 0;
+		right: 0px;
+		width: 15px;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(2, .3);
+}
+
+/*____________________________________________________________
+##### Intuitive Landscape
+____________________________________________________________*/
+.landscape {
+	position: absolute;
+	top: 35px;
+	right: -26px;
+	width: 35px;
+	height: 25px;
+	animation: levitation 5s linear infinite 1.4s;
+}
+.landscapeShadow {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 32px;
+	height: 22px;
+	background-color: $x-color-granite;
+}
+.landscapePicture {
+	position: relative;
+	width: 32px;
+	height: 22px;
+	overflow: hidden;
+}
+.landscapePicture__bg {
+	width: 100%;
+	height: 100%;
+	background-color: $x-color-aquamarine;
+	opacity: .8;
+	animation: changeDay 10s linear infinite;
+}
+
+.landscapePicture__mountainsWrap {
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+	width: 25px;
+	height: 13px;
+}
+
+.landscapePicture__mountain {
+	position: absolute;
+	bottom: 0;
+
+	&:nth-child(1) {
+		border-left: 6.5px solid transparent;
+		border-right: 6.5px solid transparent;
+		border-bottom: 8px solid $x-color-white;
+	}
+	&:nth-child(2) {
+		right: 0;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 13px solid $x-color-white;
+	}
+}
+
+.landscapePicture__dayWrap {
+	position: absolute;
+	top: 7px;
+	left: 1px;
+	width: 30px;
+	height: 30px;
+	animation: rotateRays 10s linear infinite;
+}
+.landscapePicture__dayWrap,
+.landscapePicture__sun,
+.landscapePicture__moon {
+	border-radius: 50%;
+}
+
+.landscapePicture__sun,
+.landscapePicture__moon {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.landscapePicture__sun {
+	top: -5px;
+	width: 5px;
+	height: 5px;
+	background-color: $x-color-white;
+}
+.landscapePicture__moon {
+	bottom: -4px;
+	width: 7px;
+	height: 7px;
+	box-shadow: 2px 2px 0 0 $x-color-amber;
+	transform: rotate(120deg);
+}
+
+/*____________________________________________________________
+##### Intuitive Neck
+____________________________________________________________*/
+.intuitiveNeck {
+	@extend %horizontalCentering;
+	bottom: -3px;
+	width: 22px;
+	height: 4px;
+	background-color: $palette-secondary;
+}
+
+/*____________________________________________________________
+##### Intuitive Base Housing
+____________________________________________________________*/
+.intuitiveBaseHousing {
+	@extend %horizontalCentering;
+	bottom: -17px;
+	width: 22px;
+	height: 14px;
+	border: solid $x-color-granite;
+	border-width: 0 2px 0 2px;
+}
+.intuitiveBaseHousing__line {
+	position: absolute;
+	left: -5px;
+	width: 28px;
+	height: 2px;
+	background-color: $x-color-granite;
+
+	$x: 2;
+	$y: 4px;
+
+	@while $x < 5 {
+		&:nth-child(#{$x}) {
+			top: $y;
+		}
+
+		$x: $x + 1;
+		$y: $y + 4;
+	}
+}
+.intuitiveBaseHousing__contact {
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 14px;
+	height: 2px;
+	background-color: $x-color-granite;
+}
+
+/*____________________________________________________________
 # Animation Pack
 ____________________________________________________________*/
-@keyframes openFolder {
-	0% {
-		left: 0;
-		transform: skew(0);
-	}
-	20% {
-		left: -5px;
-		height: 26px;
-		transform: skew(20deg);
-	}
-	80% {
-		left: -5px;
-		height: 26px;
-		transform: skew(20deg);
-	}
-	100% {
-		left: 0;
-		height: 31px;
-		transform: skew(0);
-	}
-}
-
-@keyframes openFile {
-	0% {
-		bottom: 0;
-	}
-	20% {
-		bottom: 10px;
-	}
-	80% {
-		bottom: 10px;
-	}
-	100% {
-		bottom: 0;
-	}
-}
-
 @keyframes slide {
 	0% {
 		left: -100%;
@@ -3985,15 +4352,6 @@ ____________________________________________________________*/
 	}
 	100% {
 		left: 100%;
-	}
-}
-
-@keyframes scrollCode {
-	0% {
-		top: 0;
-	}
-	100% {
-		top: -20px;
 	}
 }
 
@@ -4049,7 +4407,56 @@ ____________________________________________________________*/
 }
 
 /*____________________________________________________________
-# Animation Icons
+## Animation Illustration
+____________________________________________________________*/
+@keyframes openFolder {
+	0% {
+		left: 0;
+		transform: skew(0);
+	}
+	20% {
+		left: -5px;
+		height: 26px;
+		transform: skew(20deg);
+	}
+	80% {
+		left: -5px;
+		height: 26px;
+		transform: skew(20deg);
+	}
+	100% {
+		left: 0;
+		height: 31px;
+		transform: skew(0);
+	}
+}
+
+@keyframes openFile {
+	0% {
+		bottom: 0;
+	}
+	20% {
+		bottom: 10px;
+	}
+	80% {
+		bottom: 10px;
+	}
+	100% {
+		bottom: 0;
+	}
+}
+
+@keyframes scrollCode {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: -20px;
+	}
+}
+
+/*____________________________________________________________
+## Animation Icons
 ____________________________________________________________*/
 @keyframes learnabilityScrollCode {
 	0% {
