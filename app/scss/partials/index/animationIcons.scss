@@ -1,0 +1,23 @@
+/*____________________________________________________________
+## Animation Icons
+____________________________________________________________*/
+@keyframes learnabilityScrollCode {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: -18px;
+	}
+}
+
+@keyframes keyboardClick {
+	0% {
+		background-color: $x-color-white;
+	}
+	95% {
+		background-color: $x-color-white;
+	}
+	100% {
+		background-color: $x-color-black;
+	}
+}

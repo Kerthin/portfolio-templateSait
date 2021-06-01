@@ -1,0 +1,1930 @@
+/*____________________________________________________________
+
+### Card wrap
+	#### Learnability Icon
+		##### Learnability Editor
+			###### Learnability Editor Panel
+			###### Learnability Editor Code
+		##### Learnability Keyboard
+		##### Learnability Gear
+	#### Fast Icon
+		##### Fast Browser
+			###### Fast Browser Panel
+			###### Fast Browser Page
+		##### Fast Clock Wrap
+			###### Fast Clock Gear
+			###### Fast Clock
+	#### Dynamic Icon
+		##### Dynamic Browser
+			###### Dynamic Browser Panel
+			###### Dynamic Browser Header
+			###### Dynamic Browser Main
+			###### Dynamic Browser Footer
+		##### Dynamic Dialog
+		##### Dynamic Dashed Frame
+		##### Dynamic Chart
+	#### Responsive Icon
+		##### Responsive Imac
+			###### Responsive Imac Display
+				####### Responsive Browser
+					######## Responsive Browser Panel
+					######## Responsive Browser Page
+						######### Responsive Browser Nav
+						######### Responsive Browser Banner
+						######### Responsive Browser Product List
+			###### Responsive Imac Panel
+			###### Responsive Imac Stand
+		##### Responsive Ipad
+			###### Responsive Ipad Display
+				####### Ipad Browser
+					######## Ipad Browser Nav
+					######## Ipad Browser Banner
+					######## Responsive Ipad Product List
+			###### Responsive Ipad Camera
+			###### Responsive Ipad Button
+		##### Responsive Iphone
+			###### Responsive Iphone Display
+				####### Iphone Browser
+					######## Iphone Browser Nav
+					######## Responsive Iphone Product List
+			###### Responsive Iphone Camera
+			###### Responsive Iphone Button
+	#### Sociable Icon
+		##### Sociable Link
+		##### Sociable Display
+			###### Sociable Panel
+			###### Sociable Avatar
+			###### Sociable Buttons Wrap
+		##### Sociable Keyboard
+	#### Intuitive Icon
+		##### Intuitive Rays
+		##### Intuitive Lamp
+		##### Intuitive Lamp Circle
+		##### Intuitive Brain
+		##### Intuitive Play
+		##### Intuitive Figures
+		##### Intuitive Dialog
+		##### Intuitive Landscape
+		##### Intuitive Neck
+		##### Intuitive Base Housing
+
+____________________________________________________________*/
+
+/*____________________________________________________________
+### Card wrap
+____________________________________________________________*/
+.cardWrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 490px;
+	height: 320px;
+}
+
+.iconCard {
+	float: left;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	background-color: #9b2d30;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12),
+							0 1px 2px rgba(0,0,0,0.24);
+
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+
+/*____________________________________________________________
+#### Learnability Icon
+____________________________________________________________*/
+.learnabilityIcon {
+	@extend %centering;
+	width: 81px;
+	height: 61px;
+}
+
+/*____________________________________________________________
+##### Learnability Editor
+____________________________________________________________*/
+.learnabilityEditor {
+	position: absolute;
+	right: 0;
+	width: 41px;
+	height: 100%;
+}
+
+/*____________________________________________________________
+###### Learnability Editor Panel
+____________________________________________________________*/
+.learnabilityEditor__panel {
+	position: relative;
+	width: 100%;
+	height: 5px;
+	background-color: $palette-program-panel;
+}
+
+.learnabilityEditor__buttonsWrap {
+	position: absolute;
+	top: 1px;
+	left: 2px;
+	height: 2px;
+}
+.learnabilityEditor__button {
+	float: left;
+	margin-right: 1px;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+}
+
+/*____________________________________________________________
+###### Learnability Editor Code
+____________________________________________________________*/
+.learnabilityEditor__codeWrap {
+	position: relative;
+	padding: 6px;
+	width: 100%;
+	height: calc(100% - 5px);
+	background-color: $x-color-tomato;
+}
+.learnabilityEditor__scrollBox {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.learnabilityEditor__codeList {
+	position: absolute;
+	width: 100%;
+	animation: learnabilityScrollCode .9s linear infinite;
+}
+.learnabilityEditor__codeItem {
+	position: relative;
+	margin-bottom: 2px;
+	width: 100%;
+	height: 7px;
+}
+.learnabilityEditor__codeLine {
+	position: absolute;
+	height: 1px;
+	overflow: hidden;
+
+	@mixin learnabilityEditorCodeLineChild($nthChild, $vSide, $vSideInent, $hSide, $hSideInent, $width) {
+		&:nth-child(#{$nthChild}) {
+			#{$vSide}: #{$vSideInent}px;
+			#{$hSide}: #{$hSideInent}px;
+			width: #{$width}px;
+		}
+	}
+
+	@include learnabilityEditorCodeLineChild(1, top, 0, left, 0, 7);
+	@include learnabilityEditorCodeLineChild(2, top, 0, left, 9, 11);
+	@include learnabilityEditorCodeLineChild(3, top, 3, left, 4, 21);
+	@include learnabilityEditorCodeLineChild(4, bottom, 0, right, 7, 14);
+	@include learnabilityEditorCodeLineChild(5, bottom, 0, right, 0, 5);
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(2, .2);
+	@include animDelayChild(3, .4);
+	@include animDelayChild(4, .6);
+	@include animDelayChild(5, .7);
+
+	&:nth-child(3),
+	&:nth-child(4),
+	&:nth-child(5) {
+		&:after {
+			background-color: $x-color-white;
+		}
+	}
+}
+
+/*____________________________________________________________
+##### Learnability Keyboard
+____________________________________________________________*/
+.learnabilityKeyboard {
+	position: absolute;
+	bottom: 0;
+	padding: 2px;
+	width: 66px;
+	height: 26px;
+	background-color: $x-color-light-gray;
+}
+.learnabilityKeyboard__line {
+	position: relative;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 3.4px;
+	overflow: hidden;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@mixin keyboardButtonChild($nthChildLine, $nthChildButton, $width) {
+		&:nth-child(#{$nthChildLine}) {
+
+			.learnabilityKeyboard__button {
+
+				&:nth-child(#{$nthChildButton}) {
+					width: #{$width}px;
+				}
+			}
+		}
+	}
+
+	@include keyboardButtonChild(1, 14, 4.5);
+	@include keyboardButtonChild(2, 1, 4.5);
+	@include keyboardButtonChild(3, 1, 6.3);
+	@include keyboardButtonChild(3, 13, 6.3);
+	@include keyboardButtonChild(4, 1, 8.5);
+	@include keyboardButtonChild(4, 12, 8.5);
+	@include keyboardButtonChild(5, 5, 22);
+
+	@mixin keyboardButtonAnimDelayChild($nthChildLine, $nthChildButton, $delay) {
+		&:nth-child(#{$nthChildLine}) {
+
+			.learnabilityKeyboard__button {
+
+				&:nth-child(#{$nthChildButton}) {
+					animation: keyboardClick 4s linear infinite #{$delay}s;
+				}
+			}
+		}
+	}
+
+	@include keyboardButtonAnimDelayChild(2, 4, .4);
+	@include keyboardButtonAnimDelayChild(3, 10, .8);
+	@include keyboardButtonAnimDelayChild(2, 10, 1.2);
+	@include keyboardButtonAnimDelayChild(5, 5, 1.6);
+	@include keyboardButtonAnimDelayChild(2, 3, 2);
+	@include keyboardButtonAnimDelayChild(1, 11, 2.4);
+	@include keyboardButtonAnimDelayChild(2, 5, 2.8);
+	@include keyboardButtonAnimDelayChild(4, 12, 3.2);
+	@include keyboardButtonAnimDelayChild(3, 4, 3.6);
+}
+.learnabilityKeyboard__button {
+	position: relative;
+	margin-right: 1px;
+	float: left;
+	width: 3.4px;
+	height: 3.4px;
+	background-color: $x-color-white;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+/*____________________________________________________________
+##### Learnability Gear
+____________________________________________________________*/
+.learnabilityGear {
+	position: absolute;
+	top: 4px;
+	left: 5px;
+	width: 30px;
+	height: 26px;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		border: solid $x-color-granite;
+		width: 3px;
+		height: 100%;
+		box-sizing: border-box;
+	}
+	&:before {
+		border-width: 1px 0 1px 1px;
+	}
+	&:after {
+		right: 0;
+		border-width: 1px 1px 1px 0;
+	}
+}
+
+.learnabilityGear__gear {
+	@extend %centering;
+	width:  30px;
+	height: 30px;
+
+	svg {
+		position: absolute;
+		max-width: 100%;
+		max-height: 100%;
+		fill: none;
+		stroke: $x-color-space;
+		stroke-width: 24px;
+		animation: rotateRays 7s linear infinite;
+	}
+	.teeth {
+		position: absolute;
+		top: 19.32%;
+		left: 19.32%;
+		transform: translate(-19.32%, -19.32%);
+	}
+}
+
+.learnabilityGear__gearCircle {
+	@extend %centering;
+	width: 17px;
+	height: 17px;
+	border: 4px solid $x-color-granite;
+	background-color: $x-color-white;
+	border-radius: 50%;
+}
+
+/*____________________________________________________________
+#### Fast Icon
+____________________________________________________________*/
+.fastIcon {
+	@extend %centering;
+	width: 69px;
+	height: 69px;
+}
+
+/*____________________________________________________________
+##### Fast Browser
+____________________________________________________________*/
+.fastBrowser {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+###### Fast Browser Panel
+____________________________________________________________*/
+.fastBrowser__panel {
+	position: relative;
+	padding: 3px 5px;
+	width: 100%;
+	height: 11px;
+	background-color: $x-color-granite;
+}
+.fastBrowser__buttonsWrap {
+	float: left;
+	margin-right: 5px;
+	width: 18px;
+	height: 4px;
+}
+.fastBrowser__button {
+	float: left;
+	margin-right: 3px;
+	width: 4px;
+	height: 4px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.fastBrowser__input {
+	position: relative;
+	float: left;
+	width: calc(100% - 23px);
+	height: 4px;
+	background-color: $x-color-white;
+
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		width: 7px;
+		height: 100%;
+		background-color: $x-color-tomato;
+	}
+}
+
+/*____________________________________________________________
+###### Fast Browser Page
+____________________________________________________________*/
+.fastBrowser__page {
+	position: relative;
+	padding: 5px;
+	width: 100%;
+	height: calc(100% - 11px);
+	border: 4px solid $x-color-light-gray;
+	background-color: $x-color-white;
+}
+.fastBrowser__lineWrap {
+	width: 100%;
+	height: 100%;
+}
+.fastBrowser__line {
+	position: relative;
+	margin-bottom: 2px;
+	width: 100%;
+	height: 2px;
+	overflow: hidden;
+
+	&:first-child {
+		height: 20px;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-tomato;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(2, .1);
+	@include animDelayChild(3, .2);
+	@include animDelayChild(4, .3);
+	@include animDelayChild(5, .4);
+	@include animDelayChild(6, .45);
+}
+
+/*____________________________________________________________
+##### Fast Clock Wrap
+____________________________________________________________*/
+.fastClockWrap {
+	position: absolute;
+	top: 30px;
+	right: -30px;
+	width: 68px;
+	height: 68px;
+}
+
+/*____________________________________________________________
+###### Fast Clock Gear
+____________________________________________________________*/
+.fastClockWrap__gear {
+	position: absolute;
+	width:  100%;
+	height: 100%;
+
+	svg {
+		position: absolute;
+		max-width: 100%;
+		max-height: 100%;
+		fill: none;
+		stroke: $x-color-space;
+		stroke-width: 24px;
+		animation: rotateRays 7s linear infinite;
+	}
+	.teeth {
+		position: absolute;
+		top: 19.32%;
+		left: 19.32%;
+		transform: translate(-19.32%, -19.32%);
+	}
+}
+
+/*____________________________________________________________
+###### Fast Clock
+____________________________________________________________*/
+.fastClockWrap__clock {
+	@extend %centering;
+	width: 38px;
+	height: 38px;
+	overflow: hidden;
+	border: 4px solid $x-color-granite;
+	border-radius: 50%;
+}
+
+.clockFaceContainer {
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: $x-color-white;
+
+	svg {
+		position: absolute;
+		max-width: 100%;
+		max-height: 100%;
+		fill: none;
+		stroke: $x-color-granite;
+		stroke-width: 4px;
+		stroke-linecap: round;
+	}
+	.teeth {
+		position: absolute;
+		top: 19.32%;
+		left: 19.32%;
+		transform: translate(-19.32%, -19.32%);
+	}
+}
+
+.clockFaceContainer__clockHand {
+	position: absolute;
+	top: calc(50% - 4px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 1px;
+	height: 12px;
+	transform-origin: 50% 4px;
+	background-color: $x-color-granite;
+	animation: rotateRays 12s linear infinite;
+}
+.clockFaceContainer__clockCircle {
+	@extend %centering;
+	width: 5px;
+	height: 5px;
+	border: 1px solid $x-color-granite;
+	border-radius: 50%;
+	background-color: $x-color-white;
+}
+
+/*____________________________________________________________
+#### Dynamic Icon
+____________________________________________________________*/
+.dynamicIcon {
+	@extend %centering;
+	width: 47px;
+	height: 68px;
+}
+
+/*____________________________________________________________
+##### Dynamic Browser
+____________________________________________________________*/
+.dynamicBrowser {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+###### Dynamic Browser Panel
+____________________________________________________________*/
+.dynamicBrowser__panel {
+	width: 100%;
+	height: 5px;
+	background-color: $palette-program-panel;
+}
+.dynamicBrowser__buttonsWrap {
+	position: absolute;
+	top: 1px;
+	left: 2px;
+	height: 2px;
+}
+.dynamicBrowser__button {
+	float: left;
+	margin-right: 1px;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+}
+
+/*____________________________________________________________
+###### Dynamic Browser Header
+____________________________________________________________*/
+.dynamicBrowser__header {
+	position: relative;
+	padding: 4px;
+	width: 100%;
+	height: 24px;
+	background-color: $x-color-light-gray;
+}
+.dynamicBrowser__lineWrap {
+	position: relative;
+	padding-top: 2px;
+	margin-bottom: 3px;
+	width: 100%;
+	height: 5px;
+	background-color: $palette-tertiary;
+}
+.dynamicBrowser__line {
+	position: relative;
+	float: left;
+	margin-left: 3px;
+	width: 6px;
+	height: 1px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(2, .2);
+	@include animDelayChild(3, .4);
+	@include animDelayChild(4, .6);
+}
+
+.dynamicBrowser__title {
+	position: relative;
+	margin-bottom: 3px;
+	width: 100%;
+	height: 3px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-tomato;
+		animation: slide 3.5s ease infinite;
+		animation-delay: .2s;
+	}
+}
+.dynamicBrowser__subtitle {
+	position: relative;
+	margin: 0 auto;
+	width: 60%;
+	height: 2px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+		animation-delay: .2s;
+	}
+}
+
+/*____________________________________________________________
+###### Dynamic Browser Main
+____________________________________________________________*/
+.dynamicBrowser__main {
+	position: relative;
+	width: 100%;
+	height: 22px;
+	background-color: $palette-tertiary;
+	animation: changeDay 10s linear infinite;
+
+	.landscape {
+		position: absolute;
+		top: 0;
+		left: 7px;
+		transform: scale(.8);
+		animation: none;
+	}
+
+	.landscapePicture__bg {
+		width: 100%;
+		height: 100%;
+		background: $palette-tertiary;
+		opacity: 1;
+		animation: changeDay 10s linear infinite;
+	}
+}
+
+/*____________________________________________________________
+###### Dynamic Browser Footer
+____________________________________________________________*/
+.dynamicBrowser__footer {
+	position: relative;
+	padding: 2px 4px;
+	width: 100%;
+	height: 17px;
+	background-color: $x-color-light-gray;
+}
+
+.dynamicBrowser__productList {
+	width: 100%;
+	height: 100%;
+}
+.dynamicBrowser__product {
+	position: relative;
+	float: left;
+	margin-right: 5%;
+	width: 30%;
+	height: 100%;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.dynamicBrowser__productImg {
+	position: relative;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 7px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-tomato;
+		animation: slide 3.5s ease infinite;
+	}
+}
+.dynamicBrowser__productLineWrap {
+	width: 100%;
+	height: 5px;
+}
+.dynamicBrowser__productLine {
+	position: relative;
+	float: left;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+
+	&:nth-child(3) {
+		width: 50%;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(1, .2);
+	@include animDelayChild(2, .4);
+	@include animDelayChild(3, .6);
+}
+
+/*____________________________________________________________
+##### Dynamic Dialog
+____________________________________________________________*/
+.dynamicDialog {
+	position: absolute;
+	padding: 2px;
+	animation: levitation 5s linear infinite;
+
+	&.dynamicDialog_left {
+		top: 18px;
+		left: -18px;
+		width: 14px;
+		background-color: $palette-tertiary;
+
+		.dynamicDialog__line {
+
+			&:last-child {
+				width: 50%;
+			}
+
+			&:after {
+				background-color: $x-color-white;
+			}
+		}
+	}
+
+	&.dynamicDialog_right {
+		top: 16px;
+		right: -20px;
+		width: 18px;
+		animation-delay: 2s;
+
+		.dynamicDialog__line {
+
+			&:first-child {
+				width: 50%;
+			}
+		}
+	}
+}
+.dynamicDialog__line {
+	position: relative;
+	float: left;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+
+	&:last-child {
+		width: 50%;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(2, .2);
+	@include animDelayChild(3, .4);
+	@include animDelayChild(4, .6);
+}
+
+/*____________________________________________________________
+##### Dynamic Dashed Frame
+____________________________________________________________*/
+.dynamicDashedFrame {
+	position: absolute;
+	top: 36px;
+	left: -13px;
+	width: 22px;
+	height: 18px;
+	border: 1px dashed $palette-secondary;
+	animation: levitation 5s linear infinite 2.5s;
+}
+
+/*____________________________________________________________
+##### Dynamic Chart
+____________________________________________________________*/
+.dynamicChart {
+	position: absolute;
+	padding: 2px;
+	top: 31px;
+	right: -13px;
+	width: 18px;
+	height: 12px;
+	background-color: $x-color-light-gray;
+	animation: levitation 5s linear infinite 1s;
+}
+.dynamicChart__line {
+	position: relative;
+	bottom: 0;
+	float: left;
+	margin-right: 1px;
+	width: 2px;
+	height: 100%;
+	overflow: hidden;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 10%;
+		background-color: $x-color-cadet-blue;
+		animation: lineDiagram 2.5s ease infinite;
+	}
+
+	&:nth-child(1) {
+		&:after {
+			background-color: $x-color-granite;
+		}
+	}
+	&:nth-child(4) {
+		&:after {
+			background-color: $x-color-tomato;
+		}
+	}
+
+	@include animDelayChild(1, .8);
+	@include animDelayChild(2, 1.4);
+	@include animDelayChild(3, .4);
+	@include animDelayChild(4, 1.2);
+	@include animDelayChild(5, 1.6);
+}
+
+/*____________________________________________________________
+#### Responsive Icon
+____________________________________________________________*/
+.responsiveIcon {
+	@extend %centering;
+	width: 69px;
+	height: 46px;
+}
+
+/*____________________________________________________________
+##### Responsive Imac
+____________________________________________________________*/
+.respImac {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+###### Responsive Imac Display
+____________________________________________________________*/
+.respImac__display {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 3.2px solid $x-color-granite;
+	border-radius: 2px 2px 0 0;
+	background-color: $palette-tertiary;
+}
+
+/*____________________________________________________________
+####### Responsive Browser
+____________________________________________________________*/
+.respBrowser {
+	@extend %centering;
+	width: 60%;
+	height: 70%;
+	background-color: $x-color-white;
+}
+
+/*____________________________________________________________
+######## Responsive Browser Panel
+____________________________________________________________*/
+.respBrowser__panel {
+	width: 100%;
+	height: 4px;
+	background-color: $palette-program-panel;
+}
+.respBrowser__buttonsWrap {
+	position: absolute;
+	top: 0.5px;
+	left: 2px;
+	height: 2px;
+}
+.respBrowser__button {
+	float: left;
+	margin-right: 1px;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+}
+
+/*____________________________________________________________
+######## Responsive Browser Page
+____________________________________________________________*/
+.respBrowser__page {
+	padding: 1.5px 2.5px 2.5px;
+	width: 100%;
+	height: calc(100% - 4px);
+}
+.respBrowser__pageLayout {
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+######### Responsive Browser Nav
+____________________________________________________________*/
+.respBrowser__nav {
+	margin-bottom: 1px;
+	width: 60%;
+	height: 3px;
+	background-color: $palette-responsive-nav;
+}
+
+/*____________________________________________________________
+######### Responsive Browser Banner
+____________________________________________________________*/
+.respBrowser__banner {
+	margin-bottom: 1px;
+	width: 100%;
+	height: 5px;
+	background-color: $palette-responsive-banner;
+}
+
+/*____________________________________________________________
+######### Responsive Browser Product List
+____________________________________________________________*/
+.respBrowser__productList {
+	width: 100%;
+	height: 9px;
+}
+.respBrowser__product {
+	position: relative;
+	float: left;
+	margin-right: 5%;
+	width: 30%;
+	height: 100%;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.respBrowser__productImg {
+	position: relative;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 5px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-grideperlevy;
+		animation: slide 3.5s ease infinite;
+	}
+}
+.respBrowser__productLineWrap {
+	width: 100%;
+	height: 3px;
+}
+.respBrowser__productLine {
+	position: relative;
+	float: left;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(1, .2);
+	@include animDelayChild(2, .4);
+}
+
+/*____________________________________________________________
+###### Responsive Imac Panel
+____________________________________________________________*/
+.respImac__panel {
+	position: absolute;
+	bottom: -6px;
+	width: 100%;
+	height: 6px;
+	border-radius: 0 0 2px 2px;
+	background-color: $x-color-grideperlevy;
+}
+
+/*____________________________________________________________
+###### Responsive Imac Stand
+____________________________________________________________*/
+.respImac__stand {
+	@extend %horizontalCentering;
+	bottom: -17px;
+	height: 0; 
+	width: 23px;
+	border-bottom: 11px solid $x-color-grideperlevy;
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+}
+.respImac__standShadow {
+	position: absolute;
+	left: 3px;
+	width: 0; 
+	height: 0;
+	border-top: 11px solid $x-color-cadet-blue;
+	border-left: 12px solid transparent;
+	transform: skew(26deg, 0deg);
+}
+.respImac__standBase {
+	@extend %horizontalCentering;
+	top: 11px;
+	width: 36px;
+	height: 2px;
+	border-radius: 3px 3px 0 0;
+	background-color: $x-color-cadet-blue;
+}
+
+/*____________________________________________________________
+##### Responsive Ipad
+____________________________________________________________*/
+.respIpad {
+	position: absolute;
+	bottom: -19px;
+	left: -14px;
+	width: 29px;
+	height: 42px;
+}
+
+/*____________________________________________________________
+###### Responsive Ipad Display
+____________________________________________________________*/
+.respIpad__display {
+	position: relative;
+	padding: 2px 2px 2px 1px;
+	width: 100%;
+	height: 100%;
+	border: solid $x-color-granite;
+	border-width: 4px 2.5px;
+	border-radius: 2px;
+	background-color: $x-color-white;
+}
+
+/*____________________________________________________________
+####### Ipad Browser
+____________________________________________________________*/
+.ipadBrowser {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+######## Ipad Browser Nav
+____________________________________________________________*/
+.ipadBrowser__nav {
+	margin-bottom: 1px;
+	width: 60%;
+	height: 3px;
+	background-color: $palette-responsive-nav;
+}
+
+/*____________________________________________________________
+######## Ipad Browser Banner
+____________________________________________________________*/
+.ipadBrowser__banner {
+	margin-bottom: 1px;
+	width: 100%;
+	height: 5px;
+	background-color: $palette-responsive-banner;
+}
+
+/*____________________________________________________________
+######## Responsive Ipad Product List
+____________________________________________________________*/
+.ipadBrowser__productList {
+	width: 100%;
+	height: calc(100% - 10px);
+}
+.ipadBrowser__product {
+	position: relative;
+	margin-bottom: 2px;
+	width: 100%;
+	height: 5px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.ipadBrowser__productImg {
+	float: left;
+	position: relative;
+	margin-right: 2px;
+	width: 5px;
+	height: 5px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-grideperlevy;
+		animation: slide 3.5s ease infinite;
+	}
+}
+.ipadBrowser__productLineWrap {
+	float: left;
+	width: calc(100% - 7px);
+	height: 5px;
+}
+.ipadBrowser__productLine {
+	position: relative;
+	float: left;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+
+	&:nth-child(3) {
+		margin-bottom: 0;
+		width: 50%;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(1, .2);
+	@include animDelayChild(2, .4);
+	@include animDelayChild(3, .5);
+}
+
+/*____________________________________________________________
+###### Responsive Ipad Camera
+____________________________________________________________*/
+.respIpad__camera,
+.respIphone__camera,
+.respIpad__button,
+.respIphone__button {
+	position: absolute;
+	height: 2px;
+	background-color: $x-color-grideperlevy;
+}
+.respIpad__camera,
+.respIphone__camera {
+	top: 1px;
+	width: 2px;
+	border-radius: 50%;
+}
+.respIpad__camera {
+	left: 13.5px;
+}
+
+/*____________________________________________________________
+###### Responsive Ipad Button
+____________________________________________________________*/
+.respIpad__button,
+.respIphone__button {
+	bottom: 1px;
+	border-radius: 1px;
+}
+.respIpad__button {
+	left: 10.5px;
+	width: 8px;
+}
+
+/*____________________________________________________________
+##### Responsive Iphone
+____________________________________________________________*/
+.respIphone {
+	position: absolute;
+	bottom: -19px;
+	right: -6px;
+	width: 17px;
+	height: 31px;
+}
+
+/*____________________________________________________________
+###### Responsive Iphone Display
+____________________________________________________________*/
+.respIphone__display {
+	position: relative;
+	padding: 1px;
+	width: 100%;
+	height: 100%;
+	border: solid $x-color-granite;
+	border-width: 4px 2px;
+	border-radius: 2px;
+	background-color: $x-color-white;
+}
+
+/*____________________________________________________________
+####### Iphone Browser
+____________________________________________________________*/
+.iphoneBrowser {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+######## Iphone Browser Nav
+____________________________________________________________*/
+.iphoneBrowser__nav {
+	margin-bottom: 1px;
+	width: 100%;
+	height: 3px;
+	background-color: $palette-responsive-nav;
+}
+
+/*____________________________________________________________
+######## Responsive Iphone Product List
+____________________________________________________________*/
+.iphoneBrowser__productList {
+	width: 100%;
+	height: calc(100% - 7px);
+}
+.iphoneBrowser__product {
+	position: relative;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 8px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.iphoneBrowser__productImg {
+	position: relative;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 4px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-grideperlevy;
+		animation: slide 3.5s ease infinite;
+	}
+}
+.iphoneBrowser__productLineWrap {
+	width: 100%;
+	height: 3px;
+}
+.iphoneBrowser__productLine {
+	position: relative;
+	float: left;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+
+	&:nth-child(2) {
+		margin-bottom: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(1, .2);
+	@include animDelayChild(2, .4);
+}
+
+/*____________________________________________________________
+###### Responsive Iphone Camera
+____________________________________________________________*/
+.respIphone__camera {
+	left: 7.5px;
+}
+
+/*____________________________________________________________
+###### Responsive Iphone Button
+____________________________________________________________*/
+.respIphone__button {
+	left: 5.5px;
+	width: 6px;
+}
+
+/*____________________________________________________________
+#### Sociable Icon
+____________________________________________________________*/
+.sociableIcon {
+	@extend %centering;
+	width: 50px;
+	height: 32px;
+}
+
+/*____________________________________________________________
+##### Sociable Link
+____________________________________________________________*/
+.sociableLink {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: dashed $x-color-granite;
+	animation: levitation 5s linear infinite;
+
+	@mixin sociableLinkPos($figureName, $top, $side, $sideInent, $borderWidth, $delay, $topFigure, $sideFigure, $sideInentFigure) {
+		&.sociableLink_pos#{$figureName} {
+			top: #{$top};
+			#{$side}: #{$sideInent};
+			border-width: #{$borderWidth};
+			animation-delay: #{$delay}s;
+
+			.sociableLink__figure {
+				top: #{$topFigure};
+				#{$sideFigure}: #{$sideInentFigure};
+			}
+		}
+	}
+
+	@include sociableLinkPos(LC, 50%, left, -10px, '1px 0 0 0', 0, -7px, left, -12px);
+	@include sociableLinkPos(LT, -10px, left, -1px, '1px 1px 0 0', .8, -7px, left, -12px);
+	@include sociableLinkPos(CT, -10px, left, 50%, '0 0 0 1px', 1.5, -12px, left, -7px);
+	@include sociableLinkPos(RT, -10px, right, -1px, '1px 0 0 1px', 2.2, -7px, right, -12px);
+	@include sociableLinkPos(RC, 50%, right, -10px, '1px 0 0 0', 2.9, -7px, right, -12px);
+
+	&:nth-child(2),
+	&:nth-child(4) {
+		.sociableLink__figure {
+			border-radius: 50%;
+			background-color: $x-color-tomato;
+
+			&:before {
+				border-radius: 50%;
+			}
+		}
+	}
+}
+.sociableLink__figure {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background-color: $x-color-grideperlevy;
+
+	@mixin sociableLinkType($figureName, $content) {
+		&.sociableLink__figure_#{$figureName} {
+			&:after {
+				content: '#{$content}';
+			}
+		}
+	}
+
+	@include sociableLinkType(mail, '@');
+	@include sociableLinkType(money, '$');
+	@include sociableLinkType(tag, '#');
+	@include sociableLinkType(percent, '%');
+	@include sociableLinkType(and, '&');
+
+	&:after {
+		margin-top: .5px;
+	}
+
+	&:before,
+	&:after {
+		@extend %centering;
+		font-size: 9px;
+	}
+	&:before {
+		content: '';
+		width: 9px;
+		height: 9px;
+		border: 1px solid $x-color-granite;
+	}
+}
+
+/*____________________________________________________________
+##### Sociable Display
+____________________________________________________________*/
+.sociableDisplay {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 3.2px solid $x-color-granite;
+	border-radius: 1px;
+	background-color: $x-color-white;
+}
+
+/*____________________________________________________________
+###### Sociable Panel
+____________________________________________________________*/
+.sociableDisplay__panel {
+	position: absolute;
+	top: 2.2px;
+	width: 9px;
+
+	&.sociableDisplay_leftSide {
+		left: 1.8px;
+
+		.sociableDisplay__line {
+			&:nth-child(1) {
+				margin-top: 6px;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			margin-bottom: 2px;
+			width: 100%;
+			height: 4px;
+			background-color: $x-color-tomato;
+		}
+	}
+	&.sociableDisplay_rightSide {
+		right: 1.8px;
+
+		.sociableDisplay__line {
+			&:nth-child(1) {
+				width: 50%;
+			}
+		}
+	}
+}
+.sociableDisplay__line {
+	position: relative;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	&:nth-child(6) {
+		width: 50%;
+	}
+
+	@include animDelayChild(2, .2);
+	@include animDelayChild(3, .4);
+	@include animDelayChild(4, .6);
+	@include animDelayChild(5, .8);
+	@include animDelayChild(6, 1);
+}
+
+/*____________________________________________________________
+###### Sociable Avatar
+____________________________________________________________*/
+.sociableDisplay__avatar {
+	@extend %horizontalCentering;
+	top: 2.2px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: $palette-tertiary;
+	background-image: url('https://i.pinimg.com/originals/05/d9/93/05d99321de948f7f4c24164eec708a15.png');
+	background-repeat: no-repeat;
+	background-position: center 2px;
+	background-size: contain;
+}
+
+/*____________________________________________________________
+###### Sociable Buttons Wrap
+____________________________________________________________*/
+.sociableDisplay__buttonsWrap {
+	@extend %horizontalCentering;
+	bottom: 2.2px;
+	width: 16px;
+	height: 2px;
+}
+.sociableDisplay__button {
+	float: left;
+	width: 7px;
+	height: 2px;
+
+	&:nth-child(1) {
+		margin-right: 2px;
+		background-color: $x-color-granite;
+	}
+	&:nth-child(2) {
+		background-color: $x-color-tomato;
+	}
+}
+
+/*____________________________________________________________
+##### Sociable Keyboard
+____________________________________________________________*/
+.sociableKeyboard {
+	position: relative;
+	margin-left: -8%;
+	width: calc(100% + 16%);
+	height: 10%;
+	border-radius: 0 0 3px 3px;
+	background-color: $x-color-grideperlevy;
+	overflow: hidden;
+}
+
+/*____________________________________________________________
+#### Intuitive Icon
+____________________________________________________________*/
+.intuitiveIcon {
+	@extend %centering;
+	width: 50px;
+	height: 59px;
+}
+
+/*____________________________________________________________
+##### Intuitive Rays
+____________________________________________________________*/
+.intuitiveRays {
+	position: absolute;
+	top: -30px;
+	left: -30px;
+	width: 110px;
+	height: 110px;
+
+	svg {
+		position: absolute;
+		max-width: 100%;
+		max-height: 100%;
+		fill: none;
+		stroke: $palette-secondary;
+		stroke-width: 5px;
+		stroke-linecap: round;
+		animation: rotateRays 3s linear infinite;
+	}
+	.teeth {
+		position: absolute;
+		top: 19.32%;
+		left: 19.32%;
+		transform: translate(-19.32%, -19.32%);
+	}
+}
+
+/*____________________________________________________________
+##### Intuitive Lamp
+____________________________________________________________*/
+.intuitiveLightBulb {
+	position: absolute;
+	width: 50px;
+}
+.intuitiveLightBulb__silhouette {
+	fill: $palette-secondary;
+}
+
+/*____________________________________________________________
+##### Intuitive Lamp Circle
+____________________________________________________________*/
+.intuitiveLightBulbCircle {
+	@extend %horizontalCentering;
+	top: 8px;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background-color: $x-color-white;
+}
+
+/*____________________________________________________________
+##### Intuitive Brain
+____________________________________________________________*/
+.intuitiveBrain {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+	width: 34px;
+	height: 34px;
+	opacity: .9;
+	background-image: url('https://i.pinimg.com/originals/56/68/37/566837724bf672f1f538df597d55604a.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+/*____________________________________________________________
+##### Intuitive Play
+____________________________________________________________*/
+.intuitivePlay {
+	position: absolute;
+	top: 35px;
+	left: -20px;
+	width: 20px;
+	height: 20px;
+	z-index: 1;
+	animation: levitation 5s linear infinite;
+
+	path {
+		fill: $palette-secondary;
+	}
+}
+
+/*____________________________________________________________
+##### Intuitive Figures
+____________________________________________________________*/
+.intuitiveBubble {
+	position: absolute;
+	border-radius: 50%;
+	animation: levitation 5s linear infinite;
+}
+
+.intuitiveBubble_sm {
+	top: 50px;
+	left: 3px;
+	width: 7px;
+	height: 7px;
+	background-color: $x-color-grideperlevy;
+	animation-delay: 1.6s;
+}
+.intuitiveBubble_lg {
+	top: -12px;
+	left: 12px;
+	width: 13px;
+	height: 13px;
+	background-color: $x-color-aquamarine;
+	opacity: .8;
+	animation-delay: 2s;
+}
+
+.intuitiveRectangle {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	width: 20px;
+	height: 12px;
+	border: 3px solid $x-color-granite;
+	animation: levitation 5s linear infinite .5s;
+}
+
+/*____________________________________________________________
+##### Intuitive Dialog
+____________________________________________________________*/
+.intuitiveDialog {
+	position: absolute;
+	top: 2px;
+	left: -15px;
+	width: 25px; 
+	height: 20px;
+	animation: levitation 5s linear infinite .8s;
+}
+.intuitiveDialog__cloud {
+	position: absolute;
+	width: 25px; 
+	height: 15px; 
+	background-color: $x-color-grideperlevy;
+	opacity: .8;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		left: 5px;
+		width: 0; 
+		height: 0;
+		border-top: 5px solid $x-color-grideperlevy;
+		border-right: 5px solid transparent;
+	}
+}
+.intuitiveDialog__lineWrap {
+	position: absolute;
+	top: 4px;
+	right: 7px;
+	width: 23px;
+	height: 6px;
+}
+.intuitiveDialog__line {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	overflow: hidden;
+
+	&:nth-child(2) {
+		bottom: 0;
+		right: 0px;
+		width: 15px;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(2, .3);
+}
+
+/*____________________________________________________________
+##### Intuitive Landscape
+____________________________________________________________*/
+.landscape {
+	position: absolute;
+	top: 35px;
+	right: -26px;
+	width: 35px;
+	height: 25px;
+	animation: levitation 5s linear infinite 1.4s;
+}
+.landscapeShadow {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 32px;
+	height: 22px;
+	background-color: $x-color-granite;
+}
+.landscapePicture {
+	position: relative;
+	width: 32px;
+	height: 22px;
+	overflow: hidden;
+}
+.landscapePicture__bg {
+	width: 100%;
+	height: 100%;
+	background-color: $x-color-aquamarine;
+	opacity: .8;
+	animation: changeDay 10s linear infinite;
+}
+
+.landscapePicture__mountainsWrap {
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+	width: 25px;
+	height: 13px;
+}
+
+.landscapePicture__mountain {
+	position: absolute;
+	bottom: 0;
+
+	&:nth-child(1) {
+		border-left: 6.5px solid transparent;
+		border-right: 6.5px solid transparent;
+		border-bottom: 8px solid $x-color-white;
+	}
+	&:nth-child(2) {
+		right: 0;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 13px solid $x-color-white;
+	}
+}
+
+.landscapePicture__dayWrap {
+	position: absolute;
+	top: 7px;
+	left: 1px;
+	width: 30px;
+	height: 30px;
+	animation: rotateRays 10s linear infinite;
+}
+.landscapePicture__dayWrap,
+.landscapePicture__sun,
+.landscapePicture__moon {
+	border-radius: 50%;
+}
+
+.landscapePicture__sun,
+.landscapePicture__moon {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.landscapePicture__sun {
+	top: -5px;
+	width: 5px;
+	height: 5px;
+	background-color: $x-color-white;
+}
+.landscapePicture__moon {
+	bottom: -4px;
+	width: 7px;
+	height: 7px;
+	box-shadow: 2px 2px 0 0 $x-color-amber;
+	transform: rotate(120deg);
+}
+
+/*____________________________________________________________
+##### Intuitive Neck
+____________________________________________________________*/
+.intuitiveNeck {
+	@extend %horizontalCentering;
+	bottom: -3px;
+	width: 22px;
+	height: 4px;
+	background-color: $palette-secondary;
+}
+
+/*____________________________________________________________
+##### Intuitive Base Housing
+____________________________________________________________*/
+.intuitiveBaseHousing {
+	@extend %horizontalCentering;
+	bottom: -17px;
+	width: 22px;
+	height: 14px;
+	border: solid $x-color-granite;
+	border-width: 0 2px 0 2px;
+}
+.intuitiveBaseHousing__line {
+	position: absolute;
+	left: -5px;
+	width: 28px;
+	height: 2px;
+	background-color: $x-color-granite;
+
+	$x: 2;
+	$y: 4px;
+
+	@while $x < 5 {
+		&:nth-child(#{$x}) {
+			top: $y;
+		}
+
+		$x: $x + 1;
+		$y: $y + 4;
+	}
+}
+.intuitiveBaseHousing__contact {
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 14px;
+	height: 2px;
+	background-color: $x-color-granite;
+}

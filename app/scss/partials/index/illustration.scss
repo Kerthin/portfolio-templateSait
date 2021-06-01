@@ -1,0 +1,2112 @@
+/*____________________________________________________________
+
+### Illustration
+	#### Illustration Blob Circle
+	#### Illustration Bubbles Wrap
+	#### Illustration Dashed Frame
+	#### Illustration Circle Charts
+	#### Illustration Stickers
+	#### Illustration Site Layout
+	#### Illustration Dialog
+	#### Illustration Folder
+	#### Illustration Books
+	#### Illustration Analytics
+		##### Illustration Analytics Page
+			###### Illustration Analytics Diagram
+			###### Illustration Analytics Banner
+				####### Illustration Analytics Description
+				####### Illustration Analytics Product List
+	#### Illustration Imac
+		##### Illustration Imac Display
+			###### Illustration Imac Editor
+				####### Illustration Imac Editor Code
+			###### Illustration Imac Browser
+				####### Illustration Imac Browser Panel
+				####### Illustration Imac Browser Page
+					######## Illustration Imac Browser Header
+					######## Illustration Imac Browser Main
+					######## Illustration Imac Browser Footer
+			###### Avatar
+				####### Head
+					######## Hair
+					######## Ears
+					######## Face
+						######### Top Face
+						######### Middle Face
+						######### Bottom Face
+					######## Neck
+				####### Body
+					######## Bow
+		##### Illustration Imac Panel
+		##### Illustration Imac Stand
+	#### Illustration Presentation	
+		##### Illustration Presentation Panel
+		##### Illustration Presentation Page
+			###### Illustration Presentation Banner
+				####### Picture
+			###### Illustration Presentation Form
+	#### Illustration Settings
+		##### Illustration Settings Gear
+		##### Illustration Settings Line
+
+____________________________________________________________*/
+
+/*____________________________________________________________
+### Illustration
+____________________________________________________________*/
+.illustration {
+	@extend %verticalCentering;
+	left: 50px;
+	width: 893px;
+	height: 600px;
+	overflow: hidden;
+
+  &:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 3px;
+		border-radius: 3px;
+		background-color: $x-color-granite;
+	}
+}
+
+/*____________________________________________________________
+#### Illustration Blob Circle
+____________________________________________________________*/
+.illustrationBlob {
+	position: absolute;
+	width: 893px;
+	height: 893px;
+}
+.illustrationBlob__path {
+	position: absolute;
+	fill: $palette-secondary;
+}
+
+/*____________________________________________________________
+#### Illustration Bubbles Wrap
+____________________________________________________________*/
+.illustrationBubblesWrap {
+	width: 100%;
+	height: 100%;
+}
+
+.illustrationBubble  {
+	position: absolute;
+	border-radius: 50%;
+	background-color: $palette-tertiary;
+	animation: levitation 5s linear infinite;
+
+	@mixin bubbleChild($nthChild, $top, $left, $width, $height, $bg, $delay) {
+		&:nth-child(#{$nthChild}) {
+			top: #{$top}px;
+			left: #{$left}px;
+			width: #{$width}px;
+			height: #{$height}px;
+			background-color: #{$bg};
+			animation-delay: #{$delay}s;
+		}
+	}
+
+	@include bubbleChild(1, 535, 310, 16, 16, $palette-bubble-type-1, 0);
+	@include bubbleChild(2, 370, 150, 12, 12, $palette-bubble-type-1, .3);
+	@include bubbleChild(3, 240, 50, 16, 16, $palette-bubble-type-2, .6);
+	@include bubbleChild(4, 180, 2, 10, 2, $palette-bubble-type-1, 0);
+	@include bubbleChild(5, 140, 275, 20, 20, transparent, 1.2);
+	@include bubbleChild(6, 50, 420, 12, 12, $palette-bubble-type-1, 1.5);
+	@include bubbleChild(7, 10, 510, 10, 10, $palette-bubble-type-1, 1.8);
+	@include bubbleChild(8, 30, 640, 6, 6, $palette-bubble-type-2, 2.1);
+	@include bubbleChild(9, 75, 700, 10, 2, $palette-bubble-type-1, 2.4);
+	@include bubbleChild(10, 220, 780, 16, 16, $palette-bubble-type-1, 2.7);
+	@include bubbleChild(11, 300, 730, 6, 6, $palette-bubble-type-3, 3);
+	@include bubbleChild(12, 550, 630, 10, 2, $palette-bubble-type-2, 3.3);
+
+	&:nth-child(4) {
+		animation: none;
+	}
+
+	&:nth-child(4),
+	&:nth-child(9),
+	&:nth-child(12) {
+		border-radius: 1px;
+	}
+
+	&:nth-child(4):before,
+	&:nth-child(9):before,
+	&:nth-child(12):before {
+		content: '';
+		position: absolute;
+		top: -4px;
+		left: 4px;
+		width: 2px;
+		height: 10px;
+		border-radius: 1px;
+		background-color: $palette-bubble-type-1;
+	}
+
+	&:nth-child(5) {
+		border: 3px solid $palette-bubble-type-1;
+	}
+
+	&:nth-child(12):before {
+		background-color: $palette-bubble-type-2;
+	}
+}
+
+
+/*____________________________________________________________
+#### Illustration Dashed Frame
+____________________________________________________________*/
+.illustrationDashedFrame {
+	position: absolute;
+	border: 2px dashed $x-color-cyanide;
+	border-radius: 5px;
+}
+
+@mixin dashedFrameType($nthType, $top, $left, $width, $height) {
+	.dashedFrame_type#{$nthType} {
+		top: #{$top}px;
+		left: #{$left}px;
+		width: #{$width}px;
+		height: #{$height}px;
+	}
+}
+
+@include dashedFrameType(1, 292, 130, 116, 243);
+@include dashedFrameType(2, 100, 210, 130, 130);
+@include dashedFrameType(3, 210, 673, 170, 210);
+
+/*____________________________________________________________
+#### Illustration Circle Charts
+____________________________________________________________*/
+.illustrationCircleChart,
+.illustrationCircleChart_type1:before,
+.illustrationCircleChart_type2,
+.illustrationCircleChart_type2:before,
+.illustrationCircleChart_type2:after {
+	position: absolute;
+	border-radius: 50%;
+}
+
+.illustrationCircleChart_type1 {
+	top: 250px;
+	left: 90px;
+	border-right: 30px solid transparent;
+	border-top: 30px solid $palette-tertiary;
+	border-left: 30px solid $palette-tertiary;
+	border-bottom: 30px solid $palette-tertiary;
+	animation: rotateRays 7s linear infinite;
+
+  &:before {
+		content: '';
+		top: -30px;
+		left: -24px;
+		border-right: 30px solid $palette-chart-type-1;
+		border-top: 30px solid transparent;
+		border-left: 30px solid transparent;
+		border-bottom: 30px solid transparent;
+	}
+}
+
+.illustrationCircleChart_type2 {
+	top: 280px;
+	right: 30px;
+	border-right: 35px solid transparent;
+	border-top: 35px solid $x-color-tomato;
+	border-left: 35px solid transparent;
+	border-bottom: 35px solid $x-color-tomato;
+	animation: rotateRays 7s linear infinite;
+
+  &:before {
+		content: '';
+		top: -35px;
+		left: -30px;
+		border-right: 35px solid $palette-chart-type-2;
+		border-top: 35px solid transparent;
+		border-left: 35px solid transparent;
+		border-bottom: 35px solid transparent;
+	}
+	&:after {
+		content: '';
+		top: -35px;
+		right: -30px;
+		border-right: 35px solid transparent;
+		border-top: 35px solid transparent;
+		border-left: 35px solid $palette-chart-type-2;
+		border-bottom: 35px solid transparent;
+	}
+}
+
+/*____________________________________________________________
+#### Illustration Stickers
+____________________________________________________________*/
+.illustrationSticker {
+	position: absolute;
+	padding: 10px 7px;
+	width: 60px;
+	height: 35px;
+	overflow: hidden;
+
+  &:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-width: 0 16px 16px 0;
+		border-style: solid;
+		display: block;
+		width: 0;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
+								-1px 1px 1px rgba(0, 0, 0, 0.2);
+	}
+}
+
+
+@mixin stickerType($nthType, $top, $left, $bg) {
+	.illustrationSticker_type#{$nthType} {
+		top: #{$top}px;
+		left: #{$left}px;
+		background-color: #{$bg};
+
+		&:before {
+			border-color: $palette-secondary $palette-secondary #{$bg} #{$bg};
+		}
+	}
+}
+
+@include stickerType(1, 125, 320, $palette-tertiary);
+@include stickerType(2, 75, 300, $x-color-tomato);
+
+.illustrationSticker_type1 {
+	transform: rotate(10deg);
+}
+
+.illustrationSticker__lineWrap {
+	width: 28px;
+	height: 15px;
+}
+.illustrationSticker__line {
+	position: relative;
+	margin-bottom: 3px;
+	width: 100%;
+	height: 3px;
+	overflow: hidden;
+
+	&:nth-child(2) {
+		&:after {
+			animation-delay: .1s;
+		}
+	}
+	&:nth-child(3) {
+		&:after {
+			animation-delay: .2s;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+		width: 70%;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-white;
+		animation: slide 3.5s ease infinite;
+	}
+}
+
+/*____________________________________________________________
+#### Illustration Site Layout
+____________________________________________________________*/
+.illustrationSiteLayout {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 90px;
+	height: 85px;
+	border: 2px solid $palette-site-layout;
+	border-radius: 5px;
+	animation: levitation 5s linear infinite 3.2s;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		border: solid $palette-site-layout;
+	}
+	&:before {
+		width: 100%;
+		height: 20px;
+		border-width: 0 0 2px 0;
+	}
+	&:after {
+		top: 20px;
+		width: 20px;
+		height: calc(100% - 20px);
+		border-width: 0 2px 0 0;
+	}
+}
+
+.illustrationSiteLayout__codeWrap {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 3px 6px 3px 8px;
+	width: calc(100% - 20px);
+	height: calc(100% - 22px);
+}
+
+.illustrationSiteLayout__scrollBox {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.illustrationSiteLayout__codeList {
+	position: absolute;
+	width: 100%;
+	animation: scrollCode .9s linear infinite;
+}
+.illustrationSiteLayout__codeItem {
+	position: relative;
+	margin-bottom: 2px;
+	width: 100%;
+	height: 18px;
+}
+.illustrationSiteLayout__codeLine {
+	position: absolute;
+	height: 2px;
+	background-color: $palette-site-layout;
+	overflow: hidden;
+
+	@mixin siteLayoutLineChild($nthChild, $top, $left, $width) {
+		&:nth-child(#{$nthChild}) {
+			top: #{$top}px;
+			left: #{$left};
+			width: #{$width};
+		}
+	}
+
+	@include siteLayoutLineChild(1, 0, 0, 90%);
+	@include siteLayoutLineChild(2, 4, 0, 70%);
+	@include siteLayoutLineChild(3, 8, 0, 50%);
+	@include siteLayoutLineChild(4, 12, 0, 20%);
+	@include siteLayoutLineChild(5, 12, 30%, 60%);
+	@include siteLayoutLineChild(6, 16, 0, 50%);
+	@include siteLayoutLineChild(7, 16, 60%, 15%);
+}
+
+/*____________________________________________________________
+#### Illustration Dialog
+____________________________________________________________*/
+.illustrationDialog {
+	position: absolute;
+	top: 90px;
+	right: 170px;
+	padding: 8px 14px;
+	width: 78px;
+	height: 45px;
+	background-color: $palette-dialog;
+	animation: levitation 5s linear infinite .8s;
+
+	&:before {
+		content: '';
+		position: absolute;
+		left: 10px;
+		bottom: -10px;
+		width: 0; 
+		height: 0;
+		border-top: 10px solid $palette-dialog;
+		border-right: 10px solid transparent;
+	}
+}
+.illustrationDialog__line {
+	position: relative;
+	margin-bottom: 3px;
+	width: 100%;
+	height: 3px;
+	overflow: hidden;
+
+	&:nth-child(2) {
+		width: 70%;
+	}
+	&:nth-child(4) {
+		width: 60%;
+	}
+	&:nth-child(5) {
+		width: 90%;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-white;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(2, .1);
+	@include animDelayChild(3, .2);
+	@include animDelayChild(4, .3);
+	@include animDelayChild(5, .35);
+}
+
+/*____________________________________________________________
+#### Illustration Folder
+____________________________________________________________*/
+.illustrationFolder {
+	position: absolute;
+	top: 350px;
+	left: 50px;
+	width: 47px;
+	height: 31px;
+	border-radius: 1px 0 1px 1px;
+	background-color: $palette-folder-shadow;
+	animation: levitation 5s linear infinite 1.4s;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -4px;
+		right: 0;
+		width: 10px;
+		height: 4px;
+		border-radius: 1px 1px 0 0;
+		background-color: $palette-folder-shadow;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: -5px;
+		bottom: 0;
+		width: 47px;
+		height: 31px;
+		border-radius: 1px;
+		background-color: $palette-tertiary;
+		animation: openFolder 3.5s ease infinite;
+	}
+}
+
+.illustrationFolder__file {
+	position: absolute;
+	left: 4px;
+	bottom: 0;
+	padding: 4px 2px;
+	width: 29px;
+	height: 35px;
+	border-radius: 1px;
+	background-color: $x-color-white;
+	animation: openFile 3.5s ease infinite;
+}
+.illustrationFolder__line {
+	position: relative;
+	margin-bottom: 2px;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(2, .1);
+	@include animDelayChild(3, .2);
+	@include animDelayChild(4, .3);
+	@include animDelayChild(5, .4);
+}
+
+/*____________________________________________________________
+#### Illustration Books
+____________________________________________________________*/
+.illustrationBooks {
+	position: absolute;
+	left: 70px;
+	bottom: 0;
+	width: 164px;
+	height: 86px;
+}
+.illustrationBooks__book {
+	position: absolute;
+
+	&:nth-child(1) {
+		left: 5px;
+		width: 132px;
+		height: 28px;
+		border: solid $x-color-tomato;
+		border-width: 4px 0 4px 4px;
+		border-radius: 20px 0 0 20px;
+		background: repeating-linear-gradient(0deg, $x-color-white, $x-color-white 4px, #e6e6e6 4px, #e6e6e6 5px);
+	}
+	&:nth-child(2) {
+		top: 28px;
+		right: 0;
+		width: 146px;
+		height: 31px;
+		border: solid $palette-tertiary;
+		border-width: 4px 4px 4px 0;
+		border-radius: 0 20px 20px 0;
+		background: repeating-linear-gradient(0deg, $x-color-white, $x-color-white 4px, #e6e6e6 4px, #e6e6e6 5px);
+	}
+	&:nth-child(3) {
+		bottom: 0;
+		width: 132px;
+		height: 27px;
+		background-color: $x-color-tomato;
+	}
+}
+
+.illustrationBooks__binding {
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background-color: $x-color-coral-red;
+
+	&:nth-child(1) {
+		left: 10px;
+	}
+	&:nth-child(2) {
+		left: 20px;
+	}
+	&:nth-child(3) {
+		right: 20px;
+	}
+	&:nth-child(4) {
+		right: 10px;
+	}
+}
+
+/*____________________________________________________________
+#### Illustration Analytics
+____________________________________________________________*/
+.illustrationAnalytics {
+	position: absolute;
+	bottom: 25px;
+	right: 10px;
+	width: 215px;
+	height: 180px;
+	border-radius: 2px;
+	background-color: $x-color-white;
+	overflow: hidden;
+	animation: levitation 5s linear infinite;
+}
+
+.illustrationAnalyticsPanel {
+	position: relative;
+	width: 100%;
+	height: 20px;
+	background-color: $palette-program-panel;
+}
+.illustrationAnalyticsPanel__buttonsWrap {
+	position: absolute;
+	top: 6px;
+	left: 10px;
+	height: 8px;
+}
+.illustrationAnalyticsPanel__button {
+	float: left;
+	margin-right: 4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+/*____________________________________________________________
+##### Illustration Analytics Page
+____________________________________________________________*/
+.illustrationAnalyticsPage {
+	padding: 8px;
+	width: 100%;
+	height: calc(100% - 20px);
+}
+.illustrationAnalyticsPage__container {
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+###### Illustration Analytics Diagram
+____________________________________________________________*/
+.illustrationAnalyticsPage__diagramWrap  {
+	float: left;
+	padding-top: 20%;
+	margin-right: 10px;
+	width: 90px;
+	height: 100%;
+}
+.illustrationAnalyticsPage__diagram {
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	width: 15px;
+	height: 100%;
+	border-radius: 1px;
+	overflow: hidden;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 10%;
+		background-color: $palette-analytics-elements;
+		animation: lineDiagram 2.8s ease infinite;
+	}
+
+	@include animDelayChild(2, .6);
+	@include animDelayChild(3, .3);
+	@include animDelayChild(4, .9);
+}
+
+/*____________________________________________________________
+###### Illustration Analytics Banner
+____________________________________________________________*/
+.illustrationAnalyticsPage__banner {
+	float: left;
+	width: calc(100% - 100px);
+	height: 100%;
+}
+
+/*____________________________________________________________
+####### Illustration Analytics Description
+____________________________________________________________*/
+.illustrationAnalyticsPage__lineWrap {
+	margin-bottom: 17px;
+	width: 100%;
+	height: 87px;
+}
+.illustrationAnalyticsPage__line {
+	position: relative;
+	margin-bottom: 5px;
+	width: 100%;
+	height: 3px;
+	border-radius: 3px;
+	overflow: hidden;
+
+	&:first-child {
+		width: 60%;
+		height: 6px;
+		margin-bottom: 8px;
+	}
+	&:nth-child(5),
+	&:nth-child(6),
+	&:nth-child(7) {
+		width: 70%;
+	}
+	&:last-child {
+		height: 27px;
+		margin-bottom: 0;
+		border-radius: 1px;
+		background-color: $palette-window-line;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $palette-window-line;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(1, .1);
+	@include animDelayChild(2, .2);
+	@include animDelayChild(3, .3);
+	@include animDelayChild(4, .35);
+	@include animDelayChild(5, .4);
+	@include animDelayChild(6, .45);
+	@include animDelayChild(7, .5);
+
+	&:last-child {
+		&:after {
+			animation: none;
+		}
+	}
+}
+
+/*____________________________________________________________
+####### Illustration Analytics Product List
+____________________________________________________________*/
+.illustrationAnalyticsPage__productList {
+	width: 100%;
+	height: calc(100% - 104px);
+}
+
+.illustrationAnalyticsPage__productItem {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	width: 47px;
+	height: 15px;
+
+  &:nth-child(2n)  {
+		margin-right: 0;
+	}
+
+	&:nth-child(3),
+	&:nth-child(4) {
+		.illustrationAnalyticsPage__productImg {
+			background-color: $palette-analytics-elements;
+		}
+	}
+}
+
+.illustrationAnalyticsPage__productImg {
+	float: left;
+	margin-right: 5px;
+	width: 15px;
+	height: 15px;
+	border-radius: 1px;
+	background-color: $palette-window-line;
+}
+
+.illustrationAnalyticsPage__productLineWrap {
+	float: left;
+	width: calc(100% - 20px);
+	height: 15px;
+}
+.illustrationAnalyticsPage__productLine {
+	position: relative;
+	margin-bottom: 3px;
+	width: 100%;
+	height: 3px;
+	border-radius: 3px;
+	overflow: hidden;
+
+	&:nth-child(2),
+	&:last-child {
+		width: 70%;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $palette-window-line;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(1, .1);
+	@include animDelayChild(2, .2);
+	@include animDelayChild(3, .3);
+}
+
+/*____________________________________________________________
+#### Illustration Imac
+____________________________________________________________*/
+.illustrationImac {
+	@extend %horizontalCentering;
+	bottom: 147px;
+	width: 482px;
+	height: 266px;
+}
+
+/*____________________________________________________________
+##### Illustration Imac Display
+____________________________________________________________*/
+.illustrationImac__display {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 9px solid $x-color-granite;
+	border-radius: 10px 10px 0 0;
+	background: repeating-linear-gradient(90deg, $palette-tertiary, $palette-tertiary 24px, $palette-imac-display-gradient 24px, $palette-imac-display-gradient 34px);
+}
+
+/*____________________________________________________________
+###### Illustration Imac Editor
+____________________________________________________________*/
+.illustrationImacEditor {
+	position: absolute;
+	bottom: 9px;
+	left: 30px;
+	width: 180px;
+	height: 116px;
+	background-color: $x-color-white;
+}
+
+.illustrationImacEditorPanel {
+	width: 100%;
+	height: 10px;
+	background-color: $palette-program-panel;
+}
+
+/*____________________________________________________________
+####### Illustration Imac Editor Code
+____________________________________________________________*/
+.illustrationImacEditorCodeWrap {
+	position: relative;
+	padding: 6px;
+	width: 100%;
+	height: calc(100% - 10px);
+	background-color: $x-color-graphite-grey;
+}
+.illustrationImacEditorCodeWrap__scrollBox {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+@mixin editorCodeLineChild($nthChild, $top, $side, $sideInent, $width, $bg) {
+	&:nth-child(#{$nthChild}) {
+		top: #{$top}px;
+		#{$side}: #{$sideInent}px;
+		width: #{$width}px;
+		background-color: #{$bg};
+	}
+}
+.illustrationImacEditorCodeWrap__codeList {
+	position: absolute;
+	width: 50%;
+	animation: scrollCode .9s linear infinite;
+
+	&:first-child {
+		border-right: 1px solid $x-color-wet-asphalt;
+
+		.illustrationImacEditorCodeWrap__codeLine {
+			@include editorCodeLineChild(1, 0, left, 0, 20, $x-color-tomato);
+			@include editorCodeLineChild(2, 0, left, 24, 45, $x-color-tomato);
+			@include editorCodeLineChild(3, 4, left, 10, 21, $x-color-white);
+			@include editorCodeLineChild(4, 4, left, 35, 25, $x-color-white);
+			@include editorCodeLineChild(5, 8, left, 0, 22, #78dbe2);
+			@include editorCodeLineChild(6, 8, left, 26, 14, #78dbe2);
+			@include editorCodeLineChild(7, 12, right, 40, 22, #ADFF2F);
+			@include editorCodeLineChild(8, 12, right, 16, 20, #ADFF2F);
+			@include editorCodeLineChild(9, 16, right, 18, 30, $x-color-white);
+			@include editorCodeLineChild(10, 16, right, 6, 8, $x-color-white);
+		}
+	}
+	&:last-child {
+		right: 0;
+		animation-duration: 1.3s;
+
+		.illustrationImacEditorCodeWrap__codeLine {
+			@include editorCodeLineChild(1, 0, left, 6, 36, $x-color-white);
+			@include editorCodeLineChild(2, 0, left, 46, 20, #ff4765);
+			@include editorCodeLineChild(3, 4, left, 12, 30, #29b87d);
+			@include editorCodeLineChild(4, 4, left, 46, 18, #ff4765);
+			@include editorCodeLineChild(5, 8, left, 18, 24, transparent);
+			@include editorCodeLineChild(6, 8, left, 46, 16, #ff4765);
+			@include editorCodeLineChild(7, 12, right, 35, 15, #feb021);
+			@include editorCodeLineChild(8, 12, right, 6, 25, #feb021);
+			@include editorCodeLineChild(9, 16, right, 10, 30, #78dbe2);
+			@include editorCodeLineChild(10, 16, right, 0, 6, #78dbe2);
+		}
+	}
+}
+
+.illustrationImacEditorCodeWrap__codeItem {
+	position: relative;
+	margin-bottom: 2px;
+	width: 100%;
+	height: 18px;
+}
+.illustrationImacEditorCodeWrap__codeLine {
+	position: absolute;
+	height: 2px;
+	background-color: $x-color-tomato;
+	overflow: hidden;
+}
+
+/*____________________________________________________________
+###### Illustration Imac Browser
+____________________________________________________________*/
+.illustrationImacBrowser {
+	position: absolute;
+	top: 12px;
+	left: 16px;
+	width: 180px;
+	height: 116px;
+	background-color: $x-color-white;
+}
+
+/*____________________________________________________________
+####### Illustration Imac Browser Panel
+____________________________________________________________*/
+.illustrationImacBrowserPanel {
+	width: 100%;
+	height: 10px;
+	background-color: $palette-program-panel;
+}
+.illustrationImacBrowserPanel__buttonsWrap {
+	position: absolute;
+	top: 3px;
+	left: 6px;
+	height: 4px;
+}
+.illustrationImacBrowserPanel__button {
+	float: left;
+	margin-right: 2px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+}
+
+/*____________________________________________________________
+####### Illustration Imac Browser Page
+____________________________________________________________*/
+.illustrationImacBrowserPage {
+	width: 100%;
+	height: calc(100% - 10px);
+}
+.illustrationImacBrowserPage__container {
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+######## Illustration Imac Browser Header
+____________________________________________________________*/
+.illustrationImacBrowserPage__header {
+	position: relative;
+	padding-top: 9px;
+	width: 100%;
+	height: 27px;
+}
+
+.illustrationImacBrowserPage__nav {
+	position: relative;
+	padding-top: 4px;
+	margin: 0 auto;
+	width: 100px;
+	height: 10px;
+	background-color: $palette-imac-browser-elements;
+}
+.illustrationImacBrowserPage__navItem {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 15px;
+	height: 2px;
+	overflow: hidden;
+
+	&:first-child {
+		margin-left: calc(10px / 2);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $palette-imac-browser-line;
+		animation: slide 3.5s ease infinite;
+	}
+
+	&:nth-child(2) {
+		&:after {
+			animation-delay: .1s;
+		}
+	}
+	&:nth-child(3) {
+		&:after {
+			animation-delay: .2s;
+		}
+	}
+	&:nth-child(4) {
+		&:after {
+			animation-delay: .3s;
+		}
+	}
+}
+
+/*____________________________________________________________
+######## Illustration Imac Browser Main
+____________________________________________________________*/
+.illustrationImacBrowserPage__main {
+	position: relative;
+	padding: 8px;
+	width: 100%;
+	height: 37px;
+	background-color: $x-color-tomato;
+}
+
+.illustrationImacBrowserPage__banner {
+	width: 100%;
+	height: 100%;
+}
+.illustrationImacBrowserPage__img {
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	width: 44px;
+	height: 22px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-white;
+		animation: slide 3.5s ease infinite;
+	}
+}
+
+.illustrationImacBrowserPage__lineWrap {
+	float: left;
+	width: calc(100% - 54px);
+	height: 20px;
+}
+.illustrationImacBrowserPage__line {
+	position: relative;
+	margin-bottom: 3px;
+	width: 100%;
+	height: 2px;
+	overflow: hidden;
+
+	&:last-child {
+		width: calc(100% / 2);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $palette-imac-browser-line;
+		animation: slide 3.5s ease infinite;
+	}
+
+	&:nth-child(1) {
+		&:after {
+			animation-delay: .1s;
+		}
+	}
+	&:nth-child(2) {
+		&:after {
+			animation-delay: .2s;
+		}
+	}
+	&:nth-child(3) {
+		&:after {
+			animation-delay: .3s;
+		}
+	}
+	&:nth-child(4) {
+		&:after {
+			animation-delay: .35s;
+		}
+	}
+}
+
+/*____________________________________________________________
+######## Illustration Imac Browser Footer
+____________________________________________________________*/
+.illustrationImacBrowserPage__footer {
+	position: relative;
+	padding: 7px 8px;
+	width: 100%;
+	height: 42px;
+}
+
+.illustrationImacBrowserPage__productList {
+	width: 100%;
+	height: 100%;
+}
+
+.illustrationImacBrowserPage__productItem {
+	position: relative;
+	float: left;
+	margin-right: 16px;
+	width: 44px;
+	height: 100%;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.illustrationImacBrowserPage__productImg {
+	position: relative;
+	margin-bottom: 2px;
+	width: 100%;
+	height: 22px;
+	overflow: hidden;
+
+  &:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $palette-imac-browser-elements;
+		animation: slide 3.5s ease infinite;
+	}
+}
+
+.illustrationImacBrowserPage__productLineWrap {
+	width: 100%;
+	height: 6px;
+}
+.illustrationImacBrowserPage__productLine {
+	position: relative;
+	float: left;
+	margin-bottom: 2px;
+	width: 100%;
+	height: 2px;
+	overflow: hidden;
+
+  &:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $palette-imac-browser-line;
+		animation: slide 3.5s ease infinite;
+	}
+
+  &:nth-child(1) {
+		&:after {
+			animation-delay: .1s;
+		}
+	}
+	&:nth-child(2) {
+		&:after {
+			animation-delay: .2s;
+		}
+	}
+}
+
+/*____________________________________________________________
+###### Avatar
+____________________________________________________________*/
+.avatarWrap {
+	position: absolute;
+	bottom: 0;
+	right: 30px;
+	width: 250px;
+	height: 356px;
+}
+
+/*____________________________________________________________
+####### Head
+____________________________________________________________*/
+.headWrap {
+	position: relative;
+	width: 100%;
+	height: 249px;
+}
+
+/*____________________________________________________________
+######## Hair
+____________________________________________________________*/
+.hair {
+	@extend %horizontalCentering;
+	width: 140px;
+	height: 44px;
+}
+.hair__leftSide {
+	position: absolute;
+	width: 120px;
+	height: 44px;
+	border-radius: 60px 0 30px 0;
+	background-color: $x-color-black;
+	z-index: 9;
+
+	.blink {
+		position: absolute;
+		height: 5.5px;
+		border-radius: 5px;
+		background-color: $palette-hair-blink;
+
+		&:nth-child(1) {
+			top: 29px;
+			left: 25px;
+			width: 26px;
+		}
+		&:nth-child(2) {
+			top: 12px;
+			left: 40px;
+			width: 63px;
+		}
+		&:nth-child(3) {
+			top: 26px;
+			right: 10px;
+			width: 26px;
+		}
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -40px;
+		width: 40px;
+		height: 40px;
+		background-color: $x-color-black;
+	}
+}
+
+.hair__rightSide {
+	overflow: hidden;
+	content: '';
+	position: absolute;
+	top: 25px;
+	right: 0;
+	width: 40px;
+	height: 55px;
+	background-color: $x-color-black;
+
+  &:after {
+		content: '';
+		position: absolute;
+		top: -16px;
+		left: -16px;
+		width: 50px;
+		height: 40px;
+		border-radius: 0 0 30px 0;
+		background-color: $palette-hair-shadow;
+	}
+}
+
+/*____________________________________________________________
+######## Ears
+____________________________________________________________*/
+.ears {
+	@extend %horizontalCentering;
+	top: 115px;
+	width: 186px;
+	height: 40px;
+}
+.ear {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: $palette-skin;
+
+	&:nth-child(2) {
+		right: 0;
+	}
+
+	&:after {
+		content: '';
+		@extend %centering;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: #180812;
+	}
+}
+
+/*____________________________________________________________
+######## Face
+____________________________________________________________*/
+.face {
+	@extend %horizontalCentering;
+	top: 44px;
+	width: 140px;
+	height: 181px;
+	border-radius: 60px 60px 100px 100px; 
+	background-color: $palette-skin;
+	z-index: 2;
+}
+
+/*____________________________________________________________
+######### Top Face
+____________________________________________________________*/
+.eyebrows {
+	@extend %horizontalCentering;
+	top: 29px;
+	width: 90px;
+	height: 10px;
+}
+.eyebrows__brow {
+	overflow: hidden;
+	position: absolute;
+	width: 30px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: $x-color-black;
+	z-index: 9;
+
+	&:nth-child(2) {
+		right: 0;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -4px;
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		background-color: $palette-hair-shadow;
+	}
+	&:after {
+		content: '';
+		@extend %horizontalCentering;
+		top: 2px;
+		width: 12px;
+		height: 2px;
+		border-radius: 15px;
+		background-color: $x-color-white;
+		opacity: .2;
+	}
+}
+
+.eyebrows__shadow {
+	position: absolute;
+	top: 4px;
+	width: 100%;
+	height: 100%;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 10px;
+		border-radius: 10px;
+		background-color: $palette-skin-shadow;
+	}
+	&:after {
+		right: 0;
+	}
+}
+
+/*____________________________________________________________
+######### Middle Face
+____________________________________________________________*/
+.eyes {
+	@extend %horizontalCentering;
+	bottom: 100px;
+	width: 70px;
+	height: 22px;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 12px;
+		height: 22px;
+		border-radius: 6px;
+		background-color: $x-color-black;
+		animation: blink 3s ease-in-out infinite;
+	}
+	&:after {
+		right: 0;
+	}
+}
+
+.glasses {
+	@extend %horizontalCentering;
+	top: 70px;
+	width: 4px;
+	height: 4px;
+	background-color: $x-color-black;
+
+	.left,
+	.right {
+		position: absolute;
+		width: 56px;
+		height: 56px;
+		background-color: transparent;
+		border-radius: 100%;
+		border: 5px solid $x-color-black;
+		left: -56px;
+		top: -26px;
+		z-index: 2;
+
+		&:before {
+			content: '';
+			@extend %verticalCentering;
+			width: 20px;
+			height: 4px;
+			border-radius: 5px;
+			background-color: $x-color-black;
+		}
+		&:after {
+			content: '';
+			@extend %verticalCentering;
+			width: 8px;
+			height: 2px;
+			border-radius: 15px;
+			background-color: $x-color-white;
+			opacity: .4;
+		}
+	}
+	.left {
+
+		&:before {
+			left: -20px;
+		}
+		&:after {
+			left: -17px;
+		}
+	}
+	.right {
+		left: 4px;
+
+		&:before {
+			right: -20px;
+		}
+		&:after {
+			right: -17px;
+		}
+	}
+}
+
+
+.lens {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+
+	.shine {
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: -21px;
+			left: 5px;
+			width: 20px;
+			height: 100px;
+			background-color: $x-color-white;
+			transform: rotate(30deg);
+			opacity: 0.3;
+		}
+		&:after {
+			width: 5px;
+			left: 30px;
+		}
+	}
+}
+
+/*____________________________________________________________
+######### Bottom Face
+____________________________________________________________*/
+.nose {
+	@extend %horizontalCentering;
+	bottom: 72px;
+	width: 30px;
+	height: 8px;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: $x-color-flea-belly;
+	}
+	&:after {
+		right: 0;
+	}
+}
+
+.arm {
+	overflow: hidden;
+	@extend %horizontalCentering;
+	bottom: 28px;
+	width: calc(81px - 10px);
+	height: calc(30px - 0px);
+	border-radius: 0 0 50% 50% / 0 0 100% 100%;
+	background-color: $x-color-pearl-ruby;
+}
+.arm__pharynx {
+	@extend %horizontalCentering;
+	top: 6px;
+	width: calc(57px - 10px);
+	height: calc(11px - 0px);
+	border-radius: 20px;
+	background-color: $x-color-deep-red-brown;
+}
+.arm__tooth {
+	position: absolute;
+	left: 6px;
+	width: calc(69px - 10px);
+	height: calc(9px - 0px);
+	background-color: $x-color-white;
+	border-radius: 0 0 5px 5px;
+	z-index: 1;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		background-color: $x-color-periwinkle;
+	}
+}
+.arm__tongue {
+	position: absolute;
+	bottom: 0;
+	right: 3px;
+	width: calc(58px - 10px);
+	height: calc(16px - 0px);
+	border-radius: 15px 0 0 0;
+	background-color: $x-color-light-cherry;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 4px;
+		left: 12px;
+		width: 22px;
+		height: 3px;
+		border-radius: 15px;
+		background-color: $x-color-white;
+		opacity: .2;
+	}
+}
+
+/*____________________________________________________________
+######## Neck
+____________________________________________________________*/
+.neck {
+	overflow: hidden;
+	@extend %horizontalCentering;
+	bottom: 0;
+	width: 58px;
+	height: 31px;
+	background-color: $palette-skin;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 58px;
+		height: 18px;
+		border-radius: 0 0 50% 50% / 0 0 100% 100%;
+		background-color: $palette-skin-shadow;
+	}
+}
+
+/*____________________________________________________________
+####### Body
+____________________________________________________________*/
+.bodyWrap {
+	position: relative;
+	width: 100%;
+	height: 107px;
+}
+.bodyWrap__body  {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+	background-color: $x-color-grey-silk;
+	background-image: linear-gradient(90deg, transparent 20%, rgba(166, 152, 134,.5) 20%);
+	background-size: 20px 20px;
+	overflow: hidden;
+}
+
+.collar {
+	@extend %horizontalCentering;
+	top: -50px;
+	width: 120px;
+	height: 170px;
+	border-radius: 100%;
+	background-color: $palette-costume-elements;
+}
+
+.shirt {
+	@extend %horizontalCentering;
+	top: 50px;
+	width: 0; 
+	height: 0;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+	border-top: 200px solid $x-color-lemon-cream;
+}
+
+.button {
+	@extend %horizontalCentering;
+	top: 82px;
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	background-color: $palette-costume-elements;
+
+	&:nth-child(2) {
+		top: 102px;
+	}
+}
+
+/*____________________________________________________________
+######## Bow
+____________________________________________________________*/
+.bowWrap {
+	position: absolute;
+	top: -17px;
+	left: 85px;
+	width: 80px;
+	height: 46px;
+}
+.bowWrap__bowShadow {
+	&:before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		width: 0;
+		height: 5px;
+		border-width: 23px 40px;
+		border-style: solid;
+		border-color: transparent #bce1be transparent #bce1be;
+		border-radius: 25px;
+		opacity: .8;
+		z-index: 1;
+	}
+}
+.bowWrap__bowShadow {
+	&:after {
+		content: "";
+		position: absolute;
+		top: 16px;
+		left: 31.5px;
+		width: 17px;
+		height: 19px;
+		border-radius: 2px;
+		background-color: #bce1be;
+		opacity: .8;
+		z-index: 2;
+	}
+}
+.bowWrap__bow {
+	&:before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 5px;
+		border-width: 23px 40px;
+		border-style: solid;
+		border-color: transparent $x-color-vinous transparent $x-color-vinous;
+		border-radius: 25px;
+		z-index: 1;
+	}
+}
+.bowWrap__bow {
+	&:after {
+		content: "";
+		position: absolute;
+		top: 16px;
+		left: 31.5px;
+		width: 17px;
+		height: 19px;
+		border-radius: 2px;
+		background-color: $palette-bow-elements;
+		z-index: 2;
+	}
+}
+.bowWrap__crease {
+	position: absolute;
+	top: 21px;
+	left: 17.5px;
+	width: 45px;
+	height: 4px;
+	border-radius: 2px;
+	background-color: $palette-bow-elements;
+	z-index: 1;
+}
+
+@keyframes blink {
+	0% {
+		transform: scaleY(1);
+	}
+	18% {
+		transform: scaleY(1);
+	}
+	20% {
+		transform: scaleY(0);
+	}
+	25% {
+		transform: scaleY(1);
+	}
+	38% {
+		transform: scaleY(1);
+	}
+	40% {
+		transform: scaleY(0);
+	}
+	45% {
+		transform: scaleY(1);
+	}
+	80% {
+		transform: scaleY(1);
+	}
+}
+
+/*____________________________________________________________
+##### Illustration Imac Panel
+____________________________________________________________*/
+.illustrationImac__panel {
+	position: absolute;
+	bottom: -45px;
+	width: 100%;
+	height: 45px;
+	border-radius: 0 0 10px 10px;
+	background-color: $x-color-grideperlevy;
+}
+.illustrationImac__panelButton {
+	@extend %centering;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background-color: $x-color-manatee;
+}
+
+/*____________________________________________________________
+##### Illustration Imac Stand
+____________________________________________________________*/
+.illustrationImac__stand {
+	@extend %horizontalCentering;
+	bottom: -127px;
+	width: 154px;
+	height: 0; 
+	border-bottom: 82px solid $x-color-cadet-blue;
+	border-left: 21px solid transparent;
+	border-right: 21px solid transparent;
+}
+.illustrationImac__standShadow {
+	position: absolute;
+	top: 5px;
+	left: -5px;
+	height: 0; 
+	width: 122px;
+	border-bottom: 16px solid $x-color-manatee;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+}
+.illustrationImac__standBase {
+	@extend %horizontalCentering;
+	top: 82px;
+	width: 284px;
+	height: 20px;
+	border-radius: 15px;
+	background-color: $x-color-niagara;
+}
+
+/*____________________________________________________________
+#### Illustration Presentation	
+____________________________________________________________*/
+.illustrationPresentation {
+	position: absolute;
+	top: 25px;
+	left: 20px;
+	width: 215px;
+	height: 179px;
+	background-color: $x-color-snow-blue;
+	border-radius: 2px;
+	overflow: hidden;
+	animation: levitation 5s linear infinite;
+}
+
+/*____________________________________________________________
+##### Illustration Presentation Panel
+____________________________________________________________*/
+.illustrationPresentationPanel {
+	position: relative;
+	width: 100%;
+	height: 20px;
+	background-color: $palette-program-panel;
+}
+.illustrationPresentationPanel__buttonsWrap {
+	position: absolute;
+	top: 6px;
+	left: 10px;
+	height: 8px;
+}
+.illustrationPresentationPanel__button {
+	float: left;
+	margin-right: 4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+/*____________________________________________________________
+##### Illustration Presentation Page
+____________________________________________________________*/
+.illustrationPresentationPage {
+	padding: 8px;
+	width: 100%;
+	height: calc(100% - 20px);
+}
+.illustrationPresentationPage__container {
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+###### Illustration Presentation Banner
+____________________________________________________________*/
+.illustrationPresentationPage__banner {
+	position: relative;
+	width: 100%;
+	height: 72px;
+	margin-bottom: 6px;
+}
+
+.illustrationPresentationPage__img {
+	position: relative;
+	float: right;
+	margin-left: 10px;
+	width: 93px;
+	height: 72px;
+	background-color: $x-color-white;
+	overflow: hidden;
+}
+
+/*____________________________________________________________
+####### Picture
+____________________________________________________________*/
+.picture {
+	position: absolute;
+	width: 93px;
+	height: 72px;
+	border: 6px solid $x-color-gainsborough;
+	background-color: $x-color-moderate-turquoise;
+	overflow: hidden;
+	animation: changeDay 10s linear infinite;
+}
+.illustrationImac__display {
+	.picture {
+		top: 50px;
+		right: 10px;
+		animation-delay: 3s;
+	}
+
+	.picture__dayWrap {
+		animation-delay: 3s;
+	}
+}
+
+.picture__mountain {
+	position: absolute;
+	bottom: 0;
+
+	@mixin pictureMountainChild($nthChild, $side, $sideInent, $borderWidth, $borderHeight, $bg) {
+		&:nth-child(#{$nthChild}) {
+			#{$side}: #{$sideInent}px;
+			border-left: #{$borderWidth}px solid transparent;
+			border-right: #{$borderWidth}px solid transparent;
+			border-bottom: #{$borderHeight}px solid #{$bg};
+		}
+	}
+
+	@include pictureMountainChild(1, left, 0, 22.5, 24, $x-color-blackish-blue);
+	@include pictureMountainChild(2, right, -20, 36, 39, $x-color-dark-grey-blue);
+	@include pictureMountainChild(3, left, 26, 10, 10, $x-color-slate-grey);
+}
+
+.picture__dayWrap {
+	position: absolute;
+	top: 15px;
+	left: 8px;
+	width: 70px;
+	height: 70px;
+	animation: rotateRays 10s linear infinite;
+}
+
+.picture__dayWrap,
+.picture__sun,
+.picture__moon {
+	border-radius: 50%;
+}
+
+.picture__sun,
+.picture__moon {
+	@extend %horizontalCentering;
+}
+.picture__sun {
+	top: -5px;
+	width: 15px;
+	height: 15px;
+	background-color: $x-color-white;
+}
+.picture__moon {
+	bottom: -4px;
+	width: 17px;
+	height: 17px;
+	box-shadow: 4px 4px 0 0 $x-color-amber;
+	transform: rotate(120deg);
+}
+
+
+.illustrationPresentationPage__lineWrap {
+	float: right;
+	width: calc(100% - 103px);
+	height: 20px;
+}
+.illustrationPresentationPage__line {
+	position: relative;
+	margin-bottom: 6px;
+	width: 100%;
+	height: 6px;
+	border-radius: 3px;
+	overflow: hidden;
+
+	&:last-child {
+		margin-bottom: 0;
+		width: 80%;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $palette-window-line;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(1, .1);
+	@include animDelayChild(2, .2);
+	@include animDelayChild(3, .3);
+	@include animDelayChild(4, .35);
+	@include animDelayChild(5, .4);
+	@include animDelayChild(6, .45);
+}
+
+/*____________________________________________________________
+###### Illustration Presentation Form
+____________________________________________________________*/
+.illustrationPresentationPage__form {
+	position: relative;
+	width: 100%;
+	height: calc(100% - 78px);
+}
+.illustrationPresentationPage__input {
+	margin-bottom: 6px;
+	width: 100%;
+	height: 16px;
+	border-radius: 3px;
+	background-color: $x-color-white;
+
+	&:last-child {
+		height: calc(100% - 22px);
+	}
+}
+
+/*____________________________________________________________
+#### Illustration Settings
+____________________________________________________________*/
+.illustrationSettings {
+	position: absolute;
+	bottom: 115px;
+	left: 5px;
+	padding: 8px 14px;
+	width: 206px;
+	height: 56px;
+	border-radius: 5px;
+	background-color: $palette-settings-elements;
+	animation: levitation 5s linear infinite 3s;
+}
+.illustrationSettings__container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*____________________________________________________________
+##### Illustration Settings Gear
+____________________________________________________________*/
+.illustrationSettings__gearWrap {
+	position: relative;
+	float: left;
+	margin-right: 12px;
+	width: 40px;
+	height: 40px;
+}
+
+.illustrationSettings__gear {
+	@extend %centering;
+	width:  50px;
+	height: 50px;
+}
+.illustrationSettings__gear svg {
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	fill: none;
+	stroke: $x-color-white;
+	stroke-width: 35px;
+	animation: rotateRays 7s linear infinite;
+}
+.illustrationSettings__gear .teeth {
+	position: absolute;
+	top: 19.32%;
+	left: 19.32%;
+	transform: translate(-19.32%, -19.32%);
+}
+
+.illustrationSettings__gearCircle {
+	@extend %centering;
+	width: 29px;
+	height: 29px;
+	border: 8px solid $x-color-white;
+	background-color: $palette-settings-elements;
+	border-radius: 50%;
+}
+
+/*____________________________________________________________
+##### Illustration Settings Line
+____________________________________________________________*/
+.illustrationSettings__lineWrap {
+	position: relative;
+	float: left;
+	padding-top: 6.5px;
+	width: calc(100% - 52px);
+	height: 40px;
+}
+.illustrationSettings__line {
+	position: relative;
+	width: 100%;
+	height: 3px;
+	margin-bottom: 5px;
+	overflow: hidden;
+
+	&:last-child {
+		margin-bottom: 0;
+		width: 60%;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-white;
+		animation: slide 3.5s ease infinite;
+	}
+
+	@include animDelayChild(1, .1);
+	@include animDelayChild(2, .2);
+	@include animDelayChild(3, .3);
+	@include animDelayChild(4, .35);
+}

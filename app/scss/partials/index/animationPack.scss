@@ -1,0 +1,68 @@
+/*____________________________________________________________
+# Animation Pack
+____________________________________________________________*/
+@keyframes slide {
+	0% {
+		left: -100%;
+	}
+	22% {
+		left: 0%;
+	}
+	78% {
+		left: 0%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+
+@keyframes rotateRays {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes changeDay {
+	0% {
+		background-color: $palette-tertiary;
+	}
+	25% {
+		background-color: $x-color-granite;
+	}
+	60% {
+		background-color: $x-color-granite;
+	}
+	75% {
+		background-color: $palette-tertiary;
+	}
+	100% {
+		background-color: $palette-tertiary;
+	}
+}
+
+@keyframes lineDiagram {
+	0% {
+		height: 10%;
+	}
+	50% {
+		height: 100%;
+	}
+	100% {
+		left: 10%;
+	}
+}
+
+@keyframes levitation {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(6px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

@@ -1,0 +1,85 @@
+/*____________________________________________________________
+
+# Variables
+# Container
+# @import
+	## @import _variables.scss
+	## @import _centering.scss
+	## @import _animDelay.scss
+	
+	## @import buttonsStyle.scss
+	## @import home.scss
+	## @import illustration.scss
+	## @import about.scss
+	## @import icons.scss
+	## @import animationPack.scss
+	## @import animationIllustration.scss
+	## @import animationIcons.scss
+
+____________________________________________________________*/
+
+/*____________________________________________________________
+# Container
+____________________________________________________________*/
+.container {
+	width: 100%;
+}
+
+/*____________________________________________________________
+# @import
+____________________________________________________________*/
+
+/*____________________________________________________________
+## @import _variables.scss
+____________________________________________________________*/
+@import 'partials/variables/_variables.scss';
+
+/*____________________________________________________________
+## @import _centering.scss
+____________________________________________________________*/
+@import 'partials/extends/_centering.scss';
+
+/*____________________________________________________________
+## @import _animDelay.scss
+____________________________________________________________*/
+@import 'partials/mixins/_animDelay.scss';
+
+/*____________________________________________________________
+## @import buttonsStyle.scss
+____________________________________________________________*/
+@import 'partials/index/buttonsStyle.scss';
+
+/*____________________________________________________________
+## @import home.scss
+____________________________________________________________*/
+@import 'partials/index/home.scss';
+
+/*____________________________________________________________
+## @import illustration.scss
+____________________________________________________________*/
+@import 'partials/index/illustration.scss';
+
+/*____________________________________________________________
+## @import about.scss
+____________________________________________________________*/
+@import 'partials/index/about.scss';
+
+/*____________________________________________________________
+## @import icons.scss
+____________________________________________________________*/
+@import 'partials/index/icons.scss';
+
+/*____________________________________________________________
+## @import animationPack.scss
+____________________________________________________________*/
+@import 'partials/index/animationPack.scss';
+
+/*____________________________________________________________
+## @import animationIllustration.scss
+____________________________________________________________*/
+@import 'partials/index/animationIllustration.scss';
+
+/*____________________________________________________________
+## @import animationIcons.scss
+____________________________________________________________*/
+@import 'partials/index/animationIcons.scss';

@@ -1,0 +1,10 @@
+/*____________________________________________________________
+## Animation delay mixin
+____________________________________________________________*/
+@mixin animDelayChild($nthChild, $delay) {
+	&:nth-child(#{$nthChild}) {
+		&:after {
+			animation-delay: #{$delay}s;
+		}
+	}
+}

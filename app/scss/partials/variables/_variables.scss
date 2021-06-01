@@ -1,0 +1,107 @@
+/*____________________________________________________________
+
+# Variables
+	## Regular color variables
+	## Compound color variables
+
+____________________________________________________________*/
+
+/*____________________________________________________________
+# Variables
+____________________________________________________________*/
+
+/*____________________________________________________________
+## Regular color variables
+____________________________________________________________*/
+// First number color
+$x-color-black: #000;
+$x-color-dark-blue: #01243a;
+$x-color-dark-greenish-blue: #0b3442;
+$x-color-blackish-blue: #171b25;
+$x-color-dark-grey-blue: #272f3a;
+$x-color-lime-green: #29c740;
+$x-color-granite: #2a333c;
+$x-color-dark-cyanide: #2c8291;
+$x-color-cyanide: #37a4b8;
+$x-color-space:#37404a;
+$x-color-slate-grey: #3e4955;
+$x-color-graphite-grey: #4c5259;
+$x-color-wet-asphalt: #626a73;
+$x-color-aquamarine: #7dcbd8;
+$x-color-deep-red-brown: #480a16;
+$x-color-flea-belly: #4d160e;
+$x-color-marengo: #4d5c68;
+$x-color-moderate-turquoise: #57c2cb;
+$x-color-falun-red: #5f140e;
+$x-color-dark-red: #732124;
+$x-color-pearl-ruby: #7a1635;
+$x-color-manatee: #889ea6;
+$x-color-coral-red: #8c250e;
+$x-color-vinous: #9b2d30;
+
+// First letter color
+$x-color-snow-blue: #a3d9e3;
+$x-color-cadet-blue: #a4b4ba;
+$x-color-niagara: #b0b7c6;
+$x-color-silver: #c0c0c0;
+$x-color-grideperlevy: #c3cdd1;
+$x-color-grey-silk: #c6b69d;
+$x-color-deep-orange: #c74b16;
+$x-color-light-cyanide: #cceaf0;
+$x-color-periwinkle: #cfdce5;
+$x-color-light-cherry: #dd3e62;
+$x-color-gainsborough: #e1e6e8;
+$x-color-light-gray: #e6e5e5;
+$x-color-tomato: #ee6648;
+$x-color-beige: #f7e0b5;
+$x-color-lemon-cream: #fafac3;
+$x-color-shiny-orange: #febc2e;
+$x-color-amber: #fec712;
+$x-color-orange-dawn: #ff5f56;
+$x-color-white: #fff;
+
+/*____________________________________________________________
+## Compound color variables
+____________________________________________________________*/
+$palette-primary: $x-color-vinous;
+$palette-secondary: $x-color-beige;
+$palette-tertiary: $x-color-aquamarine;
+
+$palette-button-exit: $x-color-orange-dawn;
+$palette-button-minimize: $x-color-shiny-orange;
+$palette-button-screen: $x-color-lime-green;
+
+$palette-bubble-type-1: $x-color-aquamarine;
+$palette-bubble-type-2: $x-color-granite;
+$palette-bubble-type-3: $x-color-tomato;
+
+$palette-chart-type-1: $x-color-tomato;
+$palette-chart-type-2: $x-color-granite;
+
+$palette-window-line: $x-color-light-cyanide;
+
+$palette-folder-shadow: $x-color-dark-cyanide;
+
+$palette-settings-elements: $x-color-dark-cyanide;
+
+$palette-analytics-elements: $x-color-snow-blue;
+
+$palette-dialog: $x-color-snow-blue;
+
+$palette-site-layout: $x-color-snow-blue;
+
+$palette-imac-display-gradient: $x-color-snow-blue;
+$palette-imac-browser-elements: $x-color-silver;
+$palette-imac-browser-line: $x-color-granite;
+
+$palette-program-panel: $x-color-granite;
+
+$palette-skin: $x-color-deep-orange;
+$palette-skin-shadow: $x-color-falun-red;
+$palette-hair-blink: $x-color-dark-greenish-blue;
+$palette-hair-shadow: $x-color-dark-blue;
+$palette-costume-elements: $x-color-marengo;
+$palette-bow-elements: $x-color-dark-red;
+
+$palette-responsive-nav: $x-color-tomato;
+$palette-responsive-banner: $x-color-aquamarine;

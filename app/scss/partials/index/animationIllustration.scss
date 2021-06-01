@@ -1,0 +1,48 @@
+/*____________________________________________________________
+## Animation Illustration
+____________________________________________________________*/
+@keyframes openFolder {
+	0% {
+		left: 0;
+		transform: skew(0);
+	}
+	20% {
+		left: -5px;
+		height: 26px;
+		transform: skew(20deg);
+	}
+	80% {
+		left: -5px;
+		height: 26px;
+		transform: skew(20deg);
+	}
+	100% {
+		left: 0;
+		height: 31px;
+		transform: skew(0);
+	}
+}
+
+@keyframes openFile {
+	0% {
+		bottom: 0;
+	}
+	20% {
+		bottom: 10px;
+	}
+	80% {
+		bottom: 10px;
+	}
+	100% {
+		bottom: 0;
+	}
+}
+
+@keyframes scrollCode {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: -20px;
+	}
+}
