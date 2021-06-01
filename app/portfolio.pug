@@ -5,4 +5,55 @@ html
 		include template/partials/portfolio/_linkPortfolioStyle.pug
 	body
 		.container
+			section.popupMenu
+				.portfolioContainer
+					.bgRect
+					.bgRect
+					.presentation
+						//- Present Wrap
+						.presentWrap
+							.presentWrap__side
+								.closeButtonWrap
+									svg.closeButtonWrap__textWrap(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve")
+										defs
+											path#circlePath(d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 ")
+										circle(cx="150" cy="100" r="75" fill="none")
+										g
+											use(xlink:href="#circlePath" fill="none")
+											text
+												textPath.closeButtonWrap__text(xlink:href="#circlePath") Close portfolio page
+									.closeButtonWrap__circle
+								h1.wrap__vertical
+							.presentWrap__presentBlock
+								p.presentWrap__article Presentation
+								p.presentWrap__article 01
+								p.presentWrap__article
+									a.wrap__demoLink(href="" target="_blank") Demo Page
+								p.presentWrap__article Made by Roden
+
+								.presentWrap__titleWrap
+									h1.presentWrap__title
+									.presentWrap__titleUnderline
+									.presentWrap__slide
+
+									.presentWrap__titleCircle
+										svg.presentWrap__textWrap(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve")
+											defs
+												path#circlePath(d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 ")
+											circle(cx="150" cy="100" r="75" fill="none")
+											g
+												use(xlink:href="#circlePath" fill="none")
+												text
+													textPath.presentWrap__text(xlink:href="#circlePath") Welcome to portfolio page
+								.presentWrap__content
+									.presentWrap__descript
+										h2.presentWrap__descriptTitle
+										p.presentWrap__descriptParagraph
+									.presentWrap__imgWrap
+										.presentWrap__imgRect
+										.presentWrap__img
+						//- Detail Wrap
+						.detailWrap
+						//- Portfolio Wrap
+						.portfolioWrap
 		include template/partials/_mainScripts.pug
