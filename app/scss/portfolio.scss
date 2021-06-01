@@ -1,0 +1,36 @@
+/*____________________________________________________________
+
+# Variables
+# Container
+# @import
+	## @import _variables.scss
+	## @import _centering.scss
+	## @import _animDelay.scss
+	
+	## @import buttonsStyle.scss
+	## @import home.scss
+	## @import illustration.scss
+	## @import about.scss
+	## @import icons.scss
+	## @import animationPack.scss
+	## @import animationIllustration.scss
+	## @import animationIcons.scss
+
+____________________________________________________________*/
+
+/*____________________________________________________________
+# Container
+____________________________________________________________*/
+.container {
+	width: 100%;
+	background: darkred;
+}
+
+/*____________________________________________________________
+# @import
+____________________________________________________________*/
+
+/*____________________________________________________________
+## @import _variables.scss
+____________________________________________________________*/
+@import 'partials/variables/_variables.scss';
