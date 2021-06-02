@@ -4,9 +4,10 @@ html
 		include template/partials/_general.pug
 		include template/partials/portfolio/_linkPortfolioStyle.pug
 	body
+		//- Container
 		.container
 
-			//- Popup Menu
+			//-- Popup Menu
 			section.popupMenu
 
 				//- Portfolio Container
@@ -149,14 +150,14 @@ html
 								.portfolio__paragraphWrap
 									p.portfolio__paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quis aperiam vero dicta, odio eaque illum, rerum veniam velit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quis
 
-			//- Portfolio Card Content
+			//-- Portfolio Card Content
 			.portfolioCardContent.clearfix
 				h1.portfolioCardContent__title Portfolio.
 				.portfolioCardContent__paragraphWrap
 					h2.portfolioCardContent__paragraphTitle Idea Crafting.
 					p.portfolioCardContent__paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quis aperiam vero dicta, odio eaque illum, rerum veniam velit? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 
-			//- Portfolio Card Content
+			//-- Portfolio Card Wrap
 			.portfolioCardWrap.clearfix
 				mixin portfolioCardMix(imgProjectClass, portfolioCardName, portfolioCardTechnologies)
 					.portfolioCard

@@ -3,6 +3,8 @@
 # @import
 	## @import _variables.scss
 # Container
+	## Portfolio Card Content
+	## Portfolio Card Wrap
 
 ____________________________________________________________*/
 
@@ -15,10 +17,144 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @import 'partials/variables/_variables.scss';
 
+
+body{
+	width: 100%;
+	font-family: 'Dosis', sans-serif;
+}
 /*____________________________________________________________
 # Container
 ____________________________________________________________*/
 .container {
 	width: 100%;
-	background: darkred;
+	background: $palette-primary;
+}
+
+/*____________________________________________________________
+## Portfolio Card Content
+____________________________________________________________*/
+.portfolioCardContent {
+	position: relative;
+	margin: 150px auto 100px;
+	width: 1500px;
+	height: auto;
+}
+.portfolioCardContent__title {
+	position: relative;
+	float: left;
+	width: 45%;
+	font-family: Galeria;
+	font-size: 136px;
+	color: $palette-secondary;
+}
+.portfolioCardContent__paragraphWrap {
+	position: relative;
+	float: left;
+	width: 55%;
+	height: auto;
+}
+.portfolioCardContent__paragraphTitle {
+	position: relative;
+	margin-bottom: 20px;
+	font-family: Galeria;
+	font-size: 28px;
+	color: $palette-secondary;
+}
+.portfolioCardContent__paragraph {
+	font-family: Galeria-Medium;
+	font-size: 18px;
+	word-spacing: 10px;
+	text-align: justify;
+	line-height: 40px;
+	color: $palette-secondary;
+}
+
+/*____________________________________________________________
+## Portfolio Card Wrap
+____________________________________________________________*/
+.portfolioCardWrap {
+	position: relative;
+	margin: 0 auto;
+	width: 1500px;
+}
+.portfolioCard {
+	position: relative;
+	float: left;
+	width: 330px;
+	height: 450px;
+	padding: 25px;
+	margin-bottom: 60px;
+	margin-right: 60px;
+	background: $palette-secondary;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+	transition: all 0.3s ease-out;
+	cursor: pointer;
+
+	&:nth-child(4n) {
+		margin-right: 0;
+	}
+
+	&:hover {
+		transform: translateY(-5px) scale(1.005) translateZ(0);
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+	&:active {
+		transform: scale(1) translateZ(0);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+	}
+}
+.portfolioCard__img {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+
+	&_gwent {
+		background-image: url('https://i.pinimg.com/originals/73/8d/26/738d26a92f816d7379f67519ee5e8210.png');
+	}
+	&_prado {
+		background-image: url('https://i.pinimg.com/originals/9d/c8/f7/9dc8f7657f620fe5496d10cf9f55ac83.png');
+	}
+	&_spiele {
+		background-image: url('https://i.pinimg.com/originals/f4/47/d2/f447d2fd4073f28997ca80bdf0cd6cf9.png');
+	}
+	&_cuphead {
+		background-image: url('https://i.pinimg.com/originals/ed/3d/4e/ed3d4e76fa5d5116de0a2bb8f649689a.png');
+	}
+	&_calculator {
+		background-image: url('https://i.pinimg.com/originals/a9/5b/95/a95b9595b3a101d14407c92c3586bed4.png');
+	}
+	&_player {
+		background-image: url('https://i.pinimg.com/originals/e0/8a/14/e08a141b68c02b08358d7aec2ce6c97c.png');
+	}
+	&_mobile {
+		background-image: url('https://i.pinimg.com/originals/b8/72/89/b8728959adfe9cdeb6ed7e255e6f1162.png');
+	}
+	&_artGallery {
+		background-image: url('https://i.pinimg.com/originals/a2/22/42/a222421ec14add5fd262768d76bdf183.png');
+	}
+	&_tree {
+		background-image: url('https://i.pinimg.com/originals/4b/ca/fc/4bcafca6b36076f715a7e1817108ea41.png');
+	}
+}
+.portfolioCard__about {
+	width: 100%;
+	margin-top: 27px;
+}
+.portfolioCard__name {
+	margin-bottom: 3px;
+	font-family: 'Dosis', sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.portfolioCard__technologies {
+	font-family: 'Dosis', sans-serif;
+	font-size: 16px;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
