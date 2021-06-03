@@ -505,6 +505,160 @@ ____________________________________________________________*/
 }
 
 /*____________________________________________________________
+###### Portfolio Info Wrap
+____________________________________________________________*/
+.portfolioInfoWrap {
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	height: 40%;
+}
+
+.portfolioImg_lg {
+	margin-right: 2.5%;
+	width: 45%;
+	border-color: #fff;
+	background-image: url('img/5.png');
+}
+.portfolioImg_md {
+	width: 30%;
+	border-color: #56c299;
+	background-image: url('img/6.png');
+}
+
+/*____________________________________________________________
+####### Portfolio Links
+____________________________________________________________*/
+.portfolioImg,
+.portfolioLinks {
+	position: relative;
+	float: left;
+	height: 100%;
+	border: 20px solid;
+	outline: 2px solid #292c2c;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.portfolioLinks {
+	margin-right: 2.5%;
+	width: 20%;
+	border-color: #dd4f5b;
+	background-color: #dd4f5b;
+}
+.portfolioLinks__lineWrap {
+	margin-bottom: 10px;
+	width: 100%;
+	height: 50px;
+}
+.portfolioLinks__line {
+	float: left;
+	margin-top: 23px;
+	margin-right: 20px;
+	width: calc(100% - 70px);
+	height: 3px;
+	background-color: #292c2c;
+}
+.portfolioLinks__circle {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #292c2c;
+	border-radius: 50%;
+	background-color: #facf6f;
+}
+
+.portfolioLinks__socialWrap {
+	width: 100%;
+}
+.portfolioLinks__socialTitle {
+	margin-bottom: 20px;
+	font-family: Galeria;
+	font-size: 32px;
+	color: #fff;
+}
+
+.portfolioLinks__socialList {
+	width: 100%;
+  list-style: none;
+}
+.portfolioLinks__socialItem {
+	position: relative;
+  margin-bottom: 20px;
+  width: 115px;
+  height: 20px;
+  transition: transform 0.2s;
+
+  &:hover {
+	  transform: translateY(-3px);
+
+	  .portfolioLinks__icon {
+	  	stroke: #7dcbd8;
+	  }
+		.portfolioLinks__name {
+			color: #7dcbd8;
+		}
+	}
+}
+.portfolioLinks__link {
+	text-decoration: none;
+}
+.portfolioLinks__icon {
+	margin-right: 20px;
+	width: 20px;
+	height: 20px;
+  fill: none;
+  stroke: #fff;
+}
+.portfolioLinks__name {
+	position: absolute;
+	font-family: Galeria-Medium;
+	font-size: 14px;
+	color: #fff;
+}
+.portfolioLinks__underline {
+	position: absolute;
+	bottom: 23px;
+	width: 30%;
+	height: 3px;
+	background-color: #fff;
+}
+
+/*____________________________________________________________
+###### Portfolio Content
+____________________________________________________________*/
+.portfolioContent {
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+}
+.portfolioTitle {
+	position: relative;
+	font-family: Galeria;
+	font-size: 96px;
+	color: #292c2c;
+}
+.portfolio__paragraphWrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+}
+.portfolio__paragraph {
+	font-family: Galeria-Medium;
+	font-size: 16px;
+	word-spacing: 10px;
+	text-align: justify;
+	line-height: 40px;
+	color: #292c2c;
+}
+
+/*____________________________________________________________
 ## Portfolio Card Content
 ____________________________________________________________*/
 .portfolioCardContent {
