@@ -10,18 +10,18 @@ html
 			//-- Popup Menu
 			section.popupMenu
 
-				//- Portfolio Container
+				//--- Portfolio Container
 				.portfolioContainer
 					.bgRect
 					.bgRect
 
-					//- Presentation
+					//---- Presentation
 					section.presentation
 
-						//- Present Page
+						//----- Present Page
 						section.presentPage
 
-							//- Present Side
+							//------ Present Side
 							.presentSide
 								.closeButtonWrap
 									svg.closeButtonWrap__textWrap(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve")
@@ -33,9 +33,9 @@ html
 											text
 												textPath.closeButtonWrap__text(xlink:href="#circlePath") Close portfolio page
 									.closeButtonWrap__circle
-								h1.wrap__vertical
+								h1.presentSide__title
 
-							//- Present Main
+							//------ Present Main
 							.presentMain
 								p.presentMain__article Presentation
 								p.presentMain__article 01
@@ -43,6 +43,7 @@ html
 									a.presentMain__demoLink(href="" target="_blank") Demo Page
 								p.presentMain__article Made by Roden
 
+								//------- Present Main Title Wrap
 								.presentMain__titleWrap
 									h1.presentMain__title
 									.presentMain__titleUnderline
@@ -57,6 +58,8 @@ html
 												use(xlink:href="#circlePath" fill="none")
 												text
 													textPath.presentMain__text(xlink:href="#circlePath") Welcome to portfolio page
+
+								//------- Present Main Content
 								.presentMain__content
 									.presentMain__descript
 										h2.presentMain__descriptTitle
@@ -65,10 +68,10 @@ html
 										.presentMain__imgRect
 										.presentMain__img
 
-						//- Detail Page
+						//----- Detail Page
 						section.detailPage
 
-							//- Line Info Wrap
+							//------ Line Info Wrap
 							mixin lineInfoMix(leftWord, pageNumber, leftClassLink, leftHref, leftWordLink, rightClassLink, rightHref, rightWordLink)
 								.lineInfoWrap
 									.lineInfoWrap__left #{leftWord}
@@ -81,13 +84,13 @@ html
 									.lineInfoWrap__right
 										a(class=`${rightClassLink}` href=`${rightHref}` target="_blank") #{rightWordLink}
 
-							//- Detail Line Info Wrap
+							//------ Detail Line Info Wrap
 							+lineInfoMix('Details', '02', 'lineInfoWrap__detailGithub', '', 'Github Page', '', 'https://dribbble.com/Kerthin', 'www.dribbble.com')
 
-							//- Detail Wrap
+							//------ Detail Wrap
 							.detailsWrap
 
-								//- Detail Item
+								//------- Detail Item
 								mixin detailItemMix(detailItemNumber)
 									.detailItem
 										.detailItem__img
@@ -102,17 +105,17 @@ html
 								+detailItemMix(3)
 								+detailItemMix(4)
 
-						//- Portfolio Page
+						//----- Portfolio Page
 						section.portfolioPage
 
-							//- Portfolio Line Info Wrap
+							//------ Portfolio Line Info Wrap
 							+lineInfoMix('Portfolio', '03', '', 'mailto:belichenko.roden.dev@gmail.com', 'mail.google.com', '', 'https://dev.to/kerthin', 'www.dev.to')
 
-							//- Portfolio Info Wrap
+							//------ Portfolio Info Wrap
 							.portfolioInfoWrap
 								.portfolioImg.portfolioImg_lg
 
-								//- Portfolio Links
+								//------- Portfolio Links
 								.portfolioLinks
 									.portfolioLinks__lineWrap
 										.portfolioLinks__line
@@ -144,7 +147,7 @@ html
 
 								.portfolioImg.portfolioImg_md
 
-							//- Portfolio Content
+							//------ Portfolio Content
 							.portfolioContent
 								h3.portfolioTitle Portfolio.
 								.portfolio__paragraphWrap
