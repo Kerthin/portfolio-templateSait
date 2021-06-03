@@ -4,10 +4,24 @@
 	## @import _variables.scss
 # Fonts
 # Container
-	## Popup Menu
-		### Portfolio Container
 	## Portfolio Card Content
 	## Portfolio Card Wrap
+	## Popup Menu
+		### Portfolio Container
+			#### Presentation
+				##### Present Page
+					###### Present Side
+					###### Present Main
+						####### Present Main Title Wrap
+						####### Present Main Content
+				##### Detail Page
+					###### Line Info Wrap
+					###### Detail Wrap
+						####### Detail Item
+					##### Portfolio Page
+						###### Portfolio Info Wrap
+							####### Portfolio Links
+						###### Portfolio Content
 
 ____________________________________________________________*/
 
@@ -31,25 +45,178 @@ ____________________________________________________________*/
   font-family: 'Galeria-Medium';
   src: url('https://github.com/Kerthin/portfolio-templateSait/blob/main/app/fonts/Galeria-Medium.otf?raw=true') format('opentype');
 }
+
 /*____________________________________________________________
 # Container
 ____________________________________________________________*/
 .container {
+	position: absolute;
 	width: 100%;
 	background: $palette-primary;
 }
 
 /*____________________________________________________________
+## Portfolio Card Content
+____________________________________________________________*/
+.portfolioCardContent {
+	position: relative;
+	margin: 150px auto 100px;
+	width: 1500px;
+	// height: auto;
+}
+.portfolioCardContent__title {
+	position: relative;
+	float: left;
+	width: 45%;
+	font-family: Galeria;
+	font-size: 100px;
+	color: $palette-secondary;
+}
+.portfolioCardContent__paragraphWrap {
+	position: relative;
+	float: left;
+	width: 55%;
+	// height: auto;
+}
+.portfolioCardContent__paragraphTitle {
+	position: relative;
+	margin-bottom: 20px;
+	font-family: Galeria;
+	font-size: 24px;
+	color: $palette-secondary;
+}
+.portfolioCardContent__paragraph {
+	font-family: Galeria-Medium;
+	font-size: 18px;
+	word-spacing: 8px;
+	text-align: justify;
+	line-height: 35px;
+	color: $palette-secondary;
+}
+
+/*____________________________________________________________
+## Portfolio Card Wrap
+____________________________________________________________*/
+.portfolioCardWrap {
+	position: relative;
+	margin: 0 auto;
+	width: 1500px;
+}
+.portfolioCard {
+	position: relative;
+	float: left;
+	width: 330px;
+	height: 450px;
+	padding: 25px;
+	margin-bottom: 60px;
+	margin-right: 60px;
+	background: $palette-secondary;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+	transition: all 0.3s ease-out;
+	cursor: pointer;
+
+	&:nth-child(4n) {
+		margin-right: 0;
+	}
+
+	&:hover {
+		transform: translateY(-5px) scale(1.005) translateZ(0);
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+	&:active {
+		transform: scale(1) translateZ(0);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+	}
+}
+.portfolioCard__img {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+
+	&_gwent {
+		background-image: url('https://i.pinimg.com/originals/73/8d/26/738d26a92f816d7379f67519ee5e8210.png');
+	}
+	&_prado {
+		background-image: url('https://i.pinimg.com/originals/9d/c8/f7/9dc8f7657f620fe5496d10cf9f55ac83.png');
+	}
+	&_spiele {
+		background-image: url('https://i.pinimg.com/originals/f4/47/d2/f447d2fd4073f28997ca80bdf0cd6cf9.png');
+	}
+	&_cuphead {
+		background-image: url('https://i.pinimg.com/originals/ed/3d/4e/ed3d4e76fa5d5116de0a2bb8f649689a.png');
+	}
+	&_calculator {
+		background-image: url('https://i.pinimg.com/originals/a9/5b/95/a95b9595b3a101d14407c92c3586bed4.png');
+	}
+	&_player {
+		background-image: url('https://i.pinimg.com/originals/e0/8a/14/e08a141b68c02b08358d7aec2ce6c97c.png');
+	}
+	&_mobile {
+		background-image: url('https://i.pinimg.com/originals/b8/72/89/b8728959adfe9cdeb6ed7e255e6f1162.png');
+	}
+	&_artGallery {
+		background-image: url('https://i.pinimg.com/originals/a2/22/42/a222421ec14add5fd262768d76bdf183.png');
+	}
+	&_tree {
+		background-image: url('https://i.pinimg.com/originals/4b/ca/fc/4bcafca6b36076f715a7e1817108ea41.png');
+	}
+}
+.portfolioCard__about {
+	width: 100%;
+	margin-top: 26px;
+}
+.portfolioCard__name {
+	margin-bottom: 4px;
+	font-family: Galeria;
+	font-size: 26px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #292c2c;
+}
+.portfolioCard__technologies {
+	font-family: Galeria-Medium;
+	font-size: 14px;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #292c2c;
+}
+
+/*____________________________________________________________
 ## Popup Menu
 ____________________________________________________________*/
+.blockRevealer__element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 50;
+}
 .popupMenu {
-	width: 100%;
-	height: 100vh;
 	position: fixed;
+	width: 100%;
+	height: 100%;
 	top: 0;
 	left: 0;
 	overflow: hidden;
 	pointer-events: none;
+}
+.js-popupMenu_open {
+  pointer-events: visible;
+
+  .presentation {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+		transition: all .4s;
+		transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+	}
 }
 
 /*____________________________________________________________
@@ -90,10 +257,44 @@ ____________________________________________________________*/
 	transform: translate(-50%, -50%);
 	width: 90%;
 	height: 90%;
+	background-color: #facf6f;
 	border: 2px solid  #292c2c;
 	overflow: hidden;
 	cursor: pointer;
   transition: all .4s;
+
+  &.open {
+		width: 100%;
+		height: 100vh;
+		border-width: 0;
+		overflow: scroll;
+		cursor: default;
+
+		.presentSide {
+			height: 100%;
+			transition-delay: .3s;
+		}
+		.closeButtonWrap {
+			transform: translateX(-50%) scale(1);
+			transition-delay: .8s;
+		}
+
+		.presentMain {
+			width: calc(100% - 160px);
+		}
+
+		.presentMain__slide {
+			width: 100%;
+		}
+		.presentMain__titleCircle {
+			transform: scale(0);
+		}
+
+		.presentMain__content {
+			height: 60%;
+			transition-delay: 1s;
+		}
+  }
 }
 
 /*____________________________________________________________
@@ -103,7 +304,7 @@ ____________________________________________________________*/
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: #facf6f;
+	background-color: #facf6f;
 }
 
 /*____________________________________________________________
@@ -140,11 +341,21 @@ ____________________________________________________________*/
 	left: -20%;
 	width: 140%;
 	height: 140%;
-	animation-name: rotate;
+	animation-name: circleTextRotate;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
+
+@keyframes circleTextRotate {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0);
+	}
+}
+
 .closeButtonWrap__text {
 	font-family: Galeria;
 	font-size: 30px;
@@ -249,8 +460,8 @@ ____________________________________________________________*/
 	position: absolute;
 	top: -80px;
 	right: -125px;
-	width: 160px;
-	height: 160px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 	transform: scale(1);
 	transition: all .4s;
@@ -280,6 +491,7 @@ ____________________________________________________________*/
 	float: left;
 	width: 35%;
 	height: 100%;
+	overflow: hidden;
 }
 .presentMain__descriptTitle {
 	margin: 10% 0;
@@ -302,6 +514,7 @@ ____________________________________________________________*/
 	float: left;
 	width: 65%;
 	height: 100%;
+	overflow: hidden;
 }
 .presentMain__imgRect {
 	position: absolute;
@@ -416,22 +629,22 @@ ____________________________________________________________*/
 	}
 
 	&:nth-child(1) {
-		.detail__img {
+		.detailItem__img {
 			border-color: #facf6f;
 		}
 	}
 	&:nth-child(2) {
-		.detail__img {
+		.detailItem__img {
 			border-color: #dd4f5b;
 		}
 	}
 	&:nth-child(3) {
-		.detail__img {
+		.detailItem__img {
 			border-color: #56c299;
 		}
 	}
 	&:nth-child(4) {
-		.detail__img {
+		.detailItem__img {
 			border-color: #fff;
 		}
 	}
@@ -516,18 +729,6 @@ ____________________________________________________________*/
 	height: 40%;
 }
 
-.portfolioImg_lg {
-	margin-right: 2.5%;
-	width: 45%;
-	border-color: #fff;
-	background-image: url('img/5.png');
-}
-.portfolioImg_md {
-	width: 30%;
-	border-color: #56c299;
-	background-image: url('img/6.png');
-}
-
 /*____________________________________________________________
 ####### Portfolio Links
 ____________________________________________________________*/
@@ -541,6 +742,17 @@ ____________________________________________________________*/
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+.portfolioImg_lg {
+	margin-right: 2.5%;
+	width: 45%;
+	border-color: #fff;
+	// background-image: url('img/5.png');
+}
+.portfolioImg_md {
+	width: 30%;
+	border-color: #56c299;
+	// background-image: url('img/6.png');
 }
 .portfolioLinks {
 	margin-right: 2.5%;
@@ -659,132 +871,25 @@ ____________________________________________________________*/
 }
 
 /*____________________________________________________________
-## Portfolio Card Content
+# @media
 ____________________________________________________________*/
-.portfolioCardContent {
-	position: relative;
-	margin: 150px auto 100px;
-	width: 1500px;
-	height: auto;
-}
-.portfolioCardContent__title {
-	position: relative;
-	float: left;
-	width: 45%;
-	font-family: Galeria;
-	font-size: 100px;
-	color: $palette-secondary;
-}
-.portfolioCardContent__paragraphWrap {
-	position: relative;
-	float: left;
-	width: 55%;
-	height: auto;
-}
-.portfolioCardContent__paragraphTitle {
-	position: relative;
-	margin-bottom: 20px;
-	font-family: Galeria;
-	font-size: 24px;
-	color: $palette-secondary;
-}
-.portfolioCardContent__paragraph {
-	font-family: Galeria-Medium;
-	font-size: 18px;
-	word-spacing: 8px;
-	text-align: justify;
-	line-height: 35px;
-	color: $palette-secondary;
-}
-
 /*____________________________________________________________
-## Portfolio Card Wrap
+## @media 1680px
 ____________________________________________________________*/
-.portfolioCardWrap {
-	position: relative;
-	margin: 0 auto;
-	width: 1500px;
-}
-.portfolioCard {
-	position: relative;
-	float: left;
-	width: 330px;
-	height: 450px;
-	padding: 25px;
-	margin-bottom: 60px;
-	margin-right: 60px;
-	background: $palette-secondary;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
-	transition: all 0.3s ease-out;
-	cursor: pointer;
-
-	&:nth-child(4n) {
-		margin-right: 0;
+@media only screen and (max-width: 1680px) {
+	.presentMain__descriptParagraph {
+		font-size: 20px;
+		word-spacing: 15px;
+		line-height: 40px;
+	}
+	
+	.detailItem__paragraph {
+		word-spacing: 7px;
+		line-height: 35px;
 	}
 
-	&:hover {
-		transform: translateY(-5px) scale(1.005) translateZ(0);
-		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	.portfolioLinks__socialTitle {
+		margin-bottom: 18px;
+		font-size: 26px;
 	}
-	&:active {
-		transform: scale(1) translateZ(0);
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
-	}
-}
-.portfolioCard__img {
-	position: relative;
-	width: 100%;
-	height: 320px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	overflow: hidden;
-
-	&_gwent {
-		background-image: url('https://i.pinimg.com/originals/73/8d/26/738d26a92f816d7379f67519ee5e8210.png');
-	}
-	&_prado {
-		background-image: url('https://i.pinimg.com/originals/9d/c8/f7/9dc8f7657f620fe5496d10cf9f55ac83.png');
-	}
-	&_spiele {
-		background-image: url('https://i.pinimg.com/originals/f4/47/d2/f447d2fd4073f28997ca80bdf0cd6cf9.png');
-	}
-	&_cuphead {
-		background-image: url('https://i.pinimg.com/originals/ed/3d/4e/ed3d4e76fa5d5116de0a2bb8f649689a.png');
-	}
-	&_calculator {
-		background-image: url('https://i.pinimg.com/originals/a9/5b/95/a95b9595b3a101d14407c92c3586bed4.png');
-	}
-	&_player {
-		background-image: url('https://i.pinimg.com/originals/e0/8a/14/e08a141b68c02b08358d7aec2ce6c97c.png');
-	}
-	&_mobile {
-		background-image: url('https://i.pinimg.com/originals/b8/72/89/b8728959adfe9cdeb6ed7e255e6f1162.png');
-	}
-	&_artGallery {
-		background-image: url('https://i.pinimg.com/originals/a2/22/42/a222421ec14add5fd262768d76bdf183.png');
-	}
-	&_tree {
-		background-image: url('https://i.pinimg.com/originals/4b/ca/fc/4bcafca6b36076f715a7e1817108ea41.png');
-	}
-}
-.portfolioCard__about {
-	width: 100%;
-	margin-top: 27px;
-}
-.portfolioCard__name {
-	margin-bottom: 3px;
-	font-family: 'Dosis', sans-serif;
-	font-size: 28px;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: #292c2c;
-}
-.portfolioCard__technologies {
-	font-family: 'Dosis', sans-serif;
-	font-size: 16px;
-	font-weight: lighter;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	color: #292c2c;
 }

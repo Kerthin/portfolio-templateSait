@@ -13,7 +13,14 @@
 ********************/
 //= ../../bower_components/revealer/revealer.js
 
+
+
 /********************
-	blob.js
+	transition.js
 ********************/
-//= partials/blob.js
+//= partials/transition.js
+
+/********************
+	presentOpen.js
+********************/
+//= partials/presentOpen.js
