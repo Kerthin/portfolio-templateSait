@@ -3,8 +3,8 @@ const open = document.querySelector(".presentMain");
 const close = document.querySelector(".closeButtonWrap");
 
 open.onclick = function() {
-  wrap.classList.add("open");
+  wrap.classList.add("presentation_open");
 }
 close.onclick = function() {
-  wrap.classList.remove("open");
+  wrap.classList.remove("presentation_open");
 }
