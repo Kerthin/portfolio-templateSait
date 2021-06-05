@@ -19,8 +19,3 @@
 	transition.js
 ********************/
 //= partials/transition.js
-
-/********************
-	presentOpen.js
-********************/
-//= partials/presentOpen.js
