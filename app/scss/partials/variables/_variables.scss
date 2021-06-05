@@ -19,6 +19,7 @@ $x-color-dark-blue: #01243a;
 $x-color-dark-greenish-blue: #0b3442;
 $x-color-blackish-blue: #171b25;
 $x-color-dark-grey-blue: #272f3a;
+$x-color-signal-black: #292c2c;
 $x-color-lime-green: #29c740;
 $x-color-granite: #2a333c;
 $x-color-dark-cyanide: #2c8291;
@@ -31,6 +32,7 @@ $x-color-aquamarine: #7dcbd8;
 $x-color-deep-red-brown: #480a16;
 $x-color-flea-belly: #4d160e;
 $x-color-marengo: #4d5c68;
+$x-color-trefoil-crayola: #56c299;
 $x-color-moderate-turquoise: #57c2cb;
 $x-color-falun-red: #5f140e;
 $x-color-dark-red: #732124;
@@ -50,10 +52,13 @@ $x-color-deep-orange: #c74b16;
 $x-color-light-cyanide: #cceaf0;
 $x-color-periwinkle: #cfdce5;
 $x-color-light-cherry: #dd3e62;
+$x-color-terracotta: #dd4f5b;
 $x-color-gainsborough: #e1e6e8;
 $x-color-light-gray: #e6e5e5;
 $x-color-tomato: #ee6648;
+$x-color-smoky-white: #f2eaf1;
 $x-color-beige: #f7e0b5;
+$x-color-dandelion: #facf6f;
 $x-color-lemon-cream: #fafac3;
 $x-color-shiny-orange: #febc2e;
 $x-color-amber: #fec712;
@@ -105,3 +110,14 @@ $palette-bow-elements: $x-color-dark-red;
 
 $palette-responsive-nav: $x-color-tomato;
 $palette-responsive-banner: $x-color-aquamarine;
+
+$palette-card-font: $x-color-signal-black;
+$palette-present-font: $x-color-signal-black;
+$palette-present-border: $x-color-signal-black;
+
+$palette-present-primary: $x-color-dandelion;
+
+$palette-detail-rect-border: $x-color-terracotta;
+
+$palette-social-link: $x-color-white;
+$palette-social-link-hover: $x-color-aquamarine;

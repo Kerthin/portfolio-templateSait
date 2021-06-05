@@ -45,11 +45,15 @@ ____________________________________________________________*/
 /*____________________________________________________________
 # @import
 ____________________________________________________________*/
-
 /*____________________________________________________________
 ## @import _variables.scss
 ____________________________________________________________*/
 @import 'partials/variables/_variables.scss';
+
+/*____________________________________________________________
+## @import _centering.scss
+____________________________________________________________*/
+@import 'partials/extends/_centering.scss';
 
 /*____________________________________________________________
 # Mixins
@@ -87,7 +91,7 @@ ____________________________________________________________*/
 .container {
 	position: absolute;
 	width: 100%;
-	background: $palette-primary;
+	background-color: $palette-primary;
 }
 
 /*____________________________________________________________
@@ -97,7 +101,6 @@ ____________________________________________________________*/
 	position: relative;
 	margin: 150px auto 100px;
 	width: 1500px;
-	// height: auto;
 }
 .portfolioCardContent__title {
 	position: relative;
@@ -111,7 +114,6 @@ ____________________________________________________________*/
 	position: relative;
 	float: left;
 	width: 55%;
-	// height: auto;
 }
 .portfolioCardContent__paragraphTitle {
 	position: relative;
@@ -145,7 +147,7 @@ ____________________________________________________________*/
 	padding: 25px;
 	margin-bottom: 60px;
 	margin-right: 60px;
-	background: $palette-secondary;
+	background-color: $palette-secondary;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
 	transition: all 0.3s ease-out;
 	cursor: pointer;
@@ -210,7 +212,7 @@ ____________________________________________________________*/
 	font-size: 26px;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: #292c2c;
+	color: $palette-card-font;
 }
 .portfolioCard__technologies {
 	font-family: Galeria-Medium;
@@ -218,7 +220,7 @@ ____________________________________________________________*/
 	font-weight: lighter;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	color: #292c2c;
+	color: $palette-card-font;
 }
 
 /*____________________________________________________________
@@ -261,24 +263,24 @@ ____________________________________________________________*/
 	position: fixed;
 	width: 100%;
 	height: 100vh;
-	background-color: #f2eaf1;
+	background-color: $x-color-smoky-white;
 }
 
 .bgRect {
 	position: absolute;
 	width: 20%;
 	height: 20%;
-	border: 2px solid  #292c2c;
+	border: 2px solid $palette-present-border;
 
 	&:nth-child(1) {
 		top: 2.5%;
 		right: 30%;
-		background-color: #56c299;
+		background-color: $x-color-trefoil-crayola;
 	}
 	&:nth-child(2) {
 		bottom: 2.5%;
 		left: 20%;
-		background-color: #dd4f5b;
+		background-color: $palette-detail-rect-border;
 	}
 }
 
@@ -286,14 +288,11 @@ ____________________________________________________________*/
 #### Presentation
 ____________________________________________________________*/
 .presentation {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	@extend %centering;
 	width: 90%;
 	height: 90%;
-	background-color: #facf6f;
-	border: 2px solid  #292c2c;
+	background-color: $palette-present-primary;
+	border: 2px solid $palette-present-border;
 	overflow: hidden;
 	cursor: pointer;
   transition: all .4s;
@@ -339,7 +338,7 @@ ____________________________________________________________*/
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-color: #facf6f;
+	background-color: $palette-present-primary;
 }
 
 /*____________________________________________________________
@@ -350,21 +349,19 @@ ____________________________________________________________*/
 	bottom: 0;
 	width: 160px;
 	height: 0;
-	border-right: 2px solid #292c2c;
+	border-right: 2px solid $palette-present-border;
 	overflow: hidden;
 	transition: all .4s;
 }
 
 .closeButtonWrap {
-	position: absolute;
+	@extend %horizontalCentering;
 	top: 30px;
-	left: 50%;
-	transform: translateX(-50%);
 	width: 80px;
 	height: 80px;
-	border: 2px solid #292c2c;
+	border: 2px solid $palette-present-border;
 	border-radius: 50%;
-	background: #f2eaf1;
+	background-color: $x-color-smoky-white;
 	transform: scale(0);
 	transition: all .4s;
 	cursor: pointer;
@@ -394,18 +391,15 @@ ____________________________________________________________*/
 .closeButtonWrap__text {
 	font-family: Galeria;
 	font-size: 30px;
-	fill: #292c2c;
+	fill: $palette-present-font;
 }
 .closeButtonWrap__circle {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	@extend %centering;
 	width: 28px;
 	height: 28px;
-	border: 2px solid #292c2c;
+	border: 2px solid $palette-present-border;
 	border-radius: 50%;
-	background-color: #facf6f;
+	background-color: $palette-present-primary;
 }
 
 .presentSide__title {
@@ -415,7 +409,7 @@ ____________________________________________________________*/
 	transform: translate(-50%, -50%) scale(-1, -1);
 	font-family: Galeria;
 	font-size: 72px;
-	color: #292c2c;
+	color: $palette-present-font;
 	writing-mode: vertical-lr;
 }
 
@@ -434,10 +428,10 @@ ____________________________________________________________*/
 	position: absolute;
 	font-family: Galeria;
 	font-size: 22px;
-	color: #292c2c;
+	color: $palette-present-font;
 
 	.presentMain__demoLink {
-		color: #292c2c;
+		color: $palette-present-font;
 	}
 
 	&:nth-child(1) {
@@ -463,30 +457,27 @@ ____________________________________________________________*/
 ####### Present Main Title Wrap
 ____________________________________________________________*/
 .presentMain__titleWrap {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	@extend %centering;
 }
 .presentMain__title {
 	position: relative;
 	font-family: Galeria;
 	font-size: 96px;
-	color: #292c2c;
+	color: $palette-present-font;
 }
 .presentMain__titleUnderline {
 	position: absolute;
 	bottom: -5px;
 	width: 70px;
 	height: 5px;
-	background-color: #292c2c;
+	background-color: $palette-present-font;
 }
 .presentMain__slide {
 	position: absolute;
 	top: 0;
 	width: 0;
 	height: calc(100% + 5px);
-	background-color: #facf6f;
+	background-color: $palette-present-primary;
 	transition: all .4s;
 	transition-delay: .7s;
 }
@@ -505,7 +496,7 @@ ____________________________________________________________*/
 	.presentMain__text {
 		font-family: Galeria;
 		font-size: 22px;
-		fill: #292c2c;
+		fill: $palette-present-font;
 	}
 }
 
@@ -513,10 +504,7 @@ ____________________________________________________________*/
 ####### Present Main Content
 ____________________________________________________________*/
 .presentMain__content {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	@extend %centering;
 	width: 80%;
 	height: 0;
 	overflow: hidden;
@@ -534,7 +522,7 @@ ____________________________________________________________*/
 	font-size: 24px;
 	text-transform: capitalize;
 	line-height: 35px;
-	color: #292c2c;
+	color: $palette-present-font;
 }
 .presentMain__descriptParagraph {
 	font-family: Galeria-Medium;
@@ -542,7 +530,7 @@ ____________________________________________________________*/
 	word-spacing: 20px;
 	text-align: justify;
 	line-height: 50px;
-	color: #292c2c;
+	color: $palette-present-font;
 }
 
 .presentMain__imgWrap {
@@ -557,18 +545,16 @@ ____________________________________________________________*/
 	right: 15%;
 	width: 40%;
 	height: 30%;
-	border: 2px solid #292c2c;
-	background-color: #56c299;
+	border: 2px solid $palette-present-border;
+	background-color: $x-color-trefoil-crayola;
 }
 .presentMain__img {
-	position: absolute;
-	top: 50%;
+	@extend %verticalCentering;
 	right: 5%;
-	transform: translateY(-50%);
 	width: 80%;
 	height: 80%;
-	border: 20px solid #fff;
-	outline: 2px solid #292c2c;
+	border: 20px solid $x-color-white;
+	outline: 2px solid $palette-present-border;
 	background-image: url('https://i.pinimg.com/originals/d0/61/40/d06140beca6299f42aa2c4050a0dad45.png');
 	background-repeat: no-repeat;
 	background-position: center;
@@ -582,7 +568,7 @@ ____________________________________________________________*/
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: #facf6f;
+	background-color: $palette-present-primary;
 }
 @include lineInfoMix('detail', 184px, 447px);
 
@@ -590,9 +576,7 @@ ____________________________________________________________*/
 ###### Line Info Wrap
 ____________________________________________________________*/
 .lineInfoWrap {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	@extend %horizontalCentering;
 	width: 90%;
 
 	&:nth-child(1) {
@@ -607,10 +591,10 @@ ____________________________________________________________*/
 	float: left;
 	font-family: Galeria;
 	font-size: 22px;
-	color: #292c2c;
+	color: $palette-present-font;
 
 	a {
-		color: #292c2c;
+		color: $palette-present-font;
 	}
 }
 .lineInfoWrap__left {
@@ -621,17 +605,14 @@ ____________________________________________________________*/
 	margin-top: 14px;
 	margin-right: 30px;
 	height: 2px;
-	background-color: #292c2c;
+	background-color: $palette-present-border;
 }
 
 /*____________________________________________________________
 ###### Detail Wrap
 ____________________________________________________________*/
 .detailsWrap {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	@extend %centering;
 	width: 90vw;
 	height: 70vh;
 }
@@ -653,22 +634,22 @@ ____________________________________________________________*/
 
 	&:nth-child(1) {
 		.detailItem__img {
-			border-color: #facf6f;
+			border-color: $palette-present-primary;
 		}
 	}
 	&:nth-child(2) {
 		.detailItem__img {
-			border-color: #dd4f5b;
+			border-color: $palette-detail-rect-border;
 		}
 	}
 	&:nth-child(3) {
 		.detailItem__img {
-			border-color: #56c299;
+			border-color: $x-color-trefoil-crayola;
 		}
 	}
 	&:nth-child(4) {
 		.detailItem__img {
-			border-color: #fff;
+			border-color: $x-color-white;
 		}
 	}
 }
@@ -681,7 +662,7 @@ ____________________________________________________________*/
 	background-position: center;
 	background-size: cover;
 	border: 12px solid;
-	outline: 2px solid #292c2c;
+	outline: 2px solid $palette-present-border;
 }
 .detailItem__info {
 	position: relative;
@@ -696,7 +677,7 @@ ____________________________________________________________*/
 .detailItem__title,
 .detailItem__subtitle {
 	font-size: 22px;
-	color: #292c2c;
+	color: $palette-present-font;
 }
 .detailItem__title {
 	margin-bottom: 10px;
@@ -713,7 +694,7 @@ ____________________________________________________________*/
 	word-spacing: 10px;
 	text-align: justify;
 	line-height: 40px;
-	color: #292c2c;
+	color: $palette-present-font;
 }
 
 /*____________________________________________________________
@@ -723,7 +704,7 @@ ____________________________________________________________*/
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: #facf6f;
+	background-color: $palette-present-primary;
 }
 @include lineInfoMix('portfolio', 210px, 408px);
 
@@ -731,10 +712,8 @@ ____________________________________________________________*/
 ###### Portfolio Info Wrap
 ____________________________________________________________*/
 .portfolioInfoWrap {
-	position: absolute;
+	@extend %horizontalCentering;
 	top: 15%;
-	left: 50%;
-	transform: translateX(-50%);
 	width: 90%;
 	height: 40%;
 }
@@ -748,7 +727,7 @@ ____________________________________________________________*/
 	float: left;
 	height: 100%;
 	border: 20px solid;
-	outline: 2px solid #292c2c;
+	outline: 2px solid $palette-present-border;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -756,19 +735,17 @@ ____________________________________________________________*/
 .portfolioImg_lg {
 	margin-right: 2.5%;
 	width: 45%;
-	border-color: #fff;
-	// background-image: url('img/5.png');
+	border-color: $x-color-white;
 }
 .portfolioImg_md {
 	width: 30%;
-	border-color: #56c299;
-	// background-image: url('img/6.png');
+	border-color: $x-color-trefoil-crayola;
 }
 .portfolioLinks {
 	margin-right: 2.5%;
 	width: 20%;
-	border-color: #dd4f5b;
-	background-color: #dd4f5b;
+	border-color: $palette-detail-rect-border;
+	background-color: $palette-detail-rect-border;
 }
 .portfolioLinks__lineWrap {
 	margin-bottom: 10px;
@@ -781,15 +758,15 @@ ____________________________________________________________*/
 	margin-right: 20px;
 	width: calc(100% - 70px);
 	height: 3px;
-	background-color: #292c2c;
+	background-color: $palette-present-border;
 }
 .portfolioLinks__circle {
 	float: left;
 	width: 50px;
 	height: 50px;
-	border: 2px solid #292c2c;
+	border: 2px solid $palette-present-border;
 	border-radius: 50%;
-	background-color: #facf6f;
+	background-color: $palette-present-primary;
 }
 
 .portfolioLinks__socialWrap {
@@ -799,7 +776,7 @@ ____________________________________________________________*/
 	margin-bottom: 20px;
 	font-family: Galeria;
 	font-size: 32px;
-	color: #fff;
+	color: $palette-social-link;
 }
 
 .portfolioLinks__socialList {
@@ -817,10 +794,10 @@ ____________________________________________________________*/
 	  transform: translateY(-3px);
 
 	  .portfolioLinks__icon {
-	  	stroke: #7dcbd8;
+	  	stroke: $palette-social-link-hover;
 	  }
 		.portfolioLinks__name {
-			color: #7dcbd8;
+			color: $palette-social-link-hover;
 		}
 	}
 }
@@ -832,37 +809,35 @@ ____________________________________________________________*/
 	width: 20px;
 	height: 20px;
   fill: none;
-  stroke: #fff;
+  stroke: $palette-social-link;
 }
 .portfolioLinks__name {
 	position: absolute;
 	font-family: Galeria-Medium;
 	font-size: 14px;
-	color: #fff;
+	color: $palette-social-link;
 }
 .portfolioLinks__underline {
 	position: absolute;
 	bottom: 23px;
 	width: 30%;
 	height: 3px;
-	background-color: #fff;
+	background-color: $palette-social-link;
 }
 
 /*____________________________________________________________
 ###### Portfolio Content
 ____________________________________________________________*/
 .portfolioContent {
-	position: absolute;
+	@extend %horizontalCentering;
 	bottom: 15%;
-	left: 50%;
-	transform: translateX(-50%);
 	width: 90%;
 }
 .portfolioTitle {
 	position: relative;
 	font-family: Galeria;
 	font-size: 96px;
-	color: #292c2c;
+	color: $palette-present-font;
 }
 .portfolio__paragraphWrap {
 	position: absolute;
@@ -877,7 +852,7 @@ ____________________________________________________________*/
 	word-spacing: 10px;
 	text-align: justify;
 	line-height: 40px;
-	color: #292c2c;
+	color: $palette-present-font;
 }
 
 /*____________________________________________________________
@@ -1088,7 +1063,7 @@ ____________________________________________________________*/
 		font-size: 13px;
 	}
 
-
+	// Presentation
 	.closeButtonWrap {
 		top: 40px;
 		width: 70px;
@@ -1116,11 +1091,13 @@ ____________________________________________________________*/
 		line-height: 25px;
 	}
 
+	// Detail Page
 	.detailItem__paragraph {
 		word-spacing: 3px;
 		line-height: 20px;
 	}
 
+	// Portfolio Page
 	.portfolioTitle {
 		font-size: 86px;
 	}
@@ -1134,6 +1111,7 @@ ____________________________________________________________*/
 ## @media 1024px
 ____________________________________________________________*/
 @media only screen and (max-width: 1024px) {
+	// Presentation
 	.presentMain__descript {
 		width: 100%;
 		height: 10%;
@@ -1150,11 +1128,13 @@ ____________________________________________________________*/
 		height: 90%;
 	}
 
+	// Detail Page
 	.detailItem__title,
 	.detailItem__subtitle {
 		font-size: 18px;
 	}
 
+	// Portfolio Page
 	.portfolioTitle {
 		font-size: 72px;
 	}
@@ -1208,6 +1188,7 @@ ____________________________________________________________*/
 		font-size: 10px;
 	}
 
+	// Portfolio Page
 	.portfolioInfoWrap {
 		height: 70%;
 	}
@@ -1221,12 +1202,12 @@ ____________________________________________________________*/
 	}
 	.portfolioImg_md {
 		height: 40%;
-		border-color: #56c299;
+		border-color: $x-color-trefoil-crayola;
 	}
 	.portfolioLinks {
 		margin-bottom: 2.5%;
 		height: 57.5%;
-		border-color: #dd4f5b;
+		border-color: $palette-detail-rect-border;
 	}
 	.portfolioLinks__lineWrap {
 		margin-bottom: 8px;
@@ -1257,6 +1238,7 @@ ____________________________________________________________*/
 ## @media 848px
 ____________________________________________________________*/
 @media only screen and (max-width: 848px) {
+	// Presentation
 	.presentation {
 
 		&.presentation_open {
@@ -1308,6 +1290,8 @@ ____________________________________________________________*/
 			font-size: 18px;
 		}
 	}
+
+	// Detail Page
 	.detailItem__img {
 		width: 55%;
 		border: 8px solid;
@@ -1389,7 +1373,7 @@ ____________________________________________________________*/
 		width: 0;
 		height: 80px;
 		border-right: 0;
-		border-bottom: 2px solid #292c2c;
+		border-bottom: 2px solid $palette-present-border;
 	}
 	.closeButtonWrap {
 		position: absolute;
@@ -1808,7 +1792,7 @@ ____________________________________________________________*/
 	}
 	.portfolioLinks {
 		height: 100%;
-		border-color: #dd4f5b;
+		border-color: $palette-detail-rect-border;
 	}
 }
 
@@ -1842,7 +1826,7 @@ ____________________________________________________________*/
 		width: 0;
 		height: 110px;
 		border-right: 0;
-		border-bottom: 2px solid #292c2c;
+		border-bottom: 2px solid $palette-present-border;
 	}
 	.closeButtonWrap {
 		position: absolute;
@@ -1927,12 +1911,12 @@ ____________________________________________________________*/
 	}
 	.portfolioImg_md {
 		height: 40%;
-		border-color: #56c299;
+		border-color: $x-color-trefoil-crayola;
 	}
 	.portfolioLinks {
 		margin-bottom: 2.5%;
 		height: 57.5%;
-		border-color: #dd4f5b;
+		border-color: $palette-detail-rect-border;
 	}
 	.portfolioLinks__lineWrap {
 		margin-bottom: 8px;
@@ -1971,69 +1955,3 @@ ____________________________________________________________*/
 		display: none;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
