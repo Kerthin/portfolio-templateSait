@@ -28,8 +28,8 @@ let presentPage = document.querySelector('.presentMain'),
 
 let projectInfoArray = {
 	0: {
-		wrapClass: 'gwent',
-		title: 'Gwent',
+		wrapClass: 'presentation_gwent',
+		title: 'Gwent.',
 		demoHref: 'https://kerthin.github.io/gwentReact-templateSait/',
 		descriptTitle: 'Create the best <br/> card deck',
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
@@ -52,56 +52,8 @@ let projectInfoArray = {
 		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
 	},
 	1: {
-		wrapClass: 'music',
-		title: 'Music',
-		demoHref: 'https://kerthin.github.io/musicPlayer-templateSait/',
-		descriptTitle: 'Listening your favorite  music',
-		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/musicPlayer-templateSait",
-
-		detailTitle_1: 'Fillas Andini',
-		detailSubtitle_1: 'UI/UX Designer',
-		detailParagraph_1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
-		
-		detailTitle_2: 'Hils Joe',
-		detailSubtitle_2: 'Editor',
-		detailParagraph_2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
-		
-		detailTitle_3: 'Werfa Egle',
-		detailSubtitle_3: 'Content Creator',
-		detailParagraph_3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
-		
-		detailTitle_4: 'Andinosas',
-		detailSubtitle_4: 'Marketing',
-		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
-	},
-	2: {
-		wrapClass: 'gwent',
-		title: 'Gwent',
-		demoHref: 'https://kerthin.github.io/gwentReact-templateSait/',
-		descriptTitle: 'Create the best <br/> card deck',
-		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/gwentReact-templateSait",
-
-		detailTitle_1: 'Fillad Andini',
-		detailSubtitle_1: 'UI/UX Designer',
-		detailParagraph_1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
-		
-		detailTitle_2: 'Hils Joe',
-		detailSubtitle_2: 'Editor',
-		detailParagraph_2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
-		
-		detailTitle_3: 'Werfa Egle',
-		detailSubtitle_3: 'Content Creator',
-		detailParagraph_3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
-		
-		detailTitle_4: 'Andinosas',
-		detailSubtitle_4: 'Marketing',
-		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
-	},
-	3: {
-		wrapClass: 'prado',
-		title: 'Prado',
+		wrapClass: 'presentation_prado',
+		title: 'Prado.',
 		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
 		descriptTitle: 'Learning the best artists',
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
@@ -122,7 +74,175 @@ let projectInfoArray = {
 		detailTitle_4: 'Andinosas',
 		detailSubtitle_4: 'Marketing',
 		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
-	}
+	},
+	2: {
+		wrapClass: 'presentation_spiele',
+		title: 'Spiele.',
+		demoHref: 'https://kerthin.github.io/musicPlayer-templateSait/',
+		descriptTitle: 'Dive into the past of your<br/>favorite video games.',
+		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
+		github: "https://github.com/Kerthin/musicPlayer-templateSait",
+
+		detailTitle_1: 'Fillas Andini',
+		detailSubtitle_1: 'UI/UX Designer',
+		detailParagraph_1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_2: 'Hils Joe',
+		detailSubtitle_2: 'Editor',
+		detailParagraph_2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_3: 'Werfa Egle',
+		detailSubtitle_3: 'Content Creator',
+		detailParagraph_3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_4: 'Andinosas',
+		detailSubtitle_4: 'Marketing',
+		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+	},
+	3: {
+		wrapClass: 'presentation_cuphead',
+		title: 'Cuphead.',
+		demoHref: 'https://kerthin.github.io/gwentReact-templateSait/',
+		descriptTitle: "Don't Deal with<br/>the Devil.",
+		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
+		github: "https://github.com/Kerthin/gwentReact-templateSait",
+
+		detailTitle_1: 'Fillad Andini',
+		detailSubtitle_1: 'UI/UX Designer',
+		detailParagraph_1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_2: 'Hils Joe',
+		detailSubtitle_2: 'Editor',
+		detailParagraph_2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_3: 'Werfa Egle',
+		detailSubtitle_3: 'Content Creator',
+		detailParagraph_3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_4: 'Andinosas',
+		detailSubtitle_4: 'Marketing',
+		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+	},
+	4: {
+		wrapClass: 'presentation_calculator',
+		title: 'Calculator.',
+		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
+		descriptTitle: 'Add, divide, multiply and<br/>subtract any number.',
+		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
+		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+
+		detailTitle_1: 'Fillaf Andini',
+		detailSubtitle_1: 'UI/UX Designer',
+		detailParagraph_1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_2: 'Hils Joe',
+		detailSubtitle_2: 'Editor',
+		detailParagraph_2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_3: 'Werfa Egle',
+		detailSubtitle_3: 'Content Creator',
+		detailParagraph_3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_4: 'Andinosas',
+		detailSubtitle_4: 'Marketing',
+		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+	},
+	5: {
+		wrapClass: 'presentation_player',
+		title: 'Music.',
+		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
+		descriptTitle: 'Listen to your favorite songs<br/>on our music player.',
+		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
+		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+
+		detailTitle_1: 'Fillaf Andini',
+		detailSubtitle_1: 'UI/UX Designer',
+		detailParagraph_1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_2: 'Hils Joe',
+		detailSubtitle_2: 'Editor',
+		detailParagraph_2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_3: 'Werfa Egle',
+		detailSubtitle_3: 'Content Creator',
+		detailParagraph_3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_4: 'Andinosas',
+		detailSubtitle_4: 'Marketing',
+		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+	},
+	6: {
+		wrapClass: 'presentation_old',
+		title: 'Oldsmobile.',
+		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
+		descriptTitle: 'The era when cars<br/>were created by artists.',
+		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
+		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+
+		detailTitle_1: 'Fillaf Andini',
+		detailSubtitle_1: 'UI/UX Designer',
+		detailParagraph_1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_2: 'Hils Joe',
+		detailSubtitle_2: 'Editor',
+		detailParagraph_2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_3: 'Werfa Egle',
+		detailSubtitle_3: 'Content Creator',
+		detailParagraph_3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_4: 'Andinosas',
+		detailSubtitle_4: 'Marketing',
+		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+	},
+	7: {
+		wrapClass: 'presentation_art',
+		title: 'artGallery.',
+		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
+		descriptTitle: 'Artists who have contributed<br/>to the world of art.',
+		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
+		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+
+		detailTitle_1: 'Fillaf Andini',
+		detailSubtitle_1: 'UI/UX Designer',
+		detailParagraph_1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_2: 'Hils Joe',
+		detailSubtitle_2: 'Editor',
+		detailParagraph_2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_3: 'Werfa Egle',
+		detailSubtitle_3: 'Content Creator',
+		detailParagraph_3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_4: 'Andinosas',
+		detailSubtitle_4: 'Marketing',
+		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+	},
+	8: {
+		wrapClass: 'presentation_trees',
+		title: 'Geometric.',
+		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
+		descriptTitle: 'Feel the geometry<br/>in our nature.',
+		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
+		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+
+		detailTitle_1: 'Fillaf Andini',
+		detailSubtitle_1: 'UI/UX Designer',
+		detailParagraph_1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_2: 'Hils Joe',
+		detailSubtitle_2: 'Editor',
+		detailParagraph_2: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_3: 'Werfa Egle',
+		detailSubtitle_3: 'Content Creator',
+		detailParagraph_3: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+		
+		detailTitle_4: 'Andinosas',
+		detailSubtitle_4: 'Marketing',
+		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
+	},
 };
 
 let portfolioCard = document.getElementsByClassName("portfolioCard");

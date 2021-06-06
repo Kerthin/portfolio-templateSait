@@ -3,7 +3,8 @@
 # @import
 	## @import _variables.scss
 # Mixins
-	##
+	## Line Info Mixin
+	## Project Image Path Mixin
 # Fonts
 # Container
 	## Portfolio Card Content
@@ -76,6 +77,48 @@ ____________________________________________________________*/
 					width: calc(100% - #{$bottomLineWidth});
 				}
 			}
+		}
+	}
+}
+
+/*____________________________________________________________
+## Project Image Path Mixin
+____________________________________________________________*/
+@mixin projectImgPathMix($presentationClassModification, $presentMainImg, $detailImg1, $detailImg2, $detailImg3, $detailImg4, $portfolioLgImg, $portfolioMdImg) {
+	.presentation_#{$presentationClassModification} {
+		.presentMain__img {
+			background-image: url('#{$presentMainImg}');
+		}
+
+		.detailItem {
+
+			&:nth-child(1) {
+				.detailItem__img {
+					background-image: url('#{$detailImg1}');
+				}
+			}
+			&:nth-child(2) {
+				.detailItem__img {
+					background-image: url('#{$detailImg2}');
+				}
+			}
+			&:nth-child(3) {
+				.detailItem__img {
+					background-image: url('#{$detailImg3}');
+				}
+			}
+			&:nth-child(4) {
+				.detailItem__img {
+					background-image: url('#{$detailImg4}');
+				}
+			}
+		}
+
+		.portfolioImg_lg {
+			background-image: url('#{$portfolioLgImg}');
+		}
+		.portfolioImg_md {
+			background-image: url('#{$portfolioMdImg}');
 		}
 	}
 }
@@ -331,6 +374,114 @@ ____________________________________________________________*/
   }
 }
 
+// Gwent
+@include projectImgPathMix(
+	'gwent',
+	'https://i.pinimg.com/originals/41/40/36/414036a6800072b6fea0b0550809b3be.png',
+	'https://i.pinimg.com/originals/fb/47/65/fb4765686b6711724f6f8765659b15e5.png',
+	'https://i.pinimg.com/originals/76/56/2b/76562b163d1947cc40366c973b9d390d.png',
+	'https://i.pinimg.com/originals/9c/25/18/9c2518687686dc8dadf136ffa8e7bca6.png',
+	'https://i.pinimg.com/originals/a5/4a/5b/a54a5beb991dc900743cf95339ac69ab.png',
+	'https://i.pinimg.com/originals/6d/ba/33/6dba33b2c8b6a9a812d1ea7ef78456fb.png',
+	'https://i.pinimg.com/originals/23/aa/45/23aa45cad67cb76587550c5812e0828f.png'
+);
+
+// Prado
+@include projectImgPathMix(
+	'prado',
+	'https://i.pinimg.com/originals/da/d2/be/dad2bec273660ef57d1b5b8226cdd9fa.png',
+	'https://i.pinimg.com/originals/ff/5a/75/ff5a75072701ac21e976857f4a8e4cc8.png',
+	'https://i.pinimg.com/originals/f3/9c/1f/f39c1ffd297b392afdce9f1c38ff44b1.png',
+	'https://i.pinimg.com/originals/1a/e0/f7/1ae0f7edfe962e0ab3cc1ccfbad381c0.png',
+	'https://i.pinimg.com/originals/c0/52/04/c052041d1ff7f0392d189038b919ff03.png',
+	'https://i.pinimg.com/originals/b7/3d/e0/b73de097933f05ba0a51dbc129b8ec61.png',
+	'https://i.pinimg.com/originals/c0/49/eb/c049eb8e05385fae7a136042505f53e0.png'
+);
+
+// Spiele Museum
+@include projectImgPathMix(
+	'spiele',
+	'https://i.pinimg.com/originals/57/1f/d4/571fd4a327d7b1bc1df135d8392ed26f.png',
+	'https://i.pinimg.com/originals/c8/7e/8a/c87e8a698ae1b4835464f2304945f84a.png',
+	'https://i.pinimg.com/originals/32/0b/31/320b31ee5d039a9e335b9b5be2a1000e.png',
+	'https://i.pinimg.com/originals/de/19/0c/de190c623f727f13114e3139ad503eda.png',
+	'https://i.pinimg.com/originals/a4/3a/97/a43a9788ff5635ab2559a5281e49ccf9.png',
+	'https://i.pinimg.com/originals/5e/74/82/5e7482f21acbfd060991b44b0946a924.png',
+	'https://i.pinimg.com/originals/c5/de/0c/c5de0cc134bfba07aff16db8ae06b666.png'
+);
+
+// Cuphead
+@include projectImgPathMix(
+	'cuphead',
+	'https://i.pinimg.com/originals/6b/30/63/6b30634127df5e8d6d16cad9700005ef.png',
+	'https://i.pinimg.com/originals/60/ec/d0/60ecd07e17fe41fa5061357e49dd0385.png',
+	'https://i.pinimg.com/originals/67/28/7c/67287c239b575f00c16e294744fce485.png',
+	'https://i.pinimg.com/originals/6c/a5/77/6ca5777dc71025f9b10cf1959de9c34c.png',
+	'https://i.pinimg.com/originals/8d/58/1b/8d581b8b1f9181abe117396950cb6f63.png',
+	'https://i.pinimg.com/originals/53/a2/da/53a2da0fd9ee24b2eaf131ce487a5d97.png',
+	'https://i.pinimg.com/originals/52/4f/81/524f813c10e1814fcb711fef0828d7ed.png'
+);
+
+// Calculator
+@include projectImgPathMix(
+	'calculator',
+	'https://i.pinimg.com/originals/42/f0/0e/42f00e9e1e79731cbfc9881b5c6f68f6.png',
+	'https://i.pinimg.com/originals/71/7c/eb/717ceb296abb30870c8f38ac648588bf.png',
+	'https://i.pinimg.com/originals/ff/3a/f4/ff3af41a3813c3c3e28129759d76eaad.png',
+	'https://i.pinimg.com/originals/d3/8e/51/d38e51c24708241a4cdee1bed0d5db2a.png',
+	'https://i.pinimg.com/originals/99/9a/1e/999a1e847137e6df114b2223067a0b87.png',
+	'https://i.pinimg.com/originals/6e/c3/58/6ec3588c53470444bc530bc3d2466289.png',
+	'https://i.pinimg.com/originals/97/94/93/979493204b4eafb00d89e05390f11268.png'
+);
+
+// Music Player
+@include projectImgPathMix(
+	'player',
+	'https://i.pinimg.com/originals/46/f8/7f/46f87ffbbce0ab98e516b0b2989ac15d.png',
+	'https://i.pinimg.com/originals/cf/10/38/cf1038119e3275ab196569df9824c33b.png',
+	'https://i.pinimg.com/originals/af/ef/11/afef114b4e7dc09f369e78d9abcb4f31.png',
+	'https://i.pinimg.com/originals/b8/9d/ee/b89dee9a722a725612fcb40be44ecec9.png',
+	'https://i.pinimg.com/originals/9f/db/86/9fdb86d5d5b4b6dc622372ad2f0c3b29.png',
+	'https://i.pinimg.com/originals/2b/0e/87/2b0e87f37d613fee6851152fdf6bb514.png',
+	'https://i.pinimg.com/originals/6c/06/f1/6c06f15e586aa7625fa0537b38cbc897.png'
+);
+
+// Oldsmobile
+@include projectImgPathMix(
+	'old',
+	'https://i.pinimg.com/originals/1f/81/ff/1f81ff1c40a8d2c201b97c253cfdec91.png',
+	'https://i.pinimg.com/originals/4f/57/eb/4f57ebcd0d6117a448132dd8620702bb.png',
+	'https://i.pinimg.com/originals/29/a3/2f/29a32f0f19b038c329fbd742fb9a6f28.png',
+	'https://i.pinimg.com/originals/91/db/ee/91dbee03e20c27ceff2e876adbb37cbb.png',
+	'https://i.pinimg.com/originals/b5/e8/19/b5e819a1366e66159e4205e8229aa16e.png',
+	'https://i.pinimg.com/originals/04/fe/09/04fe09a2205d68898db1df988f75095c.png',
+	'https://i.pinimg.com/originals/02/dc/9d/02dc9d25ad5c33bd66fdd77653e53e83.png'
+);
+
+// artGallery
+@include projectImgPathMix(
+	'art',
+	'https://i.pinimg.com/originals/8f/5a/ca/8f5acab6c267d16b500d18cb0b6ce6c7.png',
+	'https://i.pinimg.com/originals/18/97/f6/1897f6f2792fa98f09f3c69c889b9e92.png',
+	'https://i.pinimg.com/originals/f9/ea/42/f9ea42013fda6c830f15acd00d821e85.png',
+	'https://i.pinimg.com/originals/b3/9a/4c/b39a4ce8dc576d74d3638ff9d5e0ec05.png',
+	'https://i.pinimg.com/originals/10/bb/ad/10bbad5a586a87ef44cc7571c60a3454.png',
+	'https://i.pinimg.com/originals/bd/02/43/bd0243482cf76c8f0e4820771646fbe8.png',
+	'https://i.pinimg.com/originals/37/ed/55/37ed55ddd8bc610582dde587ccc1adea.png'
+);
+
+// Trees
+@include projectImgPathMix(
+	'trees',
+	'https://i.pinimg.com/originals/27/ce/b6/27ceb6ef4f7bcd5c24ad0a88ea307336.png',
+	'https://i.pinimg.com/originals/c9/ce/0c/c9ce0c11fd9f1dc98f80e27824878985.png',
+	'https://i.pinimg.com/originals/04/d6/f4/04d6f4a420c59b366b11f827c0c617f9.png',
+	'https://i.pinimg.com/originals/e1/e1/2b/e1e12b9054b7cf3e2b2b6eac21de092d.png',
+	'https://i.pinimg.com/originals/0c/82/7c/0c827cae63b464cc499a9955d9bb1604.png',
+	'https://i.pinimg.com/originals/c3/85/43/c3854332e59bd3c3aa5ea0b86c68fc95.png',
+	'https://i.pinimg.com/originals/9f/78/73/9f787305e7292ceb815d1956d97f5fe2.png'
+);
+
 /*____________________________________________________________
 ##### Present Page
 ____________________________________________________________*/
@@ -476,7 +627,7 @@ ____________________________________________________________*/
 	position: absolute;
 	top: 0;
 	width: 0;
-	height: calc(100% + 5px);
+	height: calc(100% + 15px);
 	background-color: $palette-present-primary;
 	transition: all .4s;
 	transition-delay: .7s;
@@ -555,7 +706,6 @@ ____________________________________________________________*/
 	height: 80%;
 	border: 20px solid $x-color-white;
 	outline: 2px solid $palette-present-border;
-	background-image: url('https://i.pinimg.com/originals/d0/61/40/d06140beca6299f42aa2c4050a0dad45.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
