@@ -5,6 +5,7 @@
 # Mixins
 	## Line Info Mixin
 	## Project Image Path Mixin
+	## Title Underline Width
 # Fonts
 # Container
 	## Portfolio Card Content
@@ -84,8 +85,11 @@ ____________________________________________________________*/
 /*____________________________________________________________
 ## Project Image Path Mixin
 ____________________________________________________________*/
-@mixin projectImgPathMix($presentationClassModification, $presentMainImg, $detailImg1, $detailImg2, $detailImg3, $detailImg4, $portfolioLgImg, $portfolioMdImg) {
+@mixin projectImgPathMix($underlineWidth, $presentationClassModification, $presentMainImg, $detailImg1, $detailImg2, $detailImg3, $detailImg4, $portfolioLgImg, $portfolioMdImg) {
 	.presentation_#{$presentationClassModification} {
+		.presentMain__titleUnderline {
+			width: #{$underlineWidth}
+		}
 		.presentMain__img {
 			background-image: url('#{$presentMainImg}');
 		}
@@ -119,6 +123,17 @@ ____________________________________________________________*/
 		}
 		.portfolioImg_md {
 			background-image: url('#{$portfolioMdImg}');
+		}
+	}
+}
+
+/*____________________________________________________________
+## Title Underline Width
+____________________________________________________________*/
+@mixin underlineWidthMix($presentationClassModification, $underlineWidth) {
+	.presentation_#{$presentationClassModification} {
+		.presentMain__titleUnderline {
+			width: #{$underlineWidth}
 		}
 	}
 }
@@ -181,6 +196,10 @@ ____________________________________________________________*/
 	position: relative;
 	margin: 0 auto;
 	width: 1500px;
+
+	&.portfolioCardWrap_eventsNone {
+		pointer-events: none;
+	}
 }
 .portfolioCard {
 	position: relative;
@@ -376,6 +395,7 @@ ____________________________________________________________*/
 
 // Gwent
 @include projectImgPathMix(
+	'80px',
 	'gwent',
 	'https://i.pinimg.com/originals/41/40/36/414036a6800072b6fea0b0550809b3be.png',
 	'https://i.pinimg.com/originals/fb/47/65/fb4765686b6711724f6f8765659b15e5.png',
@@ -388,6 +408,7 @@ ____________________________________________________________*/
 
 // Prado
 @include projectImgPathMix(
+	'53px',
 	'prado',
 	'https://i.pinimg.com/originals/da/d2/be/dad2bec273660ef57d1b5b8226cdd9fa.png',
 	'https://i.pinimg.com/originals/ff/5a/75/ff5a75072701ac21e976857f4a8e4cc8.png',
@@ -400,6 +421,7 @@ ____________________________________________________________*/
 
 // Spiele Museum
 @include projectImgPathMix(
+	'65px',
 	'spiele',
 	'https://i.pinimg.com/originals/57/1f/d4/571fd4a327d7b1bc1df135d8392ed26f.png',
 	'https://i.pinimg.com/originals/c8/7e/8a/c87e8a698ae1b4835464f2304945f84a.png',
@@ -412,6 +434,7 @@ ____________________________________________________________*/
 
 // Cuphead
 @include projectImgPathMix(
+	'80px',
 	'cuphead',
 	'https://i.pinimg.com/originals/6b/30/63/6b30634127df5e8d6d16cad9700005ef.png',
 	'https://i.pinimg.com/originals/60/ec/d0/60ecd07e17fe41fa5061357e49dd0385.png',
@@ -424,6 +447,7 @@ ____________________________________________________________*/
 
 // Calculator
 @include projectImgPathMix(
+	'80px',
 	'calculator',
 	'https://i.pinimg.com/originals/42/f0/0e/42f00e9e1e79731cbfc9881b5c6f68f6.png',
 	'https://i.pinimg.com/originals/71/7c/eb/717ceb296abb30870c8f38ac648588bf.png',
@@ -436,6 +460,7 @@ ____________________________________________________________*/
 
 // Music Player
 @include projectImgPathMix(
+	'103px',
 	'player',
 	'https://i.pinimg.com/originals/46/f8/7f/46f87ffbbce0ab98e516b0b2989ac15d.png',
 	'https://i.pinimg.com/originals/cf/10/38/cf1038119e3275ab196569df9824c33b.png',
@@ -448,6 +473,7 @@ ____________________________________________________________*/
 
 // Oldsmobile
 @include projectImgPathMix(
+	'78px',
 	'old',
 	'https://i.pinimg.com/originals/1f/81/ff/1f81ff1c40a8d2c201b97c253cfdec91.png',
 	'https://i.pinimg.com/originals/4f/57/eb/4f57ebcd0d6117a448132dd8620702bb.png',
@@ -460,6 +486,7 @@ ____________________________________________________________*/
 
 // artGallery
 @include projectImgPathMix(
+	'62px',
 	'art',
 	'https://i.pinimg.com/originals/8f/5a/ca/8f5acab6c267d16b500d18cb0b6ce6c7.png',
 	'https://i.pinimg.com/originals/18/97/f6/1897f6f2792fa98f09f3c69c889b9e92.png',
@@ -472,6 +499,7 @@ ____________________________________________________________*/
 
 // Trees
 @include projectImgPathMix(
+	'80px',
 	'trees',
 	'https://i.pinimg.com/originals/27/ce/b6/27ceb6ef4f7bcd5c24ad0a88ea307336.png',
 	'https://i.pinimg.com/originals/c9/ce/0c/c9ce0c11fd9f1dc98f80e27824878985.png',
@@ -618,8 +646,7 @@ ____________________________________________________________*/
 }
 .presentMain__titleUnderline {
 	position: absolute;
-	bottom: -5px;
-	width: 70px;
+	bottom: -8px;
 	height: 5px;
 	background-color: $palette-present-font;
 }
@@ -1230,6 +1257,12 @@ ____________________________________________________________*/
 	.presentMain__title {
 		font-size: 86px;
 	}
+	@include underlineWidthMix('gwent', '70px');
+	@include underlineWidthMix('prado', '48px');
+	@include underlineWidthMix('spiele', '55px');
+	@include underlineWidthMix('cuphead', '65px');
+	@include underlineWidthMix('calculator', '65px');
+
 	.presentMain__titleCircle {
 		top: -60px;
 		right: -110px;

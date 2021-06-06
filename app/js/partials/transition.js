@@ -1,3 +1,5 @@
+let cardWrap = document.querySelector('.portfolioCardWrap');
+
 let popupMenu = document.querySelector('.popupMenu');
 let revealer = new RevealFx(popupMenu);
 
@@ -33,7 +35,7 @@ let projectInfoArray = {
 		demoHref: 'https://kerthin.github.io/gwentReact-templateSait/',
 		descriptTitle: 'Create the best <br/> card deck',
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/gwentReact-templateSait",
+		github: 'https://github.com/Kerthin/gwentReact-templateSait',
 
 		detailTitle_1: 'Fillac Andini',
 		detailSubtitle_1: 'UI/UX Designer',
@@ -57,7 +59,7 @@ let projectInfoArray = {
 		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
 		descriptTitle: 'Learning the best artists',
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+		github: 'https://github.com/Kerthin/pradoMuseum-templateSait',
 
 		detailTitle_1: 'Fillaf Andini',
 		detailSubtitle_1: 'UI/UX Designer',
@@ -78,10 +80,10 @@ let projectInfoArray = {
 	2: {
 		wrapClass: 'presentation_spiele',
 		title: 'Spiele.',
-		demoHref: 'https://kerthin.github.io/musicPlayer-templateSait/',
+		demoHref: 'https://kerthin.github.io/computerSpieleMuseum-templateSait/',
 		descriptTitle: 'Dive into the past of your<br/>favorite video games.',
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/musicPlayer-templateSait",
+		github: 'https://github.com/Kerthin/computerSpieleMuseum-templateSait',
 
 		detailTitle_1: 'Fillas Andini',
 		detailSubtitle_1: 'UI/UX Designer',
@@ -102,10 +104,10 @@ let projectInfoArray = {
 	3: {
 		wrapClass: 'presentation_cuphead',
 		title: 'Cuphead.',
-		demoHref: 'https://kerthin.github.io/gwentReact-templateSait/',
+		demoHref: 'https://kerthin.github.io/cuphead-templateSait/',
 		descriptTitle: "Don't Deal with<br/>the Devil.",
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/gwentReact-templateSait",
+		github: 'https://github.com/Kerthin/cuphead-templateSait',
 
 		detailTitle_1: 'Fillad Andini',
 		detailSubtitle_1: 'UI/UX Designer',
@@ -126,10 +128,10 @@ let projectInfoArray = {
 	4: {
 		wrapClass: 'presentation_calculator',
 		title: 'Calculator.',
-		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
+		demoHref: 'https://kerthin.github.io/calculator-templateSait/',
 		descriptTitle: 'Add, divide, multiply and<br/>subtract any number.',
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+		github: 'https://github.com/Kerthin/calculator-templateSait',
 
 		detailTitle_1: 'Fillaf Andini',
 		detailSubtitle_1: 'UI/UX Designer',
@@ -150,10 +152,10 @@ let projectInfoArray = {
 	5: {
 		wrapClass: 'presentation_player',
 		title: 'Music.',
-		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
+		demoHref: 'https://kerthin.github.io/musicPlayer-templateSait/',
 		descriptTitle: 'Listen to your favorite songs<br/>on our music player.',
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+		github: 'https://github.com/Kerthin/musicPlayer-templateSait',
 
 		detailTitle_1: 'Fillaf Andini',
 		detailSubtitle_1: 'UI/UX Designer',
@@ -174,10 +176,10 @@ let projectInfoArray = {
 	6: {
 		wrapClass: 'presentation_old',
 		title: 'Oldsmobile.',
-		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
+		demoHref: 'https://kerthin.github.io/retroCars-templateSait/',
 		descriptTitle: 'The era when cars<br/>were created by artists.',
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+		github: 'https://github.com/Kerthin/retroCars-templateSait',
 
 		detailTitle_1: 'Fillaf Andini',
 		detailSubtitle_1: 'UI/UX Designer',
@@ -198,10 +200,10 @@ let projectInfoArray = {
 	7: {
 		wrapClass: 'presentation_art',
 		title: 'artGallery.',
-		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
+		demoHref: 'https://kerthin.github.io/artGallery-templateSait/',
 		descriptTitle: 'Artists who have contributed<br/>to the world of art.',
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+		github: 'https://github.com/Kerthin/artGallery-templateSait',
 
 		detailTitle_1: 'Fillaf Andini',
 		detailSubtitle_1: 'UI/UX Designer',
@@ -222,10 +224,10 @@ let projectInfoArray = {
 	8: {
 		wrapClass: 'presentation_trees',
 		title: 'Geometric.',
-		demoHref: 'https://kerthin.github.io/pradoMuseum-templateSait/',
+		demoHref: 'https://kerthin.github.io/trees-templateSait/',
 		descriptTitle: 'Feel the geometry<br/>in our nature.',
 		descriptParagraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis reiciendis dignissimos cum, rem temporibus, consequatur ad ut facilis aspernatur deserunt dolore quidem cumque odit quo repudiandae veritatis enim, maiores soluta, repellendus!',
-		github: "https://github.com/Kerthin/pradoMuseum-templateSait",
+		github: 'https://github.com/Kerthin/trees-templateSait',
 
 		detailTitle_1: 'Fillaf Andini',
 		detailSubtitle_1: 'UI/UX Designer',
@@ -251,6 +253,7 @@ for (let i = 0; i < portfolioCard.length; i++) {
 	portfolioCard[i].addEventListener(
 		"click",
 		function (i) {
+
 			wrap.classList.add(projectInfoArray[i].wrapClass);
 			titleVertical.innerHTML = projectInfoArray[i].title;
 			mainTitle.innerHTML = projectInfoArray[i].title;
@@ -284,6 +287,10 @@ for (let i = 0; i < portfolioCard.length; i++) {
 					contentEl.style.opacity = 1;
 				}
 			});
+
+			setTimeout(() => {
+				cardWrap.classList.add('portfolioCardWrap_eventsNone');
+			}, 250);
 		}.bind(null, i)
 	);
 }
@@ -299,7 +306,7 @@ closeButton.addEventListener(
 	"click",
 	function (i) {
 		popupMenu.classList.remove('js-popupMenu_open');
-		wrap.classList.remove("presentation_open");
+		wrap.classList.remove('presentation_open');
 
 		revealer.reveal({
 			bgcolor: '#f7e0b5',
@@ -315,6 +322,7 @@ closeButton.addEventListener(
 		setTimeout(() => {
 			demoLink.setAttribute("href", "");
 			wrap.setAttribute("class", "presentation");
-		}, 1000);
+			cardWrap.classList.remove('portfolioCardWrap_eventsNone');
+		}, 2550);
 	}
 );
