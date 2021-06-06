@@ -1262,6 +1262,10 @@ ____________________________________________________________*/
 	@include underlineWidthMix('spiele', '55px');
 	@include underlineWidthMix('cuphead', '65px');
 	@include underlineWidthMix('calculator', '65px');
+	@include underlineWidthMix('player', '92px');
+	@include underlineWidthMix('old', '70px');
+	@include underlineWidthMix('art', '55px');
+	@include underlineWidthMix('trees', '72px');
 
 	.presentMain__titleCircle {
 		top: -60px;
@@ -1460,9 +1464,16 @@ ____________________________________________________________*/
 	.presentMain__title {
 		font-size: 72px;
 	}
-	.presentMain__titleUnderline {
-		width: 50px;
-	}
+	@include underlineWidthMix('gwent', '60px');
+	@include underlineWidthMix('prado', '40px');
+	@include underlineWidthMix('spiele', '47px');
+	@include underlineWidthMix('cuphead', '57px');
+	@include underlineWidthMix('calculator', '57px');
+	@include underlineWidthMix('player', '78px');
+	@include underlineWidthMix('old', '60px');
+	@include underlineWidthMix('art', '46px');
+	@include underlineWidthMix('trees', '60px');
+
 	.presentMain__titleCircle {
 		top: -40px;
 	  right: -80px;
@@ -1590,6 +1601,16 @@ ____________________________________________________________*/
 	.presentMain__title {
 		font-size: 64px;
 	}
+	@include underlineWidthMix('gwent', '52px');
+	@include underlineWidthMix('prado', '35px');
+	@include underlineWidthMix('spiele', '42px');
+	@include underlineWidthMix('cuphead', '50px');
+	@include underlineWidthMix('calculator', '50px');
+	@include underlineWidthMix('player', '69px');
+	@include underlineWidthMix('old', '52px');
+	@include underlineWidthMix('art', '40px');
+	@include underlineWidthMix('trees', '53px');
+
 	.presentMain__titleCircle {
 		top: -40px;
 		right: -80px;
@@ -1674,7 +1695,7 @@ ____________________________________________________________*/
 		margin-top: 25px;
 	}
 	.portfolioCard__name {
-		font-size: 28px;
+		font-size: 26px;
 	}
 	.portfolioCard__technologies {
 		font-size: 16px;
@@ -1733,8 +1754,22 @@ ____________________________________________________________*/
 	.presentMain__title {
 		font-size: 48px;
 	}
+	.presentMain__titleUnderline {
+		bottom: -5px;
+		height: 4px;
+	}
+	@include underlineWidthMix('gwent', '40px');
+	@include underlineWidthMix('prado', '26px');
+	@include underlineWidthMix('spiele', '30px');
+	@include underlineWidthMix('cuphead', '38px');
+	@include underlineWidthMix('calculator', '38px');
+	@include underlineWidthMix('player', '51px');
+	@include underlineWidthMix('old', '40px');
+	@include underlineWidthMix('art', '30px');
+	@include underlineWidthMix('trees', '40px');
+
 	.presentMain__titleCircle {
-		top: -25px;
+		top: -35px;
 		right: -60px;
 		width: 70px;
 		height: 70px;
@@ -1816,11 +1851,21 @@ ____________________________________________________________*/
 		font-size: 36px;
 	}
 	.presentMain__titleUnderline {
-		width: 30px;
-		height: 4px;
+		bottom: -3px;
+		height: 3px;
 	}
+	@include underlineWidthMix('gwent', '30px');
+	@include underlineWidthMix('prado', '21px');
+	@include underlineWidthMix('spiele', '24px');
+	@include underlineWidthMix('cuphead', '30px');
+	@include underlineWidthMix('calculator', '30px');
+	@include underlineWidthMix('player', '40px');
+	@include underlineWidthMix('old', '30px');
+	@include underlineWidthMix('art', '23px');
+	@include underlineWidthMix('trees', '30px');
+
 	.presentMain__titleCircle {
-		top: -25px;
+		top: -30px;
 	  right: -50px;
 		width: 60px;
 	  height: 60px;
@@ -1838,6 +1883,23 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @media only screen and (max-width: 375px) {
 	// Presentation
+	// Presentation
+	.presentation {
+
+		&.presentation_open {
+
+			.presentSide {
+				height: 70px;
+			}
+			.closeButtonWrap {
+			}
+
+			.presentMain {
+				height: calc(100% - 70px);
+			}
+		}
+	}
+
 	.presentSide__title {
 		font-size: 24px;
 	}
@@ -1925,11 +1987,20 @@ ____________________________________________________________*/
 		font-size: 28px;
 	}
 	.presentMain__titleUnderline {
-		width: 25px;
-		height: 3px;
+		height: 2px;
 	}
+	@include underlineWidthMix('gwent', '23px');
+	@include underlineWidthMix('prado', '16px');
+	@include underlineWidthMix('spiele', '18px');
+	@include underlineWidthMix('cuphead', '23px');
+	@include underlineWidthMix('calculator', '23px');
+	@include underlineWidthMix('player', '30px');
+	@include underlineWidthMix('old', '23px');
+	@include underlineWidthMix('art', '18px');
+	@include underlineWidthMix('trees', '23px');
+
 	.presentMain__titleCircle {
-		top: -25px;
+		top: -30px;
 	  right: -40px;
 		width: 50px;
 	  height: 50px;
