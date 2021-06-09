@@ -3,8 +3,33 @@
 ____________________________________________________________*/
 .developerInfo {
 	@extend %verticalCentering;
-	right: 50px;
-	width: calc(100% - 993px);
-	height: 400px;
-	background: #fff;
+	left: 993px;
+	// width: calc(100% - 1043px);
+	width: 760px;
+	height: 600px;
+}
+.developerInfo__title,
+.developerInfo__subtitle {
+	font-family: Galeria;
+	font-size: 70px;
+	color: $palette-secondary;
+}
+.developerInfo__title {
+	margin-bottom: 10px;
+}
+.developerInfo__subtitle {
+	margin-bottom: 40px;
+}
+
+.developerInfo__name {
+	color: $x-color-granite;
+}
+
+.developerInfo__paragraph {
+	font-family: Galeria-Medium;
+	font-size: 24px;
+	word-spacing: 8px;
+	text-align: justify;
+	line-height: 45px;
+	color: $palette-secondary;
 }

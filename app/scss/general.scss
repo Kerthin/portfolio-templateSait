@@ -6,6 +6,7 @@
 	## Screen size variables
 # Mixins
 	## Media queries mixin
+# Fonts
 # Auxiliary styles
 
 ____________________________________________________________*/
@@ -108,6 +109,18 @@ ____________________________________________________________*/
 	@else if $media == 320 {
 		@media only screen and (max-width: $media-screen-320) { @content; }
 	}
+}
+
+/*____________________________________________________________
+# Fonts
+____________________________________________________________*/
+@font-face {
+	font-family: 'Galeria';
+	src: url('../fonts/Galeria-Bold.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Galeria-Medium';
+	src: url('../fonts/Galeria-Medium.otf') format('opentype');
 }
 
 /*____________________________________________________________
