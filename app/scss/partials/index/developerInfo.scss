@@ -1,0 +1,10 @@
+/*____________________________________________________________
+### Developer Info
+____________________________________________________________*/
+.developerInfo {
+	@extend %verticalCentering;
+	right: 50px;
+	width: calc(100% - 993px);
+	height: 400px;
+	background: #fff;
+}

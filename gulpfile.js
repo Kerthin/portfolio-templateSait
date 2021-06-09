@@ -1,56 +1,56 @@
 // sudo npm install --save-dev gulp-sourcemaps gulp-imagemin gulp-autoprefixer imagemin-pngquant gulp-uglify gulp-rigger gulp-minify-css rimraf gulp-watch gulp-pug gulp-sass browser-sync
-var 	gulp 			= 	require('gulp')					,
-		sourcemaps 		= 	require('gulp-sourcemaps')		,
-		imagemin 		= 	require('gulp-imagemin')		,
-		prefixer 		= 	require('gulp-autoprefixer')	,
-		pngquant 		= 	require('imagemin-pngquant')	,
-		uglify 			= 	require('gulp-uglify')			,
-		rigger 			= 	require('gulp-rigger')			,
-		cssmin 			= 	require('gulp-minify-css')		,
-		rimraf 			= 	require('rimraf')				,
-		watch 			= 	require('gulp-watch')			,
-		pug				=	require('gulp-pug')				,
-		sass 			= 	require('gulp-sass')			,
-		browserSync 	= 	require('browser-sync')			,
-		reload 			= 	browserSync.reload				;
+var 	gulp = require('gulp'),
+		sourcemaps = require('gulp-sourcemaps'),
+		imagemin = require('gulp-imagemin'),
+		prefixer = require('gulp-autoprefixer'),
+		pngquant = require('imagemin-pngquant'),
+		uglify = require('gulp-uglify'),
+		rigger = require('gulp-rigger'),
+		cssmin = require('gulp-minify-css'),
+		rimraf = require('rimraf'),
+		watch = require('gulp-watch'),
+		pug = require('gulp-pug'),
+		sass = require('gulp-sass'),
+		browserSync = require('browser-sync'),
+		reload = browserSync.reload;
 
 var		path 			= {
 			dist: 			{
-				image: 	'dist/image/'	,
-				fonts: 	'dist/fonts/'	,
-				html: 	'dist/'			,
-				css: 	'dist/css'		,
-				js: 	'dist/js/'
+				image: 'dist/image/',
+				fonts: 'dist/fonts/',
+				html: 'dist/',
+				css: 'dist/css',
+				js: 'dist/js/'
 			},
 			app:			{
-				image: 	'app/image/**/**/*.*'	,
-				fonts: 	'app/fonts/**/*.*'	,
-				scss: 	'app/scss/*.scss',
-				pug:	'app/*.pug'			,
-				js: 	'app/js/*.js'	
+				image: 'app/image/**/**/*.*',
+				fonts: 'app/fonts/**/*.*',
+				scss: 'app/scss/*.scss',
+				pug: 'app/*.pug',
+				js: 'app/js/*.js'	
 			},
 			watch: 			{
-				image: 	'app/image/**/**/*.*',
-				fonts: 	'app/fonts/**/*.*',
-				html: 	'app/**/*.html',
-				scss: 	'app/scss/*.scss',
-				pug:	'app/*.pug'			,
-				css: 	'app/css/*.css',
-				js: 	'app/js/*.js'
+				image: 'app/image/**/**/*.*',
+				fonts: 'app/fonts/**/*.*',
+				html: 'app/**/*.html',
+				scss: 'app/scss/*.scss',
+				pug: 'app/*.pug',
+				css: 'app/css/*.css',
+				js: 'app/js/*.js'
 			},
 			clean: 			{
-				dist:	'./dist'
+				dist: './dist'
 			}
 };
 
 var 	config			= {
 		server: {
-			baseDir:	"./dist"
+			baseDir: "./dist"
 		},
-		tunnel: 	 	true,
-		host: 			'localhost',
-		port: 		 	9000,
-		logPrefix: 		"Frontend_Devil"
+		tunnel: true,
+		host: 'localhost',
+		port: 9000,
+		logPrefix: "Frontend_Devil"
 };
 
 gulp.task('html:dist',	function()	{
@@ -59,7 +59,7 @@ gulp.task('html:dist',	function()	{
 			pretty: false
 		}))
 		.pipe(gulp.dest(path.dist.html))
-		.pipe(reload({stream:	true}));	//Перезагрузка сервера для обновлений
+		.pipe(reload({stream: true}));	//Перезагрузка сервера для обновлений
 });
 
 gulp.task('js:dist',	function()	{
@@ -80,19 +80,19 @@ gulp.task('style:dist',	function()	{
 		.pipe(cssmin())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.dist.css))
-		.pipe(reload({stream:	true}));
+		.pipe(reload({stream: true}));
 });
 
 gulp.task('image:dist',	function()	{
 	gulp.src(path.app.image)
 		.pipe(imagemin({
-			progressive:	true,
-			svgoPlugins:	[{removeViewBox:	false}],
-			use:			[pngquant()],
-			interlaced:		true 
+			progressive: true,
+			svgoPlugins: [{removeViewBox:	false}],
+			use: [pngquant()],
+			interlaced: true 
 		}))
 		.pipe(gulp.dest(path.dist.image))
-		.pipe(reload({stream:	true}));
+		.pipe(reload({stream: true}));
 });
 
 gulp.task('fonts:dist',	function()	{
@@ -101,10 +101,10 @@ gulp.task('fonts:dist',	function()	{
 });
 
 gulp.task('dist',	[
-	'html:dist'		,
-	'style:dist'	,
-	'js:dist'		,
-	'image:dist'	,
+	'html:dist',
+	'style:dist',
+	'js:dist',
+	'image:dist',
 	'fonts:dist'
 ]);
 
@@ -136,7 +136,7 @@ gulp.task('webserver',	function()	{
 });
 
 gulp.task('clean',		function(cb)	{
-	rimraf(path.clean.dist	,	cb);
+	rimraf(path.clean.dist, cb);
 });
 
 gulp.task('default',	['dist',	'webserver',	'watch']);
