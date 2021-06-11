@@ -14,6 +14,11 @@
 //= ../../bower_components/revealer/revealer.js
 
 /********************
+	popup.js
+********************/
+//= partials/popup.js
+
+/********************
 	blob.js
 ********************/
 //= partials/blob.js
