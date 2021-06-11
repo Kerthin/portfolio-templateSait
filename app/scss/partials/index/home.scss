@@ -7,3 +7,8 @@ ____________________________________________________________*/
 	height: 100vh;
 	background-color: $palette-primary;
 }
+.developerWrap {
+	@extend %centering;
+	width: 1700px;
+	height: 600px;
+}

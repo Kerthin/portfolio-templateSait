@@ -55,8 +55,7 @@ ____________________________________________________________*/
 ### Illustration
 ____________________________________________________________*/
 .illustration {
-	@extend %verticalCentering;
-	left: 50px;
+	position: absolute;
 	width: 893px;
 	height: 600px;
 	overflow: hidden;

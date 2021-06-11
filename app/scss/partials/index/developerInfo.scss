@@ -2,11 +2,10 @@
 ### Developer Info
 ____________________________________________________________*/
 .developerInfo {
-	@extend %verticalCentering;
-	left: 993px;
-	// width: calc(100% - 1043px);
-	width: 760px;
-	height: 600px;
+	position: absolute;
+	right: 0;
+	width: 757px;
+	// height: 600px;
 }
 .developerInfo__title,
 .developerInfo__subtitle {
