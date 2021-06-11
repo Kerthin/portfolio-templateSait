@@ -15,6 +15,7 @@ ____________________________________________________________*/
 	font-family: Galeria;
 	font-size: 44px;
 	color: $palette-secondary;
+	transition: color 0.2s;
 
 	&:after {
 		content: '';
@@ -24,6 +25,15 @@ ____________________________________________________________*/
 		width: 100%;
 		height: 3px;
 		background-color: $palette-secondary;
+		transition: background 0.2s;
+	}
+
+	&:hover {
+		color: $palette-social-link-hover;
+
+		&:after {
+			background-color: $palette-social-link-hover;
+		}
 	}
 }
 
@@ -46,7 +56,7 @@ ____________________________________________________________*/
 	font-size: 18px;
 	color: $palette-secondary;
 	cursor: pointer;
-	transition: transform 0.2s;
+	transition: color 0.2s;
 
 	&:before {
 		content: "0" counter(item) ".";
