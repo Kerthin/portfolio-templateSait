@@ -10,7 +10,21 @@ ____________________________________________________________*/
 	z-index: 2;
 }
 .logo {
+	position: relative;
 	float: left;
+	font-family: Galeria;
+	font-size: 44px;
+	color: $palette-secondary;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background-color: $palette-secondary;
+	}
 }
 
 .navigation__links {
@@ -20,7 +34,7 @@ ____________________________________________________________*/
 }
 .navigation__item {
 	float: left;
-	margin-right: 20px;
+	margin-right: 30px;
 	counter-increment: item 1;
 
 	&:last-child {
@@ -37,7 +51,6 @@ ____________________________________________________________*/
 	&:before {
 		content: "0" counter(item) ".";
 	  margin-right: 5px;
-	  // color: $palette-social-link-hover;
 	}
 
 	&:hover {

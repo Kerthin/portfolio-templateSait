@@ -5,7 +5,6 @@ ____________________________________________________________*/
 	position: absolute;
 	right: 0;
 	width: 757px;
-	// height: 600px;
 }
 .developerInfo__title,
 .developerInfo__subtitle {
@@ -25,10 +24,32 @@ ____________________________________________________________*/
 }
 
 .developerInfo__paragraph {
+	margin-bottom: 40px;
 	font-family: Galeria-Medium;
 	font-size: 24px;
 	word-spacing: 8px;
 	text-align: justify;
 	line-height: 45px;
 	color: $palette-secondary;
+}
+
+.developerInfo__link {
+	display: block;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	font-family: Galeria-Medium;
+	font-size: 18px;
+	word-spacing: 6px;
+	line-height: 46px;
+	border: 2px solid $palette-secondary;
+	border-radius: 4px;
+	background-color: transparent;
+	color: $palette-secondary;
+	transition: all 0.2s;
+
+	&:hover {
+		background-color: $palette-secondary;
+		color: $palette-primary;
+	}
 }
