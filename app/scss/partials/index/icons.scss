@@ -78,24 +78,48 @@ ____________________________________________________________*/
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 490px;
-	height: 320px;
+	width: 835px;
+	height: 666px;
 }
 
 .iconCard {
 	float: left;
 	position: relative;
-	width: 150px;
-	height: 150px;
+	width: 265px;
+	height: 323px;
 	margin-bottom: 20px;
 	margin-right: 20px;
+	padding: 20px;
 	background-color: #9b2d30;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12),
 							0 1px 2px rgba(0,0,0,0.24);
+	overflow: hidden;
 
 	&:nth-child(3n) {
 		margin-right: 0;
 	}
+}
+.iconWrap {
+	position: relative;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 110px;
+	// background-color: pink;
+}
+.iconTitle {
+	margin-bottom: 20px;
+	text-align: center;
+	font-family: Galeria;
+	font-size: 18px;
+	color: $palette-secondary;
+}
+.iconInfo {
+	font-family: Galeria-Medium;
+	font-size: 14px;
+	// word-spacing: 5px;
+	text-align: justify;
+	line-height: 25px;
+	color: $palette-secondary;
 }
 
 /*____________________________________________________________
@@ -1383,7 +1407,8 @@ ____________________________________________________________*/
 #### Sociable Icon
 ____________________________________________________________*/
 .sociableIcon {
-	@extend %centering;
+	@extend %horizontalCentering;
+	top: 50px;
 	width: 50px;
 	height: 32px;
 }
