@@ -1,0 +1,78 @@
+/*____________________________________________________________
+## Developer Links
+____________________________________________________________*/
+.devLinks {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1700px;
+	z-index: 2;
+}
+.social {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 2;
+}
+.socialList {
+	
+	&:after {
+		content: '';
+		display: block;
+		margin: 0 auto;
+		width: 1px;
+		height: 40px;
+		background: #f7e0b5;
+	}
+}
+.socialList__item {
+	margin-bottom: 10px;
+	width: 20px;
+	height: 20px;
+	transition: transform .2s;
+	
+	&:hover {
+		transform: translateY(-3px);
+		
+		.socialList__icon {
+			stroke: #7dcbd8;
+		}
+	}
+}
+
+.socialList__icon {
+	fill: none;
+	stroke: #f7e0b5;
+}
+
+.gmail {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+}
+.gmail__name {
+
+	&:after {
+		content: '';
+		display: block;
+		margin: 0 auto;
+		width: 1px;
+		height: 40px;
+		background: #f7e0b5;
+	}
+}
+.gmail__link {
+	margin-bottom: 10px;
+	writing-mode: vertical-rl;
+	font-family: Galeria-Medium;
+	font-size: 14px;
+	color: $palette-secondary;
+	transition: transform .2s;
+
+	&:hover {
+		transform: translateY(-3px);
+		color: $palette-social-link-hover;
+	}
+}

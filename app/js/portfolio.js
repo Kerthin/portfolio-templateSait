@@ -12,3 +12,8 @@
 	transition.js
 ********************/
 //= partials/transition.js
+
+/********************
+	popup.js
+********************/
+//= partials/popup.js

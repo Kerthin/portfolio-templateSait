@@ -1,7 +1,7 @@
 let cardWrap = document.querySelector('.portfolioCardWrap');
 
-let popupMenu = document.querySelector('.popupMenu');
-let revealer = new RevealFx(popupMenu);
+let popupPortfolio = document.querySelector('.popupPortfolio');
+let revealer = new RevealFx(popupPortfolio);
 
 let wrap = document.querySelector('.presentation');
 let titleVertical = document.querySelector('.presentSide__title');
@@ -283,7 +283,7 @@ for (let i = 0; i < portfolioCard.length; i++) {
 				direction: 'rl',
 				duration: 700,
 				onCover: function(contentEl, revealerEl) {
-					popupMenu.classList.add('js-popupMenu_open');
+					popupPortfolio.classList.add('js-popupPortfolio_open');
 					contentEl.style.opacity = 1;
 				}
 			});
@@ -305,7 +305,7 @@ presentPage.addEventListener(
 closeButton.addEventListener(
 	"click",
 	function (i) {
-		popupMenu.classList.remove('js-popupMenu_open');
+		popupPortfolio.classList.remove('js-popupPortfolio_open');
 		wrap.classList.remove('presentation_open');
 
 		revealer.reveal({
@@ -314,7 +314,7 @@ closeButton.addEventListener(
 			duration: 700,
 			delay: 1200,
 			onCover: function(contentEl, revealerEl) {
-				popupMenu.classList.remove('js-popupMenu_open');
+				popupPortfolio.classList.remove('js-popupPortfolio_open');
 				contentEl.style.opacity = 0;
 			}
 		});

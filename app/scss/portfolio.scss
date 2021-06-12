@@ -147,6 +147,16 @@ ____________________________________________________________*/
 }
 
 /*____________________________________________________________
+## @import popupMenu.scss
+____________________________________________________________*/
+@import 'partials/popupMenu/popupMenu.scss';
+
+/*____________________________________________________________
+## @import navigation.scss
+____________________________________________________________*/
+@import 'partials/navigation/navigation.scss';
+
+/*____________________________________________________________
 ## Portfolio Card Content
 ____________________________________________________________*/
 .portfolioCardContent {
@@ -292,7 +302,7 @@ ____________________________________________________________*/
   opacity: 0;
   z-index: 50;
 }
-.popupMenu {
+.popupPortfolio {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -300,8 +310,9 @@ ____________________________________________________________*/
 	left: 0;
 	overflow: hidden;
 	pointer-events: none;
+	z-index: 4;
 }
-.js-popupMenu_open {
+.js-popupPortfolio_open {
   pointer-events: visible;
 
   .presentation {

@@ -7,6 +7,11 @@ html
 		//- Container
 		.container
 
+			include template/partials/popupMenu/popupMenu.pug
+
+			//-- Navigation
+			include template/partials/navigation/navigation.pug
+
 			//-- Portfolio Card Content
 			.portfolioCardContent.clearfix
 				h1.portfolioCardContent__title Portfolio.
@@ -34,7 +39,7 @@ html
 				+portfolioCardMix('tree', 'geometric', 'pug,scss,js')
 
 			//-- Popup Menu
-			section.popupMenu
+			section.popupPortfolio
 
 				//--- Portfolio Container
 				.portfolioContainer

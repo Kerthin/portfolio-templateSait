@@ -1,0 +1,6 @@
+nav.navigation
+	a.logo(href="index.html") R
+	ul.navigation__links
+		each val, key in {index: 'Home', portfolio: 'Portfolio'}
+			li.navigation__item
+				a.navigation__link(href=`${key}.html`)= val
