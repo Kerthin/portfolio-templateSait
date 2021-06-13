@@ -10,10 +10,8 @@ ____________________________________________________________*/
 	z-index: 2;
 }
 .social {
-	position: fixed;
-	left: 0;
+	position: absolute;
 	bottom: 0;
-	z-index: 2;
 }
 .socialList {
 	
@@ -47,10 +45,9 @@ ____________________________________________________________*/
 }
 
 .gmail {
-	position: fixed;
+	position: absolute;
 	right: 0;
 	bottom: 0;
-	z-index: 2;
 }
 .gmail__name {
 
