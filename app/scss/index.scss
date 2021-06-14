@@ -108,3 +108,1011 @@ ____________________________________________________________*/
 ## @import animationIcons.scss
 ____________________________________________________________*/
 @import 'partials/index/animationIcons.scss';
+
+
+/*____________________________________________________________
+# @media
+____________________________________________________________*/
+/*____________________________________________________________
+## @media 1728px
+____________________________________________________________*/
+@media only screen and (max-width: 1728px) {
+	// Navigation
+	.navigation {
+		width: 1525px;
+	}
+
+	// Developer
+	.developerWrap {
+		width: 1525px;
+		height: 540px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 5);;
+		left: calc((-893px / 100) * 5);
+		transform: scale(.9);
+	}
+	.developerInfo {
+		width: 682px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 63px;
+	}
+	.developerInfo__title {
+		margin-bottom: 9px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 36px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 36px;
+		font-size: 22px;
+		word-spacing: 7px;
+		line-height: 40px;
+	}
+	.developerInfo__link {
+		width: 135px;
+		height: 45px;
+		font-size: 16px;
+		word-spacing: 5px;
+		line-height: 41px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 1525px;
+	}
+}
+
+/*____________________________________________________________
+## @media 1600px
+____________________________________________________________*/
+@media only screen and (max-width: 1600px) {
+	// Navigation
+	.navigation {
+		width: 1417px;
+	}
+
+	// Developer
+	.developerWrap {
+		width: 1417px;
+		height: 540px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 8.333);
+		left: calc((-893px / 100) * 8.333);
+		transform: scale(.83);
+	}
+	.developerInfo {
+		width: 630px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 58px;
+	}
+	.developerInfo__title {
+		margin-bottom: 8px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 33px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 33px;
+		font-size: 20px;
+		word-spacing: 6px;
+		line-height: 37px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 1417px;
+	}
+	.socialList {
+
+		&:after {
+			height: 33px;
+		}
+	}
+	.socialList__item {
+		margin-bottom: 8px;
+		width: 17px;
+		height: 17px;
+	}
+	.gmail__name {
+
+		&:after {
+			height: 33px;
+		}
+	}
+	.gmail__link {
+		margin-left: 1px;
+		margin-bottom: 8px;
+		font-size: 12px;
+	}
+
+	// Icon Cards
+	.cardWrap {
+		width: 694px;
+		height: 555px;
+	}
+	.iconCard {
+		width: 220px;
+		height: 269px;
+		margin-bottom: 17px;
+		margin-right: 17px;
+		padding: 17px;
+	}
+	.iconWrap {
+		margin-bottom: 8px;
+		height: 92px;
+	}
+	.learnabilityIcon,
+	.fastIcon,
+	.dynamicIcon,
+	.responsiveIcon,
+	.intuitiveIcon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(.83);
+	}
+	.sociableIcon {
+		position: absolute;
+		top: 42px;
+		left: 50%;
+		transform: translateX(-50%) scale(.83);
+	}
+
+	.iconTitle {
+		margin-bottom: 17px;
+		font-size: 15px;
+	}
+	.iconInfo {
+		font-size: 12px;
+		line-height: 21px;
+	}
+}
+
+/*____________________________________________________________
+## @media 1440px
+____________________________________________________________*/
+@media only screen and (max-width: 1440px) {
+	// Navigation
+	.navigation {
+		top: 23px;
+		width: 1275px;
+		height: 42px;
+	}
+	.logo {
+		font-size: 38px;
+
+		&:after {
+			bottom: -2px;
+			height: 2px;
+		}
+	}
+
+	.navigation__links {
+		padding-top: 13px;
+	}
+	.navigation__item {
+		margin-right: 25px;
+	}
+	.navigation__link {
+		font-size: 15px;
+
+		&:before {
+		  margin-right: 4px;
+		}
+	}
+
+	// Developer
+	.developerWrap {
+		width: 1275px;
+		height: 450px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 12.5);
+		left: calc((-893px / 100) * 12.5);
+		transform: scale(.75);
+	}
+	.developerInfo {
+		width: 568px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 52px;
+	}
+	.developerInfo__title {
+		margin-bottom: 7px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 30px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 30px;
+		font-size: 18px;
+		line-height: 34px;
+	}
+	.developerInfo__link {
+		width: 112px;
+		height: 38px;
+		font-size: 14px;
+		word-spacing: 4px;
+		line-height: 34px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 1275px;
+	}
+	.socialList {
+
+		&:after {
+			height: 28px;
+		}
+	}
+	.socialList__item {
+		margin-bottom: 7px;
+		width: 15px;
+		height: 15px;
+	}
+	.gmail__name {
+
+		&:after {
+			height: 28px;
+		}
+	}
+	.gmail__link {
+		margin-bottom: 7px;
+	}
+
+	// Mouse Scroll Icon
+	.mouse {
+		bottom: 35px;
+		width: 22px;
+		height: 38px;
+		border-radius: 25px;
+	}
+	.mouse__scroller {
+		margin: 6px auto 0;
+		width: 2px;
+		height: 8px;
+	}
+}
+
+/*____________________________________________________________
+## @media 1300px
+____________________________________________________________*/
+@media only screen and (max-width: 1300px) {
+	// Navigation
+	.navigation {
+		width: 1134px;
+	}
+
+	// Developer
+	.developerWrap {
+		width: 1134px;
+		height: 396px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 16.7);
+		left: calc((-893px / 100) * 16.7);
+		transform: scale(.66);
+	}
+	.developerInfo {
+		width: 505px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 47px;
+	}
+	.developerInfo__title {
+		margin-bottom: 6px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 27px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 27px;
+		font-size: 16px;
+		line-height: 30px;
+	}
+	.developerInfo__link {
+		width: 100px;
+		height: 33px;
+		font-size: 12px;
+		word-spacing: 4px;
+		line-height: 28px;
+		border-radius: 3px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 1134px;
+	}
+}
+
+/*____________________________________________________________
+## @media 1180px
+____________________________________________________________*/
+@media only screen and (max-width: 1180px) {
+	// Navigation
+	.navigation {
+		top: 17px;
+		width: 1040px;
+		height: 30px;
+	}
+	.logo {
+		font-size: 26px;
+
+		&:after {
+			bottom: -2px;
+			height: 2px;
+		}
+	}
+
+	.navigation__links {
+		padding-top: 9.5px;
+	}
+	.navigation__item {
+		margin-right: 20px;
+	}
+	.navigation__link {
+		font-size: 11px;
+
+		&:before {
+		  margin-right: 3px;
+		}
+	}
+
+	// Developer
+	.developerWrap {
+		width: 1040px;
+		height: 366px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 19.25);
+		left: calc((-893px / 100) * 19.25);
+		transform: scale(.61);
+	}
+	.developerInfo {
+		width: 466px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 43px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 24px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 24px;
+		font-size: 14px;
+		line-height: 27px;
+	}
+	.developerInfo__link {
+		width: 92px;
+		height: 30px;
+		font-size: 11px;
+		word-spacing: 3px;
+		line-height: 25px;
+		border-radius: 2px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 1040px;
+	}
+	.socialList {
+
+		&:after {
+			height: 22px;
+		}
+	}
+	.socialList__item {
+		margin-bottom: 6px;
+		width: 12px;
+		height: 12px;
+	}
+	.gmail__name {
+
+		&:after {
+			height: 22px;
+		}
+	}
+	.gmail__link {
+		margin-bottom: 6px;
+		font-size: 10px;
+	}
+
+	// Mouse Scroll Icon
+	.mouse {
+		bottom: 28px;
+		width: 18px;
+		height: 30px;
+		border-radius: 25px;
+	}
+	.mouse__scroller {
+		margin: 5px auto 0;
+		width: 2px;
+		height: 6px;
+	}
+
+	// Icon Cards
+	.cardWrap {
+		width: 513px;
+		height: 410px;
+	}
+	.iconCard {
+		width: 163px;
+		height: 199px;
+		margin-bottom: 12px;
+		margin-right: 12px;
+		padding: 12px;
+	}
+	.iconWrap {
+		margin-bottom: 6px;
+		height: 68px;
+	}
+	.learnabilityIcon,
+	.fastIcon,
+	.dynamicIcon,
+	.responsiveIcon,
+	.intuitiveIcon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(.61);
+	}
+	.sociableIcon {
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		transform: translateX(-50%) scale(.61);
+	}
+
+	.iconTitle {
+		margin-bottom: 12px;
+		font-size: 11px;
+	}
+	.iconInfo {
+		font-size: 9px;
+		line-height: 15px;
+	}
+}
+
+/*____________________________________________________________
+## @media 1080px
+____________________________________________________________*/
+@media only screen and (max-width: 1080px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		width: 920px;
+	}
+
+	// Developer
+	.developerWrap {
+		width: 920px;
+		height: 336px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 21.875);
+		left: calc((-893px / 100) * 21.875);
+		transform: scale(.56);
+	}
+	.developerInfo {
+		width: 409px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 38px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 21px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 21px;
+		font-size: 13px;
+		line-height: 24px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 920px;
+	}
+}
+
+/*____________________________________________________________
+## @media 960px
+____________________________________________________________*/
+@media only screen and (max-width: 960px) {
+	// Navigation
+	.navigation {
+		width: 850px;
+	}
+
+	// Developer
+	.developerWrap {
+		width: 850px;
+		height: 300px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 25);
+		left: calc((-893px / 100) * 25);
+		transform: scale(.50);
+	}
+	.developerInfo {
+		width: 378px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 35px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 20px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 20px;
+		font-size: 12px;
+		line-height: 22.5px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 850px;
+	}
+}
+
+/*____________________________________________________________
+## @media 890px
+____________________________________________________________*/
+@media only screen and (max-width: 890px) {
+	// Burger
+	.burgerWrap {
+		display: block;
+	}
+
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Developer
+	.developerWrap {
+		width: 787px;
+		height: 278px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 26.85);
+		left: calc((-893px / 100) * 26.85);
+		transform: scale(.463);
+	}
+	.developerInfo {
+		width: 350px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 32px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 18px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 18px;
+		font-size: 12px;
+		line-height: 21px;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+}
+
+/*____________________________________________________________
+## @media 830px
+____________________________________________________________*/
+@media only screen and (max-width: 830px) {
+	// Developer
+	.illustration {
+
+	  &:after {
+			bottom: -1px;
+			height: 6px;
+		}
+	}
+
+	.developerWrap {
+		width: 680px;
+		height: 240px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 30);
+		left: calc((-893px / 100) * 30);
+		transform: scale(.4);
+	}
+	.developerInfo {
+		width: 303px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 28px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 16px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 16px;
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.developerInfo__link {
+		width: 60px;
+		height: 20px;
+		font-size: 8px;
+		word-spacing: 3px;
+		line-height: 18px;
+		border-width: 1px;
+		border-radius: 2px;
+	}
+}
+
+/*____________________________________________________________
+## @media 720px
+____________________________________________________________*/
+@media only screen and (max-width: 720px) {
+	// Developer
+	.developerWrap {
+		width: 600px;
+		height: 210px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 32.5);
+		left: calc((-893px / 100) * 32.5);
+		transform: scale(.35);
+	}
+	.developerInfo {
+		width: 267px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 24px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 14px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 14px;
+		font-size: 12px;
+		line-height: 16px;
+	}
+}
+
+/*____________________________________________________________
+## @media 642px
+____________________________________________________________*/
+@media only screen and (max-width: 642px) {
+	// Developer
+	.developerWrap {
+		width: 536px;
+		height: 189px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 34.3);
+		left: calc((-893px / 100) * 34.3);
+		transform: scale(.314);
+	}
+	.developerInfo {
+		width: 240px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 22px;
+	}
+	.developerInfo__title {
+		margin-bottom: 4px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 12px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 12px;
+	}
+
+	// Icon Cards
+	.about {
+		padding-top: 30px;
+		height: auto;
+	}
+
+	.cardWrap {
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: translate(0);
+		margin: 0 auto;
+		width: 338px;
+		height: auto;
+	}
+	.iconCard {
+
+		&:nth-child(3n) {
+			margin-right: 12px;
+		}
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+}
+
+/*____________________________________________________________
+## @media 576px
+____________________________________________________________*/
+@media only screen and (max-width: 576px) {
+	// Developer
+	.developerWrap {
+		width: 414px;
+		height: 536px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 26.85);
+		left: calc((-893px / 100) * 26.85);
+		transform: scale(.463);
+	}
+	.developerInfo {
+		bottom: 0;
+		width: 100%;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 32px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 18px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 18px;
+		font-size: 12px;
+		line-height: 21px;
+	}
+	.developerInfo__link {
+		width: 92px;
+		height: 30px;
+		font-size: 11px;
+		word-spacing: 3px;
+		line-height: 25px;
+		border-radius: 2px;
+	}
+
+	.about {
+		padding-top: 0;
+		height: 100vh;
+	}
+	.cardWrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+		width: 338px;
+		height: auto;
+	}
+}
+
+/*____________________________________________________________
+## @media 414px
+____________________________________________________________*/
+@media only screen and (max-width: 414px) {
+	// Developer
+	.developerWrap {
+		width: 358px;
+		height: 560px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 30);
+		left: calc((-893px / 100) * 30);
+		transform: scale(.4);
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 18px;
+		font-size: 16px;
+		line-height: 26px;
+	}
+}
+
+/*____________________________________________________________
+## @media 375px
+____________________________________________________________*/
+@media only screen and (max-width: 375px) {
+	// Developer
+	.developerWrap {
+		width: 327px;
+		height: 530px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 31.69);
+		left: calc((-893px / 100) * 31.69);
+		transform: scale(.3662);
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 30px;
+	}
+
+	// Icon Cards
+	.about {
+		padding-top: 30px;
+		height: auto;
+	}
+
+	.cardWrap {
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: translate(0);
+		margin: 0 auto;
+		width: 265px;
+		height: auto;
+	}
+	.iconCard {
+		width: 265px;
+		height: 323px;
+		margin-bottom: 20px;
+		margin-right: 20px;
+		padding: 20px;
+
+		&:nth-child(3n) {
+			margin-right: 12px;
+		}
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+	.iconWrap {
+		margin-bottom: 10px;
+		height: 110px;
+	}
+
+	.learnabilityIcon,
+	.fastIcon,
+	.dynamicIcon,
+	.responsiveIcon,
+	.intuitiveIcon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	.sociableIcon {
+		position: absolute;
+		top: 50px;
+		left: 50%;
+		transform: translateX(-50%) scale(1);
+	}
+	.iconTitle {
+		margin-bottom: 20px;
+		font-size: 18px;
+	}
+	.iconInfo {
+		font-size: 14px;
+		line-height: 25px;
+	}
+}
+
+/*____________________________________________________________
+## @media 320px
+____________________________________________________________*/
+@media only screen and (max-width: 320px) {
+	// Developer
+	.developerWrap {
+		width: 278px;
+		height: 445px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 34.45);
+		left: calc((-893px / 100) * 34.45);
+		transform: scale(.311);
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 26px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 14px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 14px;
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.developerInfo__paragraphPost {
+		display: none;
+	}
+}
+
+/*____________________________________________________________
+## @media iPad (min-width: 414px) and (max-width: 1025px) (portrait)
+____________________________________________________________*/
+@media only screen and (min-width: 414px) and (max-width: 1025px) and (orientation: portrait) {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
