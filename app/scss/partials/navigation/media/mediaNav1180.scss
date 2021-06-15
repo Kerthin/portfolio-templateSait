@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1180px) {
+	// Navigation
+	.navigation {
+		top: 17px;
+		width: 1040px;
+		height: 30px;
+	}
+	.logo {
+		font-size: 26px;
+
+		&:after {
+			bottom: -2px;
+			height: 2px;
+		}
+	}
+
+	.navigation__links {
+		padding-top: 9.5px;
+	}
+	.navigation__item {
+		margin-right: 20px;
+	}
+	.navigation__link {
+		font-size: 11px;
+
+		&:before {
+		  margin-right: 3px;
+		}
+	}
+}

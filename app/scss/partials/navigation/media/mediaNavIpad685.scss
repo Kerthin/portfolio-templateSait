@@ -1,0 +1,16 @@
+@media only screen and (min-width: 415px) and (max-width: 685px) and (orientation: portrait) {
+	.navigation {
+		top: 20px;
+		left: 30px;
+		width: 30px;
+		height: 30px;
+	}
+	.logo {
+		font-size: 26px;
+
+		&:after {
+			bottom: -2px;
+			height: 2px;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+@media only screen and (max-width: 890px) {
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+}

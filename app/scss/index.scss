@@ -117,11 +117,6 @@ ____________________________________________________________*/
 ## @media 1728px
 ____________________________________________________________*/
 @media only screen and (max-width: 1728px) {
-	// Navigation
-	.navigation {
-		width: 1525px;
-	}
-
 	// Developer
 	.developerWrap {
 		width: 1525px;
@@ -169,11 +164,6 @@ ____________________________________________________________*/
 ## @media 1600px
 ____________________________________________________________*/
 @media only screen and (max-width: 1600px) {
-	// Navigation
-	.navigation {
-		width: 1417px;
-	}
-
 	// Developer
 	.developerWrap {
 		width: 1417px;
@@ -278,35 +268,6 @@ ____________________________________________________________*/
 ## @media 1440px
 ____________________________________________________________*/
 @media only screen and (max-width: 1440px) {
-	// Navigation
-	.navigation {
-		top: 23px;
-		width: 1275px;
-		height: 42px;
-	}
-	.logo {
-		font-size: 38px;
-
-		&:after {
-			bottom: -2px;
-			height: 2px;
-		}
-	}
-
-	.navigation__links {
-		padding-top: 13px;
-	}
-	.navigation__item {
-		margin-right: 25px;
-	}
-	.navigation__link {
-		font-size: 15px;
-
-		&:before {
-		  margin-right: 4px;
-		}
-	}
-
 	// Developer
 	.developerWrap {
 		width: 1275px;
@@ -386,11 +347,6 @@ ____________________________________________________________*/
 ## @media 1300px
 ____________________________________________________________*/
 @media only screen and (max-width: 1300px) {
-	// Navigation
-	.navigation {
-		width: 1134px;
-	}
-
 	// Developer
 	.developerWrap {
 		width: 1134px;
@@ -438,35 +394,6 @@ ____________________________________________________________*/
 ## @media 1180px
 ____________________________________________________________*/
 @media only screen and (max-width: 1180px) {
-	// Navigation
-	.navigation {
-		top: 17px;
-		width: 1040px;
-		height: 30px;
-	}
-	.logo {
-		font-size: 26px;
-
-		&:after {
-			bottom: -2px;
-			height: 2px;
-		}
-	}
-
-	.navigation__links {
-		padding-top: 9.5px;
-	}
-	.navigation__item {
-		margin-right: 20px;
-	}
-	.navigation__link {
-		font-size: 11px;
-
-		&:before {
-		  margin-right: 3px;
-		}
-	}
-
 	// Developer
 	.developerWrap {
 		width: 1040px;
@@ -587,12 +514,6 @@ ____________________________________________________________*/
 ## @media 1080px
 ____________________________________________________________*/
 @media only screen and (max-width: 1080px) {
-	// Navigation
-	.navigation {
-		top: 15px;
-		width: 920px;
-	}
-
 	// Developer
 	.developerWrap {
 		width: 920px;
@@ -629,11 +550,6 @@ ____________________________________________________________*/
 ## @media 960px
 ____________________________________________________________*/
 @media only screen and (max-width: 960px) {
-	// Navigation
-	.navigation {
-		width: 850px;
-	}
-
 	// Developer
 	.developerWrap {
 		width: 850px;
@@ -673,17 +589,6 @@ ____________________________________________________________*/
 	// Burger
 	.burgerWrap {
 		display: block;
-	}
-
-	// Navigation
-	.navigation {
-		top: 15px;
-		left: 30px;
-		transform: translate(0);
-		width: 30px;
-	}
-	.navigation__links {
-		display: none;
 	}
 
 	// Developer
@@ -917,26 +822,6 @@ ____________________________________________________________*/
 		display: block;
 		top: 17px;
 		width: 50px;
-	}
-
-	// Navigation
-	.navigation {
-		top: 20px;
-		left: 30px;
-		transform: translate(0);
-		width: 40px;
-		height: 50px;
-	}
-	.logo {
-		font-size: 44px;
-
-		&:after {
-			bottom: -3px;
-			height: 3px;
-		}
-	}
-	.navigation__links {
-		display: none;
 	}
 
 	// Developer
@@ -1197,22 +1082,6 @@ ____________________________________________________________*/
 		width: 30px;
 	}
 
-	// Navigation
-	.navigation {
-		top: 20px;
-		left: 30px;
-		width: 30px;
-		height: 30px;
-	}
-	.logo {
-		font-size: 26px;
-
-		&:after {
-			bottom: -2px;
-			height: 2px;
-		}
-	}
-
 	// Developer
 	.developerWrap {
 		width: 580px;
@@ -1291,11 +1160,6 @@ ____________________________________________________________*/
 	// Burger
 	.burgerWrap {
 		top: 4px;
-	}
-
-	// Navigation
-	.navigation {
-		top: 15px;
 	}
 
 	// Developer
@@ -1453,76 +1317,3 @@ ____________________________________________________________*/
 		display: none;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
