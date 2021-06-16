@@ -174,7 +174,7 @@ let projectInfoArray = {
 		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
 	},
 	6: {
-		wrapClass: 'presentation_old',
+		wrapClass: 'presentation_mobile',
 		title: 'Oldsmobile.',
 		demoHref: 'https://kerthin.github.io/retroCars-templateSait/',
 		descriptTitle: 'The era when cars<br/>were created by artists.',
@@ -198,7 +198,7 @@ let projectInfoArray = {
 		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
 	},
 	7: {
-		wrapClass: 'presentation_art',
+		wrapClass: 'presentation_artGallery',
 		title: 'artGallery.',
 		demoHref: 'https://kerthin.github.io/artGallery-templateSait/',
 		descriptTitle: 'Artists who have contributed<br/>to the world of art.',
@@ -222,7 +222,7 @@ let projectInfoArray = {
 		detailParagraph_4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, distinctio.',
 	},
 	8: {
-		wrapClass: 'presentation_trees',
+		wrapClass: 'presentation_tree',
 		title: 'Geometric.',
 		demoHref: 'https://kerthin.github.io/trees-templateSait/',
 		descriptTitle: 'Feel the geometry<br/>in our nature.',
