@@ -1,0 +1,49 @@
+.preloader {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #f7e0b5;
+	z-index: 2;
+}
+
+.preloader__word {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	padding-top: 5px;
+	width: 90%;
+	height: 130px;
+	animation:	fillColor .5s ease forwards 6.8s,
+							hide .1s ease forwards 9.2s;
+}
+.path {
+	stroke: #9b2d30;
+	stroke-width: 3;
+}
+
+.preloader__loader {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 40vh;
+	background: #9b2d30;
+	z-index: 2;
+}
+
+@keyframes fillColor {
+	from {
+		fill: transparent;
+	}
+	to {
+		fill: #9b2d30;
+	}
+}
+@keyframes hide {
+	to {
+		opacity: 0;
+	}
+}
