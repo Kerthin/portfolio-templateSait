@@ -1,0 +1,75 @@
+@media only screen and (max-width: 1440px) {
+	// Developer
+	.developerWrap {
+		width: 1275px;
+		height: 450px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 12.5);
+		left: calc((-893px / 100) * 12.5);
+		transform: scale(.75);
+	}
+	.developerInfo {
+		width: 568px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 52px;
+	}
+	.developerInfo__title {
+		margin-bottom: 7px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 30px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 30px;
+		font-size: 18px;
+		line-height: 34px;
+	}
+	.developerInfo__link {
+		width: 112px;
+		height: 38px;
+		font-size: 14px;
+		word-spacing: 4px;
+		line-height: 34px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 1275px;
+	}
+	.socialList {
+
+		&:after {
+			height: 28px;
+		}
+	}
+	.socialList__item {
+		margin-bottom: 7px;
+		width: 15px;
+		height: 15px;
+	}
+	.gmail__name {
+
+		&:after {
+			height: 28px;
+		}
+	}
+	.gmail__link {
+		margin-bottom: 7px;
+	}
+
+	// Mouse Scroll Icon
+	.mouse {
+		bottom: 35px;
+		width: 22px;
+		height: 38px;
+		border-radius: 25px;
+	}
+	.mouse__scroller {
+		margin: 6px auto 0;
+		width: 2px;
+		height: 8px;
+	}
+}

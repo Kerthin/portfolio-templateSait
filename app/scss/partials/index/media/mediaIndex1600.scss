@@ -1,0 +1,100 @@
+@media only screen and (max-width: 1600px) {
+	// Developer
+	.developerWrap {
+		width: 1417px;
+		height: 540px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 8.333);
+		left: calc((-893px / 100) * 8.333);
+		transform: scale(.83);
+	}
+	.developerInfo {
+		width: 630px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 58px;
+	}
+	.developerInfo__title {
+		margin-bottom: 8px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 33px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 33px;
+		font-size: 20px;
+		word-spacing: 6px;
+		line-height: 37px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 1417px;
+	}
+	.socialList {
+
+		&:after {
+			height: 33px;
+		}
+	}
+	.socialList__item {
+		margin-bottom: 8px;
+		width: 17px;
+		height: 17px;
+	}
+	.gmail__name {
+
+		&:after {
+			height: 33px;
+		}
+	}
+	.gmail__link {
+		margin-left: 1px;
+		margin-bottom: 8px;
+		font-size: 12px;
+	}
+
+	// Icon Cards
+	.cardWrap {
+		width: 694px;
+		height: 555px;
+	}
+	.iconCard {
+		width: 220px;
+		height: 269px;
+		margin-bottom: 17px;
+		margin-right: 17px;
+		padding: 17px;
+	}
+	.iconWrap {
+		margin-bottom: 8px;
+		height: 92px;
+	}
+	.learnabilityIcon,
+	.fastIcon,
+	.dynamicIcon,
+	.responsiveIcon,
+	.intuitiveIcon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(.83);
+	}
+	.sociableIcon {
+		position: absolute;
+		top: 42px;
+		left: 50%;
+		transform: translateX(-50%) scale(.83);
+	}
+
+	.iconTitle {
+		margin-bottom: 17px;
+		font-size: 15px;
+	}
+	.iconInfo {
+		font-size: 12px;
+		line-height: 21px;
+	}
+}

@@ -1,0 +1,50 @@
+@media only screen and (max-width: 576px) {
+	// Developer
+	.developerWrap {
+		width: 414px;
+		height: 536px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 26.85);
+		left: calc((-893px / 100) * 26.85);
+		transform: scale(.463);
+	}
+	.developerInfo {
+		bottom: 0;
+		width: 100%;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 32px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 18px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 18px;
+		font-size: 12px;
+		line-height: 21px;
+	}
+	.developerInfo__link {
+		width: 92px;
+		height: 30px;
+		font-size: 11px;
+		word-spacing: 3px;
+		line-height: 25px;
+		border-radius: 2px;
+	}
+
+	.about {
+		padding-top: 0;
+		height: 100vh;
+	}
+	.cardWrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+		width: 338px;
+		height: auto;
+	}
+}

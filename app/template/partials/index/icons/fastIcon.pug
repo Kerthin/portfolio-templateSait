@@ -1,0 +1,53 @@
+//---- Fast Icon
+.iconCard
+	.iconWrap
+		.fastIcon
+
+			//----- Fast Browser
+			.fastBrowser
+
+				//------ Fast Browser Panel
+				.fastBrowser__panel
+					.fastBrowser__buttonsWrap
+						each val, index in ['exit', 'minimize', 'screen']
+							.fastBrowser__button(class=`__button_${val}`)
+					.fastBrowser__input
+
+				//------ Fast Browser Page
+				.fastBrowser__page
+					ul.fastBrowser__lineWrap
+						- for (var n = 0; n < 6; n++)
+							li.fastBrowser__line
+
+			//----- Fast Clock Wrap
+			.fastClockWrap
+
+				//------ Fast Clock Gear
+				.fastClockWrap__gear
+					svg(viewBox="-208 -208 300 300")
+						defs
+							line#clockGearTooth(x1="-2" x2="18")
+						g.teeth
+							- var n = 0;
+							- var angle = 30;
+							while n < 12
+								g(transform=`rotate(${n++ * angle})`)
+									use(xlink:href="#clockGearTooth" x="85")
+
+				//------ Fast Clock
+				.fastClockWrap__clock
+					.clockFaceContainer
+						.clockFaceContainer__clockHand
+						.clockFaceContainer__clockCircle
+
+						svg(viewBox="-208 -208 300 300")
+							defs
+								line#clockDealTooth(x1="-2" x2="10")
+							g.teeth
+								- var n = 0;
+								- var angle = 9;
+								while n < 40
+									g(transform=`rotate(${n++ * angle})`)
+										use(xlink:href="#clockDealTooth" x="85")
+	h2.iconTitle Fast
+	p.iconInfo I am able to quickly and efficiently perform tasks in the right time.

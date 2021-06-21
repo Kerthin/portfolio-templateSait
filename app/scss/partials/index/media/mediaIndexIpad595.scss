@@ -1,0 +1,35 @@
+@media only screen and (min-width: 415px) and (max-width: 595px) and (orientation: portrait) {
+	// Developer
+	.developerWrap {
+		width: 473px;
+		height: 650px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 23.5);
+		left: calc((-893px / 100) * 23.5);
+		transform: scale(.53);
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 40px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 20px;
+	}
+	.developerInfo__paragraph {
+		font-size: 18px;
+		word-spacing: 4px;
+		line-height: 30px;
+	}
+
+	// Icons
+	.about {
+		height: 100vh;
+	}
+	.cardWrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

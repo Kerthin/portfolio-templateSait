@@ -1,0 +1,37 @@
+@media only screen and (max-width: 890px) {
+	// Burger
+	.burgerWrap {
+		display: block;
+	}
+
+	// Developer
+	.developerWrap {
+		width: 787px;
+		height: 278px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 26.85);
+		left: calc((-893px / 100) * 26.85);
+		transform: scale(.463);
+	}
+	.developerInfo {
+		width: 350px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 32px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 18px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 18px;
+		font-size: 12px;
+		line-height: 21px;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+}

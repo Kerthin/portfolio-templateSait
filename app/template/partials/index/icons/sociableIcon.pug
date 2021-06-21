@@ -1,0 +1,40 @@
+//---- Sociable Icon
+.iconCard
+	.iconWrap
+		.sociableIcon
+
+			//----- Sociable Link
+			mixin sociableLinkMix(position, name)
+				.sociableLink(class=`sociableLink_${position}`)
+					.sociableLink__figure(class=`sociableLink__figure_${name}`)
+
+			+sociableLinkMix('posLC', 'mail')
+			+sociableLinkMix('posLT', 'money')
+			+sociableLinkMix('posCT', 'tag')
+			+sociableLinkMix('posRT', 'percent')
+			+sociableLinkMix('posRC', 'and')
+
+			//----- Sociable Display
+			.sociableDisplay
+
+				//------ Sociable Panel
+				mixin sociableDisplayPanelMix(side, lineIteration)
+					ul.sociableDisplay__panel(class=`sociableDisplay_${side}Side`)
+						- for (var n = 0; n < lineIteration; n++)
+							li.sociableDisplay__line
+
+				+sociableDisplayPanelMix('left', '6')
+				+sociableDisplayPanelMix('right', '4')
+
+				//------ Sociable Avatar
+				.sociableDisplay__avatar
+
+				//------ Sociable Buttons Wrap
+				ul.sociableDisplay__buttonsWrap
+					- for (var n = 0; n < 2; n++)
+						li.sociableDisplay__button
+
+			//----- Sociable Keyboard
+			.sociableKeyboard
+	h2.iconTitle Sociable
+	p.iconInfo I easily connect with new people and can be sociable and easily adaptable in society.

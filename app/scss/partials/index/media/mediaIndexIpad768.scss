@@ -1,0 +1,67 @@
+@media only screen and (min-width: 415px) and (max-width: 768px) and (orientation: portrait) {
+	// Developer
+	.developerWrap {
+		width: 670px;
+		height: 877px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 12.5);
+		left: calc((-893px / 100) * 12.5);
+		transform: scale(.75);
+	}
+	.developerInfo__title{
+		margin-bottom: 7px;
+	}
+	.developerInfo__paragraph {
+		font-size: 22px;
+		word-spacing: 7px;
+	}
+
+	// Icon Cards
+	.cardWrap {
+		width: 338px;
+	}
+	.iconCard {
+		width: 163px;
+		height: 199px;
+		margin-bottom: 12px;
+		margin-right: 12px;
+		padding: 12px;
+
+		&:nth-child(3n) {
+			margin-right: 12px;
+		}
+		&:nth-child(6n) {
+			margin-right: 0;
+		}
+	}
+	.iconWrap {
+		margin-bottom: 6px;
+		height: 68px;
+	}
+	.learnabilityIcon,
+	.fastIcon,
+	.dynamicIcon,
+	.responsiveIcon,
+	.intuitiveIcon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(.61);
+	}
+	.sociableIcon {
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		transform: translateX(-50%) scale(.61);
+	}
+
+	.iconTitle {
+		margin-bottom: 12px;
+		font-size: 11px;
+	}
+	.iconInfo {
+		font-size: 9px;
+		line-height: 15px;
+	}
+}

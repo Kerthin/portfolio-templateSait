@@ -1,0 +1,54 @@
+@media only screen and (min-width: 415px) and (max-width: 910px) and (orientation: portrait) {
+	// Developer
+	.developerWrap {
+		width: 795px;
+		height: 992px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 5.5);
+		left: calc((-893px / 100) * 5.5);
+		transform: scale(.89);
+	}
+	.developerInfo__title{
+		margin-bottom: 8px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 35px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 35px;
+		font-size: 22px;
+		word-spacing: 7px;
+		line-height: 40px;
+	}
+
+	// Icons
+	.cardWrap {
+		width: 550px;
+		height: auto;
+	}
+
+	.iconCard {
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+		&:nth-child(3n) {
+			margin-right: 20px;
+		}
+		&:nth-child(6n) {
+			margin-right: 0;
+		}
+	}
+
+	.learnabilityIcon,
+	.fastIcon,
+	.dynamicIcon,
+	.responsiveIcon,
+	.intuitiveIcon {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	.sociableIcon {
+		transform: translateX(-50%) scale(1);
+	}
+}

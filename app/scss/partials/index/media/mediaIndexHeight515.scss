@@ -1,0 +1,32 @@
+@media only screen and (min-width: 961px) and (max-width: 1080px) and (max-height: 515px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Burger
+	.burgerWrap {
+		display: block;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+
+	// Developer
+	.home {
+		height: 520px;
+	}
+
+	// Icons
+	.about {
+		height: 520px;
+	}
+}

@@ -1,0 +1,39 @@
+@media only screen and (min-width: 415px) and (max-width: 685px) and (orientation: portrait) {
+	// Burger
+	.burgerWrap {
+		display: block;
+		top: 9px;
+		width: 30px;
+	}
+
+	// Developer
+	.developerWrap {
+		width: 580px;
+		height: 734px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 17.5);
+		left: calc((-893px / 100) * 17.5);
+		transform: scale(.65);
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 45px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 25px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 20px;
+		font-size: 20px;
+		line-height: 35px;
+	}
+	.developerInfo__link {
+		width: 98px;
+		height: 32px;
+		font-size: 12px;
+		word-spacing: 6px;
+		line-height: 28px;
+		border-radius: 4px;
+	}
+}

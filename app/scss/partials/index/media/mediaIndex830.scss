@@ -1,0 +1,44 @@
+@media only screen and (max-width: 830px) {
+	// Developer
+	.illustration {
+
+	  &:after {
+			bottom: -1px;
+			height: 6px;
+		}
+	}
+
+	.developerWrap {
+		width: 680px;
+		height: 240px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 30);
+		left: calc((-893px / 100) * 30);
+		transform: scale(.4);
+	}
+	.developerInfo {
+		width: 303px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 28px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 16px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 16px;
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.developerInfo__link {
+		width: 60px;
+		height: 20px;
+		font-size: 8px;
+		word-spacing: 3px;
+		line-height: 18px;
+		border-width: 1px;
+		border-radius: 2px;
+	}
+}

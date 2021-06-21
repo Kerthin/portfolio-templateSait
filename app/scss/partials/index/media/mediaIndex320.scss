@@ -1,0 +1,27 @@
+@media only screen and (max-width: 320px) {
+	// Developer
+	.developerWrap {
+		width: 278px;
+		height: 445px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 34.45);
+		left: calc((-893px / 100) * 34.45);
+		transform: scale(.311);
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 26px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 14px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 14px;
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.developerInfo__paragraphPost {
+		display: none;
+	}
+}

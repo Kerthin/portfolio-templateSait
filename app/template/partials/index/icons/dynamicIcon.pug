@@ -1,0 +1,62 @@
+//---- Dynamic Icon
+.iconCard
+	.iconWrap
+		.dynamicIcon
+
+			//----- Dynamic Browser
+			.dynamicBrowser
+
+				//------ Dynamic Browser Panel
+				.dynamicBrowser__panel
+					.dynamicBrowser__buttonsWrap
+						each val, index in ['exit', 'minimize', 'screen']
+							.dynamicBrowser__button(class=`__button_${val}`)
+
+				//------ Dynamic Browser Header
+				header.dynamicBrowser__header
+					ul.dynamicBrowser__lineWrap
+						- for (var n = 0; n < 4; n++)
+							li.dynamicBrowser__line
+					.dynamicBrowser__title
+					.dynamicBrowser__subtitle
+
+				//------ Dynamic Browser Main
+				section.dynamicBrowser__main
+					.landscape
+						.landscapePicture
+							.landscapePicture__bg
+							.landscapePicture__dayWrap
+								.landscapePicture__sun
+								.landscapePicture__moon
+							.landscapePicture__mountainsWrap
+								.landscapePicture__mountain
+								.landscapePicture__mountain
+
+				//------ Dynamic Browser Footer
+				footer.dynamicBrowser__footer
+					ul.dynamicBrowser__productList
+						- for (var n = 0; n < 3; n++)
+							li.dynamicBrowser__product
+								.dynamicBrowser__productImg
+								.dynamicBrowser__productLineWrap
+									- for (var j = 0; j < 3; j++)
+										.dynamicBrowser__productLine
+
+			//----- Dynamic Dialog
+			mixin dynamicDialogMix(side, lineIteration)
+				ul.dynamicDialog(class=`dynamicDialog_${side}`)
+					- for (var n = 0; n < lineIteration; n++)
+						li.dynamicDialog__line
+
+			+dynamicDialogMix('left', '4')
+			+dynamicDialogMix('right', '3')
+
+			//----- Dynamic Dashed Frame
+			.dynamicDashedFrame
+
+			//----- Dynamic Chart
+			ul.dynamicChart
+				- for (var n = 0; n < 5; n++)
+					li.dynamicChart__line
+	h2.iconTitle Dynamic
+	p.iconInfo I believe that dynamics is one of the most important foundations for high-quality and modern websites.

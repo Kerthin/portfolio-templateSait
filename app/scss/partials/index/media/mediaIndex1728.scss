@@ -1,0 +1,43 @@
+@media only screen and (max-width: 1728px) {
+	// Developer
+	.developerWrap {
+		width: 1525px;
+		height: 540px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 5);;
+		left: calc((-893px / 100) * 5);
+		transform: scale(.9);
+	}
+	.developerInfo {
+		width: 682px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 63px;
+	}
+	.developerInfo__title {
+		margin-bottom: 9px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 36px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 36px;
+		font-size: 22px;
+		word-spacing: 7px;
+		line-height: 40px;
+	}
+	.developerInfo__link {
+		width: 135px;
+		height: 45px;
+		font-size: 16px;
+		word-spacing: 5px;
+		line-height: 41px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 1525px;
+	}
+}

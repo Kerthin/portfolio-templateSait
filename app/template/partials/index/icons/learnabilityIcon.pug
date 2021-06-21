@@ -1,0 +1,45 @@
+//---- Learnability Icon
+.iconCard
+	.iconWrap
+		.learnabilityIcon
+
+			//----- Learnability Editor
+			.learnabilityEditor
+
+				//------ Learnability Editor Panel
+				.learnabilityEditor__panel
+					.learnabilityEditor__buttonsWrap
+						each val, index in ['exit', 'minimize', 'screen']
+							.learnabilityEditor__button(class=`__button_${val}`)
+
+				//------ Learnability Editor Code
+				.learnabilityEditor__codeWrap
+					.learnabilityEditor__scrollBox
+						ul.learnabilityEditor__codeList
+							- for (var n = 0; n < 7; n++)
+								li.learnabilityEditor__codeItem
+									- for (var j = 0; j < 5; j++)
+										.learnabilityEditor__codeLine
+
+			//----- Learnability Keyboard
+			.learnabilityKeyboard
+				each val, index in [14, 14, 13, 12, 10]
+					ul.learnabilityKeyboard__line
+						- for (var n = 0; n < val; n++)
+							li.learnabilityKeyboard__button
+
+			//----- Learnability Gear
+			.learnabilityGear
+				.learnabilityGear__gear
+					svg(viewBox="-208 -208 300 300")
+						defs
+							line#learnabilityGearTooth(x1="-2" x2="22")
+						g.teeth
+							- var n = 0;
+							- var angle = 30;
+							while n < 12
+								g(transform=`rotate(${n++ * angle})`)
+									use(xlink:href="#learnabilityGearTooth" x="85")
+				.learnabilityGear__gearCircle
+	h2.iconTitle Learnobility
+	p.iconInfo Able to continuously and purposefully learn new knowledge to improve their working skills.

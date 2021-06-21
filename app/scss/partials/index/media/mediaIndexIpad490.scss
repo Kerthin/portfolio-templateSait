@@ -1,0 +1,30 @@
+@media only screen and (min-width: 415px) and (max-width: 490px) and (orientation: portrait) {
+	// Burger
+	.burgerWrap {
+		top: 4px;
+	}
+
+	// Developer
+	.developerWrap {
+		width: 402px;
+		height: 560px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 27.5);
+		left: calc((-893px / 100) * 27.5);
+		transform: scale(.45);
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 33px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 12px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 13px;
+		font-size: 16px;
+		word-spacing: 3px;
+		line-height: 28px;
+	}
+}

@@ -1,0 +1,57 @@
+@media only screen and (max-width: 642px) {
+	// Developer
+	.developerWrap {
+		width: 536px;
+		height: 189px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 34.3);
+		left: calc((-893px / 100) * 34.3);
+		transform: scale(.314);
+	}
+	.developerInfo {
+		width: 240px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 22px;
+	}
+	.developerInfo__title {
+		margin-bottom: 4px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 12px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 12px;
+	}
+
+	.mouse {
+		bottom: 15px;
+	}
+
+	// Icon Cards
+	.about {
+		padding-top: 30px;
+		height: auto;
+	}
+
+	.cardWrap {
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: translate(0);
+		margin: 0 auto;
+		width: 338px;
+		height: auto;
+	}
+	.iconCard {
+
+		&:nth-child(3n) {
+			margin-right: 12px;
+		}
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+}

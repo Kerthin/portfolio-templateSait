@@ -1,0 +1,105 @@
+//---- Responsive Icon
+.iconCard
+	.iconWrap
+		.responsiveIcon
+
+			//----- Responsive Imac
+			.respImac
+
+				//------ Responsive Imac Display
+				.respImac__display
+
+					//------- Responsive Browser
+					.respBrowser
+
+						//-------- Responsive Browser Panel
+						.respBrowser__panel
+							.respBrowser__buttonsWrap
+								each val, index in ['exit', 'minimize', 'screen']
+									.respBrowser__button(class=`__button_${val}`)
+
+						//-------- Responsive Browser Page
+						.respBrowser__page
+							.respBrowser__pageLayout
+
+								//--------- Responsive Browser Nav
+								.respBrowser__nav
+
+								//--------- Responsive Browser Banner
+								.respBrowser__banner
+
+								//--------- Responsive Browser Product List
+								ul.respBrowser__productList
+									- for (var n = 0; n < 3; n++)
+										li.respBrowser__product
+											.respBrowser__productImg
+											.respBrowser__productLineWrap
+												- for (var j = 0; j < 2; j++)
+													.respBrowser__productLine
+
+				//------ Responsive Imac Panel
+				.respImac__panel
+
+				//------ Responsive Imac Stand
+				.respImac__stand
+					.respImac__standShadow
+					.respImac__standBase
+
+			//----- Responsive Ipad
+			.respIpad
+
+				//------ Responsive Ipad Display
+				.respIpad__display
+
+					//------- Ipad Browser
+					.ipadBrowser
+
+						//-------- Ipad Browser Nav
+						.ipadBrowser__nav
+
+						//-------- Ipad Browser Banner
+						.ipadBrowser__banner
+
+						//-------- Responsive Ipad Product List
+						ul.ipadBrowser__productList
+							- for (var n = 0; n < 3; n++)
+								li.ipadBrowser__product
+									.ipadBrowser__productImg
+									.ipadBrowser__productLineWrap
+										- for (var j = 0; j < 3; j++)
+											.ipadBrowser__productLine
+
+				//------ Responsive Ipad Camera
+				.respIpad__camera
+
+				//------ Responsive Ipad Button
+				.respIpad__button
+
+			//----- Responsive Iphone
+			.respIphone
+
+				//------ Responsive Iphone Display
+				.respIphone__display
+
+					//------- Iphone Browser
+					.iphoneBrowser
+
+						//-------- Iphone Browser Nav
+						.iphoneBrowser__nav
+
+						//-------- Responsive Iphone Product List
+						ul.iphoneBrowser__productList
+							- for (var n = 0; n < 2; n++)
+								li.iphoneBrowser__product
+									.iphoneBrowser__productImg
+									.iphoneBrowser__productLineWrap
+										- for (var j = 0; j < 2; j++)
+											.iphoneBrowser__productLine
+
+				//------ Responsive Iphone Camera
+				.respIphone__camera
+
+				//------ Responsive Iphone Button
+				.respIphone__button
+	h2.iconTitle Responsive
+	p.iconInfo I always try to make the website display perfectly on all screens.

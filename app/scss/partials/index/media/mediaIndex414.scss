@@ -1,0 +1,17 @@
+@media only screen and (max-width: 414px) {
+	// Developer
+	.developerWrap {
+		width: 358px;
+		height: 560px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 30);
+		left: calc((-893px / 100) * 30);
+		transform: scale(.4);
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 18px;
+		font-size: 16px;
+		line-height: 26px;
+	}
+}

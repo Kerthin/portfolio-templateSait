@@ -1,0 +1,40 @@
+@media only screen and (min-width: 415px) and (max-width: 834px) and (orientation: portrait) {
+	// Developer
+	.developerWrap {
+		width: 727px;
+		height: 917px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 9.3);
+		left: calc((-893px / 100) * 9.3);
+		transform: scale(.814);
+		border-bottom: 3px solid $x-color-granite;
+
+		&:after {
+			display: none;
+		}
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 60px;
+	}
+	.developerInfo__title{
+		margin-bottom: 8px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 30px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 30px;
+		font-size: 24px;
+		word-spacing: 8px;
+	}
+	.developerInfo__link {
+		width: 150px;
+		height: 50px;
+		font-size: 18px;
+		word-spacing: 6px;
+		line-height: 46px;
+		border-radius: 4px;
+	}
+}

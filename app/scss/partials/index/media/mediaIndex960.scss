@@ -1,0 +1,32 @@
+@media only screen and (max-width: 960px) {
+	// Developer
+	.developerWrap {
+		width: 850px;
+		height: 300px;
+	}
+	.illustration {
+		top: calc((-600px / 100) * 25);
+		left: calc((-893px / 100) * 25);
+		transform: scale(.50);
+	}
+	.developerInfo {
+		width: 378px;
+	}
+	.developerInfo__title,
+	.developerInfo__subtitle {
+		font-size: 35px;
+	}
+	.developerInfo__subtitle {
+		margin-bottom: 20px;
+	}
+	.developerInfo__paragraph {
+		margin-bottom: 20px;
+		font-size: 12px;
+		line-height: 22.5px;
+	}
+
+	// Developer Links
+	.devLinks {
+		width: 850px;
+	}
+}
