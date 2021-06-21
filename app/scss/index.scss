@@ -54,21 +54,6 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 
 /*____________________________________________________________
-## @import _variables.scss
-____________________________________________________________*/
-@import 'partials/variables/_variables.scss';
-
-/*____________________________________________________________
-## @import _centering.scss
-____________________________________________________________*/
-@import 'partials/extends/_centering.scss';
-
-/*____________________________________________________________
-## @import _animDelay.scss
-____________________________________________________________*/
-@import 'partials/mixins/_animDelay.scss';
-
-/*____________________________________________________________
 ## @import buttonsStyle.scss
 ____________________________________________________________*/
 @import 'partials/index/buttonsStyle.scss';
@@ -757,6 +742,10 @@ ____________________________________________________________*/
 		margin-bottom: 12px;
 	}
 
+	.mouse {
+		bottom: 15px;
+	}
+
 	// Icon Cards
 	.about {
 		padding-top: 30px;
@@ -1339,5 +1328,366 @@ ____________________________________________________________*/
 	}
 	.developerInfo__paragraphPost {
 		display: none;
+	}
+}
+
+/*____________________________________________________________
+## @media (min-width: 1601px) and (max-width: 5000px) and (max-height: 940px)
+____________________________________________________________*/
+@media only screen and (min-width: 1601px) and (max-width: 5000px) and (max-height: 940px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Burger
+	.burgerWrap {
+		display: block;
+		height: 50px;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+
+	// Developer
+	.home {
+		height: 1000px;
+	}
+
+	// Icons
+	.about {
+		height: 1000px;
+	}
+}
+
+/*____________________________________________________________
+## @media (min-width: 1441px) and (max-width: 1600px) and (max-height: 700px)
+____________________________________________________________*/
+@media only screen and (min-width: 1441px) and (max-width: 1600px) and (max-height: 700px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Burger
+	.burgerWrap {
+		display: block;
+		height: 50px;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+
+	// Developer
+	.home {
+		height: 900px;
+	}
+
+	// Icons
+	.about {
+		height: 900px;
+	}
+}
+
+/*____________________________________________________________
+## @media (min-width: 1301px) and (max-width: 1440px) and (max-height: 670px)
+____________________________________________________________*/
+@media only screen and (min-width: 1301px) and (max-width: 1440px) and (max-height: 670px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Burger
+	.burgerWrap {
+		display: block;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+
+	// Developer
+	.home {
+		height: 720px;
+	}
+
+	// Icons
+	.about {
+		height: 720px;
+	}
+}
+
+/*____________________________________________________________
+## @media (min-width: 1181px) and (max-width: 1300px) and (max-height: 615px)
+____________________________________________________________*/
+@media only screen and (min-width: 1181px) and (max-width: 1300px) and (max-height: 615px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Burger
+	.burgerWrap {
+		display: block;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+
+	// Developer
+	.home {
+		height: 700px;
+	}
+
+	// Icons
+	.about {
+		height: 700px;
+	}
+}
+
+/*____________________________________________________________
+## @media (min-width: 1081px) and (max-width: 1180px) and (max-height: 540px)
+____________________________________________________________*/
+@media only screen and (min-width: 1081px) and (max-width: 1180px) and (max-height: 540px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Burger
+	.burgerWrap {
+		display: block;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+
+	// Developer
+	.home {
+		height: 600px;
+	}
+
+	// Icons
+	.about {
+		height: 600px;
+	}
+}
+
+/*____________________________________________________________
+## @media (min-width: 961px) and (max-width: 1080px) and (max-height: 515px)
+____________________________________________________________*/
+@media only screen and (min-width: 961px) and (max-width: 1080px) and (max-height: 515px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Burger
+	.burgerWrap {
+		display: block;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+
+	// Developer
+	.home {
+		height: 520px;
+	}
+
+	// Icons
+	.about {
+		height: 520px;
+	}
+}
+
+/*____________________________________________________________
+## @media (min-width: 891px) and (max-width: 960px) and (max-height: 470px)
+____________________________________________________________*/
+@media only screen and (min-width: 891px) and (max-width: 960px) and (max-height: 470px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Burger
+	.burgerWrap {
+		display: block;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+
+	// Developer
+	.home {
+		height: 500px;
+	}
+
+	// Icons
+	.about {
+		height: 500px;
+	}
+}
+
+/*____________________________________________________________
+## (min-width: 720px) and (max-width: 890px) and (max-height: 425px)
+____________________________________________________________*/
+@media only screen and (min-width: 720px) and (max-width: 890px) and (max-height: 425px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Burger
+	.burgerWrap {
+		display: block;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+
+	// Developer
+	.home {
+		height: 450px;
+	}
+
+	// Icons
+	.about {
+		height: 450px;
+	}
+}
+
+/*____________________________________________________________
+## (min-width: 720px) and (max-width: 890px) and (max-height: 425px)
+____________________________________________________________*/
+@media only screen and (min-width: 720px) and (max-width: 890px) and (max-height: 425px) {
+	// Navigation
+	.navigation {
+		top: 15px;
+		left: 30px;
+		transform: translate(0);
+		width: 30px;
+	}
+	.navigation__links {
+		display: none;
+	}
+
+	// Burger
+	.burgerWrap {
+		display: block;
+	}
+
+	// Developer Links
+	.devLinks {
+		display: none;
+	}
+
+	// Developer
+	.home {
+		height: 450px;
+	}
+
+	// Icons
+	.about {
+		height: 450px;
+	}
+}
+
+/*____________________________________________________________
+## (min-width: 376px) and (max-width: 414px) and (max-height: 730px)
+____________________________________________________________*/
+@media only screen and (min-width: 376px) and (max-width: 414px) and (max-height: 730px) {
+	// Developer
+	.home {
+		height: 736px;
+	}
+
+	// Icons
+	.about {
+		height: 736px;
+	}
+}
+
+/*____________________________________________________________
+## (min-width: 321px) and (max-width: 375px) and (max-height: 660px)
+____________________________________________________________*/
+@media only screen and (min-width: 321px) and (max-width: 375px) and (max-height: 660px) {
+	// Developer
+	.home {
+		height: 667px;
+	}
+}
+
+/*____________________________________________________________
+## (min-width: 321px) and (max-width: 375px) and (max-height: 660px)
+____________________________________________________________*/
+@media only screen and (max-width: 320px) and (max-height: 560px) {
+	// Developer
+	.home {
+		height: 568px;
 	}
 }
