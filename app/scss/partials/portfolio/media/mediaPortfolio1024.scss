@@ -1,0 +1,34 @@
+@media only screen and (max-width: 1024px) {
+	// Presentation
+	.presentMain__descript {
+		width: 100%;
+		height: 10%;
+	}
+	.presentMain__descriptTitle {
+		margin: 0;
+		font-size: 18px;
+	}
+	.presentMain__descriptParagraph {
+		display: none;
+	}
+	.presentMain__imgWrap {
+		width: 100%;
+		height: 90%;
+	}
+
+	// Detail Page
+	.detailItem__title,
+	.detailItem__subtitle {
+		font-size: 18px;
+	}
+
+	// Portfolio Page
+	.portfolioTitle {
+		font-size: 72px;
+	}
+	.portfolio__paragraph {
+		font-size: 14px;
+		word-spacing: 3px;
+		line-height: 30px;
+	}
+}

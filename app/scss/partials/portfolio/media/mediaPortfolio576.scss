@@ -1,0 +1,90 @@
+@media only screen and (max-width: 576px) {
+	// Presentation
+	.presentMain__article {
+		font-size: 12px;
+
+		&:nth-child(1) {
+			top: 25px;
+			left: 25px;
+		}
+		&:nth-child(2) {
+			top: 25px;
+			right: 25px;
+			font-size: 16px;
+		}
+		&:nth-child(3) {
+			bottom: 25px;
+			left: 25px;
+		}
+		&:nth-child(4) {
+			bottom: 25px;
+			right: 25px;
+		}
+	}
+	.presentMain__title {
+		font-size: 48px;
+	}
+	.presentMain__titleUnderline {
+		bottom: -5px;
+		height: 4px;
+	}
+	@include underlineWidthMix('gwent', '40px');
+	@include underlineWidthMix('prado', '26px');
+	@include underlineWidthMix('spiele', '30px');
+	@include underlineWidthMix('cuphead', '38px');
+	@include underlineWidthMix('calculator', '38px');
+	@include underlineWidthMix('player', '51px');
+	@include underlineWidthMix('old', '40px');
+	@include underlineWidthMix('art', '30px');
+	@include underlineWidthMix('trees', '40px');
+
+	.presentMain__titleCircle {
+		top: -35px;
+		right: -60px;
+		width: 70px;
+		height: 70px;
+
+		.presentMain__text {
+			font-size: 24px;
+		}
+	}
+
+	.presentMain__img {
+		border-width: 15px;
+	}
+	.detailItem__img {
+		border: 8px solid;
+	}
+	.portfolioImg,
+	.portfolioLinks {
+		border: 15px solid;
+	}
+	.portfolioImg_lg {
+		border-color: $x-color-white;
+	}
+	.portfolioImg_md {
+		border-color: $x-color-trefoil-crayola;
+	}
+	.portfolioLinks {
+		border-color: $palette-detail-rect-border;
+	}
+
+	// Detail Page
+	@include lineInfoMix('detail', 108px, 252px);
+
+	.lineInfoWrap__left,
+	.lineInfoWrap__right {
+		font-size: 12px;
+	}
+	.lineInfoWrap__line {
+		margin-top: 6px;
+	}
+
+	.detailItem__title,
+	.detailItem__subtitle {
+		font-size: 20px;
+	}
+
+	// Portfolio Page
+	@include lineInfoMix('portfolio', 122px, 230px);
+}

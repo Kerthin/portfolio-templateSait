@@ -1,0 +1,162 @@
+/*____________________________________________________________
+## Popup Menu
+____________________________________________________________*/
+.blockRevealer__element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 50;
+}
+.popupPortfolio {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 4;
+}
+.js-popupPortfolio_open {
+  pointer-events: visible;
+
+  .presentation {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+		transition: all .4s;
+		transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+	}
+}
+
+/*____________________________________________________________
+### Portfolio Container
+____________________________________________________________*/
+.portfolioContainer {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: $x-color-smoky-white;
+}
+
+.bgRect {
+	position: absolute;
+	width: 20%;
+	height: 20%;
+	border: 2px solid $palette-present-border;
+
+	&:nth-child(1) {
+		top: 2.5%;
+		right: 30%;
+		background-color: $x-color-trefoil-crayola;
+	}
+	&:nth-child(2) {
+		bottom: 2.5%;
+		left: 20%;
+		background-color: $palette-detail-rect-border;
+	}
+}
+
+/*____________________________________________________________
+#### Presentation
+____________________________________________________________*/
+.presentation {
+	@extend %centering;
+	width: 90%;
+	height: 90%;
+	background-color: $palette-present-primary;
+	border: 2px solid $palette-present-border;
+	overflow: hidden;
+	cursor: pointer;
+  transition: all .4s;
+
+  &.presentation_open {
+		width: 100%;
+		height: 100vh;
+		border-width: 0;
+		overflow: scroll;
+		cursor: default;
+
+		.presentSide {
+			height: 100%;
+			transition-delay: .3s;
+		}
+		.closeButtonWrap {
+			transform: translateX(-50%) scale(1);
+			transition-delay: .8s;
+		}
+
+		.presentMain {
+			width: calc(100% - 160px);
+		}
+
+		.presentMain__slide {
+			width: 100%;
+		}
+		.presentMain__titleCircle {
+			transform: scale(0);
+		}
+
+		.presentMain__content {
+			height: 60%;
+			transition-delay: 1s;
+		}
+  }
+}
+
+// Gwent
+@include projectImgPathMix(
+	'gwent',
+	'80px'
+);
+
+// Prado
+@include projectImgPathMix(
+	'prado',
+	'53px'
+);
+
+// Spiele Museum
+@include projectImgPathMix(
+	'spiele',
+	'65px'
+);
+
+// Cuphead
+@include projectImgPathMix(
+	'cuphead',
+	'80px'
+);
+
+// Calculator
+@include projectImgPathMix(
+	'calculator',
+	'80px'
+);
+
+// Music Player
+@include projectImgPathMix(
+	'player',
+	'103px'
+);
+
+// Oldsmobile
+@include projectImgPathMix(
+	'mobile',
+	'78px'
+);
+
+// artGallery
+@include projectImgPathMix(
+	'artGallery',
+	'62px'
+);
+
+// Trees
+@include projectImgPathMix(
+	'tree',
+	'80px'
+);

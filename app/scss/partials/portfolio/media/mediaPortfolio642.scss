@@ -1,0 +1,58 @@
+@media only screen and (max-width: 642px) {
+	// Cards
+	.portfolioCardContent {
+		width: 330px;
+	}
+	.portfolioCardContent__title {
+		font-size: 60px;
+	}
+
+	.portfolioCardWrap {
+		width: 330px;
+	}
+	.portfolioCard {
+		width: 330px;
+		height: 450px;
+		padding: 25px;
+		margin-right: 0;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+	.portfolioCard__img {
+		height: 320px;
+	}
+	.portfolioCard__about {
+		margin-top: 25px;
+	}
+	.portfolioCard__name {
+		font-size: 26px;
+	}
+	.portfolioCard__technologies {
+		font-size: 16px;
+	}
+
+	// Presentation
+	.presentMain__article {
+		font-size: 14px;
+	}
+
+	// Detail Page
+	@include lineInfoMix('detail', 120px, 286px);
+
+	.lineInfoWrap__left,
+	.lineInfoWrap__right {
+		font-size: 14px;
+	}
+	.lineInfoWrap__left {
+		margin-right: 20px;
+	}
+	.lineInfoWrap__line {
+		margin-top: 7px;
+		margin-right: 20px;
+	}
+
+	// Portfolio Page
+	@include lineInfoMix('portfolio', 136px, 262px);
+}

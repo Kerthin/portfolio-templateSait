@@ -1,0 +1,44 @@
+/*____________________________________________________________
+## Project Image Path Mixin
+____________________________________________________________*/
+@mixin projectImgPathMix($projectName, $underlineWidth) {
+	.presentation_#{$projectName} {
+		.presentMain__titleUnderline {
+			width: #{$underlineWidth}
+		}
+		.presentMain__img {
+			background-image: url('../image/#{$projectName}/1.png');
+		}
+
+		.detailItem {
+
+			&:nth-child(1) {
+				.detailItem__img {
+					background-image: url('../image/#{$projectName}/2.png');
+				}
+			}
+			&:nth-child(2) {
+				.detailItem__img {
+					background-image: url('../image/#{$projectName}/3.png');
+				}
+			}
+			&:nth-child(3) {
+				.detailItem__img {
+					background-image: url('../image/#{$projectName}/4.png');
+				}
+			}
+			&:nth-child(4) {
+				.detailItem__img {
+					background-image: url('../image/#{$projectName}/5.png');
+				}
+			}
+		}
+
+		.portfolioImg_lg {
+			background-image: url('../image/#{$projectName}/6.png');
+		}
+		.portfolioImg_md {
+			background-image: url('../image/#{$projectName}/7.png');
+		}
+	}
+}

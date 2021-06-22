@@ -1,0 +1,22 @@
+@media only screen and (min-width: 415px) and (max-width: 1025px) and (orientation: portrait) {
+	// Burger
+	.burgerWrap {
+		display: block;
+		top: 17px;
+		width: 50px;
+	}
+}
+@media only screen and (min-width: 415px) and (max-width: 685px) and (orientation: portrait) {
+	// Burger
+	.burgerWrap {
+		display: block;
+		top: 9px;
+		width: 30px;
+	}
+}
+@media only screen and (min-width: 415px) and (max-width: 490px) and (orientation: portrait) {
+	// Burger
+	.burgerWrap {
+		top: 4px;
+	}
+}

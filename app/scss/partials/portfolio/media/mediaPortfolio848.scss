@@ -1,0 +1,77 @@
+@media only screen and (max-width: 848px) {
+	// Presentation
+	.presentation {
+
+		&.presentation_open {
+
+			.presentMain {
+				width: calc(100% - 110px);
+			}
+		}
+	}
+
+	.presentSide {
+		width: 110px;
+	}
+	.closeButtonWrap {
+		top: 40px;
+		width: 60px;
+	  height: 60px;
+	}
+	.closeButtonWrap__text {
+		font-size: 30px;
+	}
+	.closeButtonWrap__circle {
+		width: 21px;
+		height: 21px;
+	}
+	.presentSide__title {
+		font-size: 48px;
+	}
+	.presentMain__article {
+		font-size: 16px;
+
+		&:nth-child(2) {
+			font-size: 24px;
+		}
+	}
+	.presentMain__title {
+		font-size: 72px;
+	}
+	@include underlineWidthMix('gwent', '60px');
+	@include underlineWidthMix('prado', '40px');
+	@include underlineWidthMix('spiele', '47px');
+	@include underlineWidthMix('cuphead', '57px');
+	@include underlineWidthMix('calculator', '57px');
+	@include underlineWidthMix('player', '78px');
+	@include underlineWidthMix('old', '60px');
+	@include underlineWidthMix('art', '46px');
+	@include underlineWidthMix('trees', '60px');
+
+	.presentMain__titleCircle {
+		top: -40px;
+	  right: -80px;
+		width: 100px;
+	  height: 100px;
+
+		.presentMain__text {
+			font-size: 18px;
+		}
+	}
+
+	// Detail Page
+	.detailItem__img {
+		width: 55%;
+		border: 8px solid;
+	}
+	.detailItem__info {
+		width: 40%;
+	}
+	.detailItem__title,
+	.detailItem__subtitle {
+		font-size: 16px;
+	}
+	.detailItem__paragraph {
+		display: none;
+	}
+}

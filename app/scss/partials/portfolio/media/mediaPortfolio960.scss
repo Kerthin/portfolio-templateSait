@@ -1,0 +1,85 @@
+@media only screen and (max-width: 960px) {
+	// Cards
+	.portfolioCardContent {
+		margin: 70px auto 45px;
+		width: 666px;
+	}
+	.portfolioCardContent__title {
+		font-size: 75px;
+	}
+
+	.portfolioCardWrap {
+		width: 666px;
+	}
+	.portfolioCard {
+		width: 198px;
+		height: 279px;
+		padding: 15px;
+		margin-bottom: 36px;
+		margin-right: 36px;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+		&:nth-child(4n) {
+			margin-right: 36px;
+		}
+	}
+	.portfolioCard__img {
+		height: 192px;
+	}
+	.portfolioCard__about {
+		margin-top: 15px;
+	}
+	.portfolioCard__name {
+		font-size: 15px;
+	}
+	.portfolioCard__technologies {
+		font-size: 10px;
+	}
+
+	// Portfolio Page
+	.portfolioInfoWrap {
+		height: 70%;
+	}
+	.portfolioImg,
+	.portfolioLinks {
+		width: 100%;
+		border: 15px solid;
+	}
+	.portfolioImg_lg {
+		display: none;
+	}
+	.portfolioImg_md {
+		height: 40%;
+		border-color: $x-color-trefoil-crayola;
+	}
+	.portfolioLinks {
+		margin-bottom: 2.5%;
+		height: 57.5%;
+		border-color: $palette-detail-rect-border;
+	}
+	.portfolioLinks__lineWrap {
+		margin-bottom: 8px;
+		height: 30px;
+	}
+	.portfolioLinks__line {
+		margin-top: 13.5px;
+		margin-right: 12px;
+		width: calc(100% - 42px);
+	}
+	.portfolioLinks__circle {
+		width: 30px;
+		height: 30px;
+	}
+	.portfolioLinks__socialTitle {
+		font-size: 18px;
+		line-height: 25px;
+	}
+	.portfolioLinks__underline {
+		display: none;
+	}
+	.portfolioContent {
+		display: none;
+	}
+}

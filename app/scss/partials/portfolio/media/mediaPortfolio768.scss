@@ -1,0 +1,157 @@
+@media only screen and (max-width: 768px) {
+	// Cards
+	.portfolioCardContent {
+		width: 576px;
+	}
+	.portfolioCardWrap {
+		width: 576px;
+	}
+	.portfolioCard {
+		width: 264px;
+		height: 369px;
+		padding: 20px;
+		margin-bottom: 48px;
+		margin-right: 48px;
+
+		&:nth-child(3n) {
+			margin-right: 48px;
+		}
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+	.portfolioCard__img {
+		height: 256px;
+	}
+	.portfolioCard__about {
+		margin-top: 20px;
+	}
+	.portfolioCard__name {
+		font-size: 21px;
+	}
+	.portfolioCard__technologies {
+		font-size: 13px;
+	}
+
+	// Presentation
+	.presentation {
+
+		&.presentation_open {
+
+			.presentSide {
+				width: 100%;
+				height: 80px;
+				transition-delay: .3s;
+			}
+			.closeButtonWrap {
+				transform: translateY(-50%) scale(1);
+			}
+
+			.presentMain {
+				width: 100%;
+				height: calc(100% - 80px);
+			}
+		}
+	}
+	
+	.presentSide {
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 80px;
+		border-right: 0;
+		border-bottom: 2px solid $palette-present-border;
+	}
+	.closeButtonWrap {
+		position: absolute;
+		top: 50%;
+		left: auto;
+	  right: 30px;
+	  width: 50px;
+	  height: 50px;
+		transform: translateY(-50%);
+	}
+	.closeButtonWrap__circle {
+		width: 16px;
+		height: 16px;
+	}
+	.presentSide__title {
+		font-size: 36px;
+		transform: translate(-50%, -50%) scale(1, 1);
+		writing-mode: lr-tb;
+	}
+
+	.presentMain {
+		bottom: 0;
+	}
+	.presentMain__article {
+		font-size: 18px;
+
+		&:nth-child(2) {
+			font-size: 22px;
+		}
+	}
+	.presentMain__title {
+		font-size: 64px;
+	}
+	@include underlineWidthMix('gwent', '52px');
+	@include underlineWidthMix('prado', '35px');
+	@include underlineWidthMix('spiele', '42px');
+	@include underlineWidthMix('cuphead', '50px');
+	@include underlineWidthMix('calculator', '50px');
+	@include underlineWidthMix('player', '69px');
+	@include underlineWidthMix('old', '52px');
+	@include underlineWidthMix('art', '40px');
+	@include underlineWidthMix('trees', '53px');
+
+	.presentMain__titleCircle {
+		top: -40px;
+		right: -80px;
+		width: 90px;
+		height: 90px;
+
+		.presentMain__text {
+			font-size: 20px;
+		}
+	}
+	.presentMain__descript {
+		display: none;
+	}
+	.presentMain__descriptTitle {
+		display: none;
+	}
+	.presentMain__imgWrap {
+		height: 100%;
+	}
+	.presentMain__img {
+		width: 90%;
+	}
+
+	// Detail Page
+	.detailItem {
+		margin-bottom: 2vh;
+		margin-right: 0;
+		width: 100%;
+		height: 16vh;
+	}
+	.detailItem__img {
+		margin-right: 5%;
+		width: 35%;
+		border: 10px solid;
+	}
+	.detailItem__info {
+		width: 60%;
+	}
+	.detailItem__title,
+	.detailItem__subtitle {
+		font-size: 24px;
+	}
+	.detailItem__title {
+		margin-bottom: 8px;
+	}
+	.detailItem__paragraph {
+		font-size: 16px;
+		word-spacing: 10px;
+		line-height: 40px;
+	}
+}

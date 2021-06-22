@@ -1,0 +1,157 @@
+/*____________________________________________________________
+##### Portfolio Page
+____________________________________________________________*/
+.portfolioPage {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: $palette-present-primary;
+}
+@include lineInfoMix('portfolio', 210px, 408px);
+
+/*____________________________________________________________
+###### Portfolio Info Wrap
+____________________________________________________________*/
+.portfolioInfoWrap {
+	@extend %horizontalCentering;
+	top: 15%;
+	width: 90%;
+	height: 40%;
+}
+
+/*____________________________________________________________
+####### Portfolio Links
+____________________________________________________________*/
+.portfolioImg,
+.portfolioLinks {
+	position: relative;
+	float: left;
+	height: 100%;
+	border: 20px solid;
+	outline: 2px solid $palette-present-border;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.portfolioImg_lg {
+	margin-right: 2.5%;
+	width: 45%;
+	border-color: $x-color-white;
+}
+.portfolioImg_md {
+	width: 30%;
+	border-color: $x-color-trefoil-crayola;
+}
+.portfolioLinks {
+	margin-right: 2.5%;
+	width: 20%;
+	border-color: $palette-detail-rect-border;
+	background-color: $palette-detail-rect-border;
+}
+.portfolioLinks__lineWrap {
+	margin-bottom: 10px;
+	width: 100%;
+	height: 50px;
+}
+.portfolioLinks__line {
+	float: left;
+	margin-top: 23px;
+	margin-right: 20px;
+	width: calc(100% - 70px);
+	height: 3px;
+	background-color: $palette-present-border;
+}
+.portfolioLinks__circle {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border: 2px solid $palette-present-border;
+	border-radius: 50%;
+	background-color: $palette-present-primary;
+}
+
+.portfolioLinks__socialWrap {
+	width: 100%;
+}
+.portfolioLinks__socialTitle {
+	margin-bottom: 20px;
+	font-family: Galeria;
+	font-size: 32px;
+	color: $palette-social-link;
+}
+
+.portfolioLinks__socialList {
+	width: 100%;
+  list-style: none;
+}
+.portfolioLinks__socialItem {
+	position: relative;
+  margin-bottom: 20px;
+  width: 115px;
+  height: 20px;
+  transition: transform 0.2s;
+
+  &:hover {
+	  transform: translateY(-3px);
+
+	  .portfolioLinks__icon {
+	  	stroke: $palette-social-link-hover;
+	  }
+		.portfolioLinks__name {
+			color: $palette-social-link-hover;
+		}
+	}
+}
+.portfolioLinks__link {
+	text-decoration: none;
+}
+.portfolioLinks__icon {
+	margin-right: 20px;
+	width: 20px;
+	height: 20px;
+  fill: none;
+  stroke: $palette-social-link;
+}
+.portfolioLinks__name {
+	position: absolute;
+	font-family: Galeria-Medium;
+	font-size: 14px;
+	color: $palette-social-link;
+}
+.portfolioLinks__underline {
+	position: absolute;
+	bottom: 23px;
+	width: 30%;
+	height: 3px;
+	background-color: $palette-social-link;
+}
+
+/*____________________________________________________________
+###### Portfolio Content
+____________________________________________________________*/
+.portfolioContent {
+	@extend %horizontalCentering;
+	bottom: 15%;
+	width: 90%;
+}
+.portfolioTitle {
+	position: relative;
+	font-family: Galeria;
+	font-size: 96px;
+	color: $palette-present-font;
+}
+.portfolio__paragraphWrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+}
+.portfolio__paragraph {
+	font-family: Galeria-Medium;
+	font-size: 16px;
+	word-spacing: 10px;
+	text-align: justify;
+	line-height: 40px;
+	color: $palette-present-font;
+}

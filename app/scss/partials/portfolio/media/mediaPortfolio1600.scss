@@ -1,0 +1,44 @@
+@media only screen and (max-width: 1600px) {
+	// Cards
+	.portfolioCardContent {
+		margin: 110px auto 75px;
+		width: 1110px;
+	}
+	.portfolioCardContent__title {
+		font-size: 75px;
+	}
+	.portfolioCardContent__paragraphTitle {
+		margin-bottom: 15px;
+		font-size: 21px;
+	}
+	.portfolioCardContent__paragraph {
+		font-size: 15px;
+		word-spacing: 8px;
+		line-height: 30px;
+	}
+
+	.portfolioCardWrap {
+		width: 1110px;
+	}
+	.portfolioCard {
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+		&:nth-child(4n) {
+			margin-right: 60px;
+		}
+	}
+
+	// Presentation
+	.presentMain__descriptParagraph {
+		word-spacing: 12px;
+		line-height: 35px;
+	}
+
+	// Detail Page
+	.detailItem__paragraph {
+		word-spacing: 6px;
+		line-height: 30px;
+	}
+}

@@ -1,0 +1,21 @@
+/*____________________________________________________________
+## Line Info Mixin
+____________________________________________________________*/
+@mixin lineInfoMix($parentClassName, $topLineWidth, $bottomLineWidth) {
+	.#{$parentClassName}Page {
+
+		.lineInfoWrap {
+
+			&:nth-child(1) {
+				.lineInfoWrap__line {
+					width: calc(100% - #{$topLineWidth});
+				}
+			}
+			&:nth-child(2) {
+				.lineInfoWrap__line {
+					width: calc(100% - #{$bottomLineWidth});
+				}
+			}
+		}
+	}
+}

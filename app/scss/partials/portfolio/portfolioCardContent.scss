@@ -1,0 +1,36 @@
+/*____________________________________________________________
+## Portfolio Card Content
+____________________________________________________________*/
+.portfolioCardContent {
+	position: relative;
+	margin: 150px auto 100px;
+	width: 1500px;
+}
+.portfolioCardContent__title {
+	position: relative;
+	float: left;
+	width: 45%;
+	font-family: Galeria;
+	font-size: 100px;
+	color: $palette-secondary;
+}
+.portfolioCardContent__paragraphWrap {
+	position: relative;
+	float: left;
+	width: 55%;
+}
+.portfolioCardContent__paragraphTitle {
+	position: relative;
+	margin-bottom: 20px;
+	font-family: Galeria;
+	font-size: 24px;
+	color: $palette-secondary;
+}
+.portfolioCardContent__paragraph {
+	font-family: Galeria-Medium;
+	font-size: 18px;
+	word-spacing: 8px;
+	text-align: justify;
+	line-height: 35px;
+	color: $palette-secondary;
+}

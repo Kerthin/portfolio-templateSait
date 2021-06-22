@@ -1,0 +1,20 @@
+@media only screen and (max-width: 1680px) {
+	// Presentation
+	.presentMain__descriptParagraph {
+		font-size: 20px;
+		word-spacing: 15px;
+		line-height: 40px;
+	}
+
+	// Detail Page
+	.detailItem__paragraph {
+		word-spacing: 7px;
+		line-height: 35px;
+	}
+
+	// Portfolio Page
+	.portfolioLinks__socialTitle {
+		margin-bottom: 18px;
+		font-size: 26px;
+	}
+}

@@ -1,0 +1,17 @@
+.portfolioCardWrap.clearfix
+	mixin portfolioCardMix(imgProjectClass, portfolioCardName, portfolioCardTechnologies)
+		.portfolioCard
+			.portfolioCard__img(class=`portfolioCard__img_${imgProjectClass}`)
+			.portfolioCard__about
+				h1.portfolioCard__name #{portfolioCardName}
+				h1.portfolioCard__technologies #{portfolioCardTechnologies}
+
+	+portfolioCardMix('gwent', 'card game ui', 'html,scss,react')
+	+portfolioCardMix('prado', 'prado museum', 'html,scss,react')
+	+portfolioCardMix('spiele', 'spiele museum', 'pug,scss,js')
+	+portfolioCardMix('cuphead', 'cuphead', 'pug,scss,js')
+	+portfolioCardMix('calculator', 'calculator', 'pug,scss,js,ts')
+	+portfolioCardMix('player', 'music player', 'pug,scss,react')
+	+portfolioCardMix('mobile', 'old mobile', 'html,css,js')
+	+portfolioCardMix('artGallery', 'art gallery', 'pug,scss,js')
+	+portfolioCardMix('tree', 'geometric', 'pug,scss,js')

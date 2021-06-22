@@ -1,0 +1,123 @@
+@media only screen and (max-width: 320px) {
+	// Cards
+	.portfolioCardContent {
+		margin: 35px auto 24px;
+		width: 198px;
+	}
+	.portfolioCardContent__title {
+		font-size: 35px;
+	}
+
+	.portfolioCardWrap {
+		width: 198px;
+	}
+	.portfolioCard {
+		width: 198px;
+		height: 279px;
+		padding: 15px;
+		margin-bottom: 30px;
+	}
+	.portfolioCard__img {
+		height: 192px;
+	}
+	.portfolioCard__about {
+		margin-top: 15px;
+	}
+	.portfolioCard__name {
+		font-size: 16px;
+	}
+	.portfolioCard__technologies {
+		font-size: 10px;
+	}
+
+	// Presentation
+	.presentSide__title {
+		font-size: 20px;
+	}
+	.presentMain__article {
+		font-size: 10px;
+
+		&:nth-child(1) {
+			top: 15px;
+			left: 20px;
+		}
+		&:nth-child(2) {
+			top: 15px;
+			right: 20px;
+			font-size: 16px;
+		}
+		&:nth-child(3) {
+			bottom: 15px;
+			left: 20px;
+		}
+		&:nth-child(4) {
+			bottom: 15px;
+			right: 20px;
+		}
+	}
+	.presentMain__title {
+		font-size: 28px;
+	}
+	.presentMain__titleUnderline {
+		height: 2px;
+	}
+	@include underlineWidthMix('gwent', '23px');
+	@include underlineWidthMix('prado', '16px');
+	@include underlineWidthMix('spiele', '18px');
+	@include underlineWidthMix('cuphead', '23px');
+	@include underlineWidthMix('calculator', '23px');
+	@include underlineWidthMix('player', '30px');
+	@include underlineWidthMix('old', '23px');
+	@include underlineWidthMix('art', '18px');
+	@include underlineWidthMix('trees', '23px');
+
+	.presentMain__titleCircle {
+		top: -30px;
+	  right: -40px;
+		width: 50px;
+	  height: 50px;
+	}
+
+	// Detail Page
+	@include lineInfoMix('detail', 87px, 206px);
+
+	.lineInfoWrap__left,
+	.lineInfoWrap__right {
+		font-size: 10px;
+	}
+	.lineInfoWrap__left {
+		margin-right: 15px;
+	}
+	.lineInfoWrap__line {
+		margin-top: 5px;
+		margin-right: 15px;
+	}
+
+	// Portfolio Page
+	@include lineInfoMix('portfolio', 98px, 189px);
+
+	.portfolioImg_md {
+		display: none;
+	}
+	.portfolioLinks__socialTitle {
+		margin-bottom: 30px;
+		font-size: 32px;
+	}
+	.portfolioLinks__socialItem {
+		margin-bottom: 30px;
+		width: 115px;
+		height: 30px;
+	}
+	.portfolioLinks__icon {
+		margin-right: 30px;
+		width: 30px;
+		height: 30px;
+	}
+	.portfolioLinks__name {
+		font-size: 18px;
+	}
+	.portfolioLinks {
+		height: 100%;
+		border-color: $palette-detail-rect-border;
+	}
+}

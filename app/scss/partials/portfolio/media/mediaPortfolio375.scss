@@ -1,0 +1,61 @@
+@media only screen and (max-width: 375px) {
+	// Presentation
+	// Presentation
+	.presentation {
+
+		&.presentation_open {
+
+			.presentSide {
+				height: 70px;
+			}
+			.closeButtonWrap {
+			}
+
+			.presentMain {
+				height: calc(100% - 70px);
+			}
+		}
+	}
+
+	.presentSide__title {
+		font-size: 24px;
+	}
+	.closeButtonWrap {
+		right: 20px;
+	  width: 45px;
+	  height: 45px;
+	}
+	.closeButtonWrap__text {
+		font-size: 32px;
+	}
+	.closeButtonWrap__circle {
+		width: 15px;
+		height: 15px;
+	}
+
+	.presentMain__img {
+		border-width: 10px;
+	}
+	.detailItem__img {
+		border: 6px solid;
+	}
+	.portfolioImg,
+	.portfolioLinks {
+		border: 10px solid;
+	}
+	.portfolioImg_lg {
+		border-color: $x-color-white;
+	}
+	.portfolioImg_md {
+		border-color: $x-color-trefoil-crayola;
+	}
+	.portfolioLinks {
+		border-color: $palette-detail-rect-border;
+	}
+
+	// Detail Page
+	.detailItem__title,
+	.detailItem__subtitle {
+		font-size: 14px;
+	}
+}

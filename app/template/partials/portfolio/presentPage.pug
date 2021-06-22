@@ -1,0 +1,48 @@
+section.presentPage
+
+	//------ Present Side
+	.presentSide
+		.closeButtonWrap
+			svg.closeButtonWrap__textWrap(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve")
+				defs
+					path#circlePath(d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 ")
+				circle(cx="150" cy="100" r="75" fill="none")
+				g
+					use(xlink:href="#circlePath" fill="none")
+					text
+						textPath.closeButtonWrap__text(xlink:href="#circlePath") Close portfolio page
+			.closeButtonWrap__circle
+		h1.presentSide__title
+
+	//------ Present Main
+	.presentMain
+		p.presentMain__article Presentation
+		p.presentMain__article 01
+		p.presentMain__article
+			a.presentMain__demoLink(href="" target="_blank") Demo Page
+		p.presentMain__article Made by Roden
+
+		//------- Present Main Title Wrap
+		.presentMain__titleWrap
+			h1.presentMain__title
+			.presentMain__titleUnderline
+			.presentMain__slide
+
+			.presentMain__titleCircle
+				svg.presentMain__textWrap(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve")
+					defs
+						path#circlePath(d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 ")
+					circle(cx="150" cy="100" r="75" fill="none")
+					g
+						use(xlink:href="#circlePath" fill="none")
+						text
+							textPath.presentMain__text(xlink:href="#circlePath") Welcome to portfolio page
+
+		//------- Present Main Content
+		.presentMain__content
+			.presentMain__descript
+				h2.presentMain__descriptTitle
+				p.presentMain__descriptParagraph
+			.presentMain__imgWrap
+				.presentMain__imgRect
+				.presentMain__img

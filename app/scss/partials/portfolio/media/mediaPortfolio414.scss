@@ -1,0 +1,75 @@
+@media only screen and (max-width: 414px) {
+	// Cards
+	.portfolioCardContent {
+		margin: 45px auto 30px;
+		width: 264px;
+	}
+	.portfolioCardContent__title {
+		font-size: 45px;
+	}
+
+	.portfolioCardWrap {
+		width: 264px;
+	}
+	.portfolioCard {
+		width: 264px;
+		height: 369px;
+		padding: 20px;
+		margin-bottom: 34px;
+	}
+	.portfolioCard__img {
+		height: 256px;
+	}
+	.portfolioCard__about {
+		margin-top: 20px;
+	}
+	.portfolioCard__name {
+		font-size: 22px;
+	}
+	.portfolioCard__technologies {
+		font-size: 13px;
+	}
+
+	// Presentation
+	.presentation {
+
+		&.presentation_open {
+
+			.presentMain__content {
+				height: 80%;
+			}
+		}
+	}
+	.presentSide__title {
+		font-size: 28px;
+	}
+	.presentMain__title {
+		font-size: 36px;
+	}
+	.presentMain__titleUnderline {
+		bottom: -3px;
+		height: 3px;
+	}
+	@include underlineWidthMix('gwent', '30px');
+	@include underlineWidthMix('prado', '21px');
+	@include underlineWidthMix('spiele', '24px');
+	@include underlineWidthMix('cuphead', '30px');
+	@include underlineWidthMix('calculator', '30px');
+	@include underlineWidthMix('player', '40px');
+	@include underlineWidthMix('old', '30px');
+	@include underlineWidthMix('art', '23px');
+	@include underlineWidthMix('trees', '30px');
+
+	.presentMain__titleCircle {
+		top: -30px;
+	  right: -50px;
+		width: 60px;
+	  height: 60px;
+	}
+
+	// Detail Page
+	.detailItem__title,
+	.detailItem__subtitle {
+		font-size: 18px;
+	}
+}

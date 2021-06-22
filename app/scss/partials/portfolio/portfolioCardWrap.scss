@@ -1,0 +1,75 @@
+/*____________________________________________________________
+## Portfolio Card Wrap
+____________________________________________________________*/
+.portfolioCardWrap {
+	position: relative;
+	margin: 0 auto;
+	width: 1500px;
+
+	&.portfolioCardWrap_eventsNone {
+		pointer-events: none;
+	}
+}
+.portfolioCard {
+	position: relative;
+	float: left;
+	width: 330px;
+	height: 450px;
+	padding: 25px;
+	margin-bottom: 60px;
+	margin-right: 60px;
+	background-color: $palette-secondary;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+	transition: all 0.3s ease-out;
+	cursor: pointer;
+
+	&:nth-child(4n) {
+		margin-right: 0;
+	}
+
+	&:hover {
+		transform: translateY(-5px) scale(1.005) translateZ(0);
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+	&:active {
+		transform: scale(1) translateZ(0);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+	}
+}
+.portfolioCard__img {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+
+	$projectNames: 'gwent', 'prado', 'spiele', 'cuphead', 'calculator', 'player', 'mobile', 'artGallery', 'tree';
+
+	@each $name in $projectNames {
+		&_#{$name} {
+			background-image: url('../image/#{$name}/card.png');
+		}
+	}
+}
+.portfolioCard__about {
+	width: 100%;
+	margin-top: 26px;
+}
+.portfolioCard__name {
+	margin-bottom: 4px;
+	font-family: Galeria;
+	font-size: 26px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $palette-card-font;
+}
+.portfolioCard__technologies {
+	font-family: Galeria-Medium;
+	font-size: 14px;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: $palette-card-font;
+}

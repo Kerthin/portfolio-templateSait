@@ -1,0 +1,10 @@
+/*____________________________________________________________
+## Title Underline Width
+____________________________________________________________*/
+@mixin underlineWidthMix($presentationClassModification, $underlineWidth) {
+	.presentation_#{$presentationClassModification} {
+		.presentMain__titleUnderline {
+			width: #{$underlineWidth}
+		}
+	}
+}

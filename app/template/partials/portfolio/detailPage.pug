@@ -1,0 +1,34 @@
+section.detailPage
+
+	//------ Line Info Wrap
+	mixin lineInfoMix(leftWord, pageNumber, leftClassLink, leftHref, leftWordLink, rightClassLink, rightHref, rightWordLink)
+		.lineInfoWrap
+			.lineInfoWrap__left #{leftWord}
+			.lineInfoWrap__line
+			.lineInfoWrap__right #{pageNumber}
+		.lineInfoWrap
+			.lineInfoWrap__left
+				a(class=`${leftClassLink}` href=`${leftHref}` target="_blank") #{leftWordLink}
+			.lineInfoWrap__line
+			.lineInfoWrap__right
+				a(class=`${rightClassLink}` href=`${rightHref}` target="_blank") #{rightWordLink}
+
+	+lineInfoMix('Details', '02', 'lineInfoWrap__detailGithub', '', 'Github Page', '', 'https://dribbble.com/Kerthin', 'www.dribbble.com')
+
+	//------ Detail Wrap
+	.detailsWrap
+
+		//------- Detail Item
+		mixin detailItemMix(detailItemNumber)
+			.detailItem
+				.detailItem__img
+				.detailItem__info
+					.detailItem__titleWrap
+						h2.detailItem__title(class=`js-detailItem__title_${detailItemNumber}`)
+						h3.detailItem__subtitle(class=`js-detailItem__subtitle_${detailItemNumber}`)
+					.detailItem__paragraph(class=`js-detailItem__paragraph_${detailItemNumber}`)
+
+		+detailItemMix(1)
+		+detailItemMix(2)
+		+detailItemMix(3)
+		+detailItemMix(4)

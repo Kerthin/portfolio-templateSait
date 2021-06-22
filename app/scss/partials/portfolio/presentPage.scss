@@ -1,0 +1,227 @@
+/*____________________________________________________________
+##### Present Page
+____________________________________________________________*/
+.presentPage {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: $palette-present-primary;
+}
+
+/*____________________________________________________________
+###### Present Side
+____________________________________________________________*/
+.presentSide {
+	position: absolute;
+	bottom: 0;
+	width: 160px;
+	height: 0;
+	border-right: 2px solid $palette-present-border;
+	overflow: hidden;
+	transition: all .4s;
+}
+
+.closeButtonWrap {
+	@extend %horizontalCentering;
+	top: 30px;
+	width: 80px;
+	height: 80px;
+	border: 2px solid $palette-present-border;
+	border-radius: 50%;
+	background-color: $x-color-smoky-white;
+	transform: scale(0);
+	transition: all .4s;
+	cursor: pointer;
+}
+.closeButtonWrap__textWrap,
+.presentMain__textWrap {
+	position: absolute;
+	top: -20%;
+	left: -20%;
+	width: 140%;
+	height: 140%;
+	animation-name: circleTextRotate;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes circleTextRotate {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0);
+	}
+}
+
+.closeButtonWrap__text {
+	font-family: Galeria;
+	font-size: 30px;
+	fill: $palette-present-font;
+}
+.closeButtonWrap__circle {
+	@extend %centering;
+	width: 28px;
+	height: 28px;
+	border: 2px solid $palette-present-border;
+	border-radius: 50%;
+	background-color: $palette-present-primary;
+}
+
+.presentSide__title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(-1, -1);
+	font-family: Galeria;
+	font-size: 72px;
+	color: $palette-present-font;
+	writing-mode: vertical-lr;
+}
+
+/*____________________________________________________________
+###### Present Main
+____________________________________________________________*/
+.presentMain {
+	position: absolute;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	transition: all .4s;
+	transition-delay: .2s;
+}
+.presentMain__article {
+	position: absolute;
+	font-family: Galeria;
+	font-size: 22px;
+	color: $palette-present-font;
+
+	.presentMain__demoLink {
+		color: $palette-present-font;
+	}
+
+	&:nth-child(1) {
+		top: 35px;
+		left: 40px;
+	}
+	&:nth-child(2) {
+		top: 35px;
+		right: 40px;
+		font-size: 36px;
+	}
+	&:nth-child(3) {
+		bottom: 35px;
+		left: 40px;
+	}
+	&:nth-child(4) {
+		bottom: 35px;
+		right: 40px;
+	}
+}
+
+/*____________________________________________________________
+####### Present Main Title Wrap
+____________________________________________________________*/
+.presentMain__titleWrap {
+	@extend %centering;
+}
+.presentMain__title {
+	position: relative;
+	font-family: Galeria;
+	font-size: 96px;
+	color: $palette-present-font;
+}
+.presentMain__titleUnderline {
+	position: absolute;
+	bottom: -8px;
+	height: 5px;
+	background-color: $palette-present-font;
+}
+.presentMain__slide {
+	position: absolute;
+	top: 0;
+	width: 0;
+	height: calc(100% + 15px);
+	background-color: $palette-present-primary;
+	transition: all .4s;
+	transition-delay: .7s;
+}
+
+.presentMain__titleCircle {
+	position: absolute;
+	top: -80px;
+	right: -125px;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	transform: scale(1);
+	transition: all .4s;
+	transition-delay: .7s;
+
+	.presentMain__text {
+		font-family: Galeria;
+		font-size: 22px;
+		fill: $palette-present-font;
+	}
+}
+
+/*____________________________________________________________
+####### Present Main Content
+____________________________________________________________*/
+.presentMain__content {
+	@extend %centering;
+	width: 80%;
+	height: 0;
+	overflow: hidden;
+	transition: all .5s;
+}
+.presentMain__descript {
+	float: left;
+	width: 35%;
+	height: 100%;
+	overflow: hidden;
+}
+.presentMain__descriptTitle {
+	margin: 10% 0;
+	font-family: Galeria;
+	font-size: 24px;
+	text-transform: capitalize;
+	line-height: 35px;
+	color: $palette-present-font;
+}
+.presentMain__descriptParagraph {
+	font-family: Galeria-Medium;
+	font-size: 18px;
+	word-spacing: 20px;
+	text-align: justify;
+	line-height: 50px;
+	color: $palette-present-font;
+}
+
+.presentMain__imgWrap {
+	position: relative;
+	float: left;
+	width: 65%;
+	height: 100%;
+	overflow: hidden;
+}
+.presentMain__imgRect {
+	position: absolute;
+	right: 15%;
+	width: 40%;
+	height: 30%;
+	border: 2px solid $palette-present-border;
+	background-color: $x-color-trefoil-crayola;
+}
+.presentMain__img {
+	@extend %verticalCentering;
+	right: 5%;
+	width: 80%;
+	height: 80%;
+	border: 20px solid $x-color-white;
+	outline: 2px solid $palette-present-border;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
