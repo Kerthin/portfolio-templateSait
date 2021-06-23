@@ -1,0 +1,228 @@
+/*____________________________________________________________
+
+#### Sociable Icon
+	##### Sociable Link
+	##### Sociable Display
+		###### Sociable Panel
+		###### Sociable Avatar
+		###### Sociable Buttons Wrap
+	##### Sociable Keyboard
+
+____________________________________________________________*/
+
+/*____________________________________________________________
+#### Sociable Icon
+____________________________________________________________*/
+.sociableIcon {
+	@extend %horizontalCentering;
+	top: 50px;
+	width: 50px;
+	height: 32px;
+}
+
+/*____________________________________________________________
+##### Sociable Link
+____________________________________________________________*/
+.sociableLink {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: dashed $x-color-granite;
+	animation: levitation 5s linear infinite;
+
+	@mixin sociableLinkPos($figureName, $top, $side, $sideInent, $borderWidth, $delay, $topFigure, $sideFigure, $sideInentFigure) {
+		&.sociableLink_pos#{$figureName} {
+			top: #{$top};
+			#{$side}: #{$sideInent};
+			border-width: #{$borderWidth};
+			animation-delay: #{$delay}s;
+
+			.sociableLink__figure {
+				top: #{$topFigure};
+				#{$sideFigure}: #{$sideInentFigure};
+			}
+		}
+	}
+
+	@include sociableLinkPos(LC, 50%, left, -10px, '1px 0 0 0', 0, -7px, left, -12px);
+	@include sociableLinkPos(LT, -10px, left, -1px, '1px 1px 0 0', .8, -7px, left, -12px);
+	@include sociableLinkPos(CT, -10px, left, 50%, '0 0 0 1px', 1.5, -12px, left, -7px);
+	@include sociableLinkPos(RT, -10px, right, -1px, '1px 0 0 1px', 2.2, -7px, right, -12px);
+	@include sociableLinkPos(RC, 50%, right, -10px, '1px 0 0 0', 2.9, -7px, right, -12px);
+
+	&:nth-child(2),
+	&:nth-child(4) {
+		.sociableLink__figure {
+			border-radius: 50%;
+			background-color: $x-color-tomato;
+
+			&:before {
+				border-radius: 50%;
+			}
+		}
+	}
+}
+.sociableLink__figure {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background-color: $x-color-grideperlevy;
+
+	@mixin sociableLinkType($figureName, $content) {
+		&.sociableLink__figure_#{$figureName} {
+			&:after {
+				content: '#{$content}';
+			}
+		}
+	}
+
+	@include sociableLinkType(mail, '@');
+	@include sociableLinkType(money, '$');
+	@include sociableLinkType(tag, '#');
+	@include sociableLinkType(percent, '%');
+	@include sociableLinkType(and, '&');
+
+	&:after {
+		margin-top: .5px;
+	}
+
+	&:before,
+	&:after {
+		@extend %centering;
+		font-size: 9px;
+	}
+	&:before {
+		content: '';
+		width: 9px;
+		height: 9px;
+		border: 1px solid $x-color-granite;
+	}
+}
+
+/*____________________________________________________________
+##### Sociable Display
+____________________________________________________________*/
+.sociableDisplay {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 3.2px solid $x-color-granite;
+	border-radius: 1px;
+	background-color: $x-color-white;
+}
+
+/*____________________________________________________________
+###### Sociable Panel
+____________________________________________________________*/
+.sociableDisplay__panel {
+	position: absolute;
+	top: 2.2px;
+	width: 9px;
+
+	&.sociableDisplay_leftSide {
+		left: 1.8px;
+
+		.sociableDisplay__line {
+			&:nth-child(1) {
+				margin-top: 6px;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			margin-bottom: 2px;
+			width: 100%;
+			height: 4px;
+			background-color: $x-color-tomato;
+		}
+	}
+	&.sociableDisplay_rightSide {
+		right: 1.8px;
+
+		.sociableDisplay__line {
+			&:nth-child(1) {
+				width: 50%;
+			}
+		}
+	}
+}
+.sociableDisplay__line {
+	position: relative;
+	margin-bottom: 1px;
+	width: 100%;
+	height: 1px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: $x-color-granite;
+		animation: slide 3.5s ease infinite;
+	}
+
+	&:nth-child(6) {
+		width: 50%;
+	}
+
+	@include animDelayChild(2, .2);
+	@include animDelayChild(3, .4);
+	@include animDelayChild(4, .6);
+	@include animDelayChild(5, .8);
+	@include animDelayChild(6, 1);
+}
+
+/*____________________________________________________________
+###### Sociable Avatar
+____________________________________________________________*/
+.sociableDisplay__avatar {
+	@extend %horizontalCentering;
+	top: 2.2px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: $palette-tertiary;
+	background-image: url('https://i.pinimg.com/originals/05/d9/93/05d99321de948f7f4c24164eec708a15.png');
+	background-repeat: no-repeat;
+	background-position: center 2px;
+	background-size: contain;
+}
+
+/*____________________________________________________________
+###### Sociable Buttons Wrap
+____________________________________________________________*/
+.sociableDisplay__buttonsWrap {
+	@extend %horizontalCentering;
+	bottom: 2.2px;
+	width: 16px;
+	height: 2px;
+}
+.sociableDisplay__button {
+	float: left;
+	width: 7px;
+	height: 2px;
+
+	&:nth-child(1) {
+		margin-right: 2px;
+		background-color: $x-color-granite;
+	}
+	&:nth-child(2) {
+		background-color: $x-color-tomato;
+	}
+}
+
+/*____________________________________________________________
+##### Sociable Keyboard
+____________________________________________________________*/
+.sociableKeyboard {
+	position: relative;
+	margin-left: -8%;
+	width: calc(100% + 16%);
+	height: 10%;
+	border-radius: 0 0 3px 3px;
+	background-color: $x-color-grideperlevy;
+	overflow: hidden;
+}
