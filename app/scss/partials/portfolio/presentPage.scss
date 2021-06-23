@@ -180,20 +180,19 @@ ____________________________________________________________*/
 	float: left;
 	width: 35%;
 	height: 100%;
-	overflow: hidden;
 }
 .presentMain__descriptTitle {
 	margin: 10% 0;
 	font-family: Galeria;
 	font-size: 24px;
 	text-transform: capitalize;
-	line-height: 35px;
+	line-height: 45px;
 	color: $palette-present-font;
 }
 .presentMain__descriptParagraph {
 	font-family: Galeria-Medium;
-	font-size: 18px;
-	word-spacing: 20px;
+	font-size: 20px;
+	word-spacing: 15px;
 	text-align: justify;
 	line-height: 50px;
 	color: $palette-present-font;

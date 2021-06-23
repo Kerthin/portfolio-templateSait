@@ -23,7 +23,7 @@ ____________________________________________________________*/
 }
 .popupMenu__nav {
 	position: absolute;
-	background: #13334c;
+	background: $x-color-ocean-blue;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -37,7 +37,7 @@ ____________________________________________________________*/
 	font-family: 'Roboto', sans-serif;
 	font-size: 25px;
 	letter-spacing: 3px;
-	color: #f6f6e9;
+	color: $x-color-old-lace;
 	position: relative;
 	margin-bottom: 30px;
 	overflow: hidden;
@@ -54,7 +54,7 @@ ____________________________________________________________*/
 		left: -101%;
 		width: 100%;
 		height: 100%;
-		background: #e1646a;
+		background: $x-color-light-carmine-pink;
 		z-index: 2;
 		transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
 	}
@@ -66,7 +66,7 @@ ____________________________________________________________*/
 		left: 101%;
 		width: 100%;
 		height: 4px;
-		background: #e1646a;
+		background: $x-color-light-carmine-pink;
 		transition: all .3s;
 		transition-delay: .4s;
 	}
@@ -133,7 +133,7 @@ ____________________________________________________________*/
 }
 .strokeWrap__stroke {
 	fill: none;
-	stroke: #f7e0b5;
+	stroke: $palette-secondary;
 	stroke-width: 3;
 	stroke-linecap: round;
 	stroke-linejoin: round;
