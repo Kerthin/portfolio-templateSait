@@ -150,22 +150,19 @@ ____________________________________________________________*/
 .strokeWrap__stroke_second {
 	--total-length: 70;
 }
-.burgerInput {
-	display: none;
+
+.burgerWrap.js-burgerWrap_open {
 	
-	&:checked {
+	.strokeWrap {
 		
-		+ .strokeWrap {
-			
-			.strokeWrap__stroke_first,
-			.strokeWrap__stroke_third {
-				--length: 22.627416998;
-				--offset: -94.1149185097;
-			}
-			.strokeWrap__stroke_second {
-				--length: 0;
-				--offset: -50;
-			}
+		.strokeWrap__stroke_first,
+		.strokeWrap__stroke_third {
+			--length: 22.627416998;
+			--offset: -94.1149185097;
+		}
+		.strokeWrap__stroke_second {
+			--length: 0;
+			--offset: -50;
 		}
 	}
 }
