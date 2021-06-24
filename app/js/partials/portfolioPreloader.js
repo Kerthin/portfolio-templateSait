@@ -1,6 +1,6 @@
 // Preloader
-TweenMax.to(".preloader", 1.5, {
-	top: "-100%",
+TweenMax.to(".preloader", 1.6, {
+	top: "-120%",
 	ease: Expo.easeInOut,
 	delay: .5
 });
