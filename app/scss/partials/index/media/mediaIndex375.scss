@@ -9,9 +9,11 @@
 		left: calc((-893px / 100) * 31.69);
 		transform: scale(.3662);
 	}
-	.developerInfo__title,
-	.developerInfo__subtitle {
+	.developerInfo__title{
 		font-size: 30px;
+	}
+	.developerInfo__subtitle {
+		font-size: 28px;
 	}
 
 	// Icon Cards
